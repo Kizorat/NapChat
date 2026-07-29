@@ -1,0 +1,8 @@
+dataset_Kipasti/
+dataset_filter/
+results/
+
+golden_translate/*
+!golden_translate/script/
+
+scripts/__pycache__
