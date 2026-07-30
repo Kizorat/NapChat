@@ -42,8 +42,11 @@ from openpyxl.styles import Alignment, Border, Font, PatternFill, Protection, Si
 from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.datavalidation import DataValidation
 
-# serializzatore condiviso col build script (stesso formato .json)
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# serializzatore condiviso col build script (stesso formato .json), che sta in
+# scripts/ alla radice: questo file e' in golden_translate/script/, quindi il
+# path va risalito fino alla radice del progetto.
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.join(ROOT, "scripts"))
 from build_conversation_dataset import write_json
 
 GOLDEN_DIR = "golden_translate"

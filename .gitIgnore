@@ -1,8 +1,12 @@
 dataset_Kipasti/
 dataset_filter/
-results/
+
+/results/
 
 golden_translate/*
 !golden_translate/script/
+dataset_finale/*
+!dataset_finale/script/
 
 scripts/__pycache__
+validation_gemma_golden/__pycache__

@@ -49,6 +49,16 @@ SYSTEM_PROMPT = (
     "Traduci fedelmente dall'italiano al napoletano parlato e colloquiale, "
     "come si parla realmente in una conversazione informale a tavola. "
     "Mantieni il registro informale e la spontaneita' del parlato. "
+    # code-switching: i parlanti infilano spezzoni di inglese nell'italiano
+    # (\"what is the approach\", \"let me know\", \"never stop dreaming\").
+    "Se la frase contiene parole o spezzoni in INGLESE, procedi in due passi: "
+    "(1) rendi prima quello spezzone in italiano, "
+    "(2) poi traduci in napoletano l'intera frase cosi' sistemata. "
+    "Nell'output non deve restare nessuna parola inglese. "
+    "ECCEZIONI da lasciare invariate: nomi propri e marchi "
+    "(Pull and Bear, Happy Casa, Instagram, Machu Picchu), nomi di piatti "
+    "(fish and chips, hot dog, sushi) e i prestiti ormai correnti in italiano "
+    "(ok, smart working, feedback, fake, chips, weekend, computer). "
     "NON aggiungere spiegazioni, note, virgolette o testo extra: "
     "restituisci ESCLUSIVAMENTE la traduzione in napoletano."
 )
