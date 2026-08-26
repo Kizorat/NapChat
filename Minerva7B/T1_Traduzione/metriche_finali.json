@@ -1,0 +1,40 @@
+{
+ "minerva-7b-instruct-v1.0__T1__ft__greedy": {
+  "modello": "minerva-7b-instruct-v1.0",
+  "task": "T1",
+  "tag": "ft",
+  "decoding": "greedy",
+  "n": 267,
+  "chrf++": 71.05,
+  "bleu": 48.56,
+  "rapporto_lunghezza": 0.991,
+  "bertscore_sistema": {
+   "P": 0.9101,
+   "R": 0.9088,
+   "F1": 0.9093
+  },
+  "bertscore_pavimento": {
+   "P": 0.6468,
+   "R": 0.6477,
+   "F1": 0.6466
+  },
+  "bertscore_copia_italiano": {
+   "P": 0.7933,
+   "R": 0.7537,
+   "F1": 0.7728
+  },
+  "_lettura_bertscore": "confronta F1 con bertscore_pavimento (napoletano non correlato): quello e' il vero zero della scala. Su T1 confronta anche con copia_italiano: l'encoder non conosce il napoletano e premia la copia.",
+  "lessicali": {
+   "recall_dialettale": 0.7936,
+   "precisione_dialettale": 0.7726,
+   "f1_dialettale": 0.7829,
+   "tasso_italianismi": 0.0363,
+   "tasso_copia": 0.0225
+  },
+  "forme_inedite": {
+   "tasso_generato": 0.1508,
+   "tasso_riferimenti_umani": 0.1579,
+   "_lettura": "il tasso dei riferimenti umani e' il pavimento naturale (il vocabolario di train non copre tutto il napoletano). Conta solo l'ECCESSO del generato su quel valore: e' la quota di forme inventate."
+  }
+ }
+}

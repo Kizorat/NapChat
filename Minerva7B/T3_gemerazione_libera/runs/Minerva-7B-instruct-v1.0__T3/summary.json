@@ -1,0 +1,114 @@
+{
+  "repo_id": "sapienzanlp/Minerva-7B-instruct-v1.0",
+  "run": "Minerva-7B-instruct-v1.0__T3",
+  "minuti": 108.1,
+  "split_dir": "/content/split_t3",
+  "train": 742,
+  "dev": 165,
+  "iperparametri": {
+    "model": "minerva",
+    "split_dir": "/content/split_t3",
+    "out_dir": "/content/runs",
+    "tag": "T3",
+    "epochs": 4.0,
+    "lr": 0.0001,
+    "batch_size": 4,
+    "grad_accum": 4,
+    "eval_batch_size": 4,
+    "max_seq_len": 384,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "lambda_ctx": 0.5,
+    "margine": 0.15,
+    "metric": "ctx_delta",
+    "evals_per_epoch": 2,
+    "patience": 4,
+    "ctx_n": 64,
+    "gen_n": 24,
+    "gen_max_new": 32,
+    "seed": 42,
+    "init_adapter": "",
+    "resume_dir": "",
+    "max_train_samples": 0,
+    "eval_subset": 96,
+    "no_gradient_checkpointing": false,
+    "precision": "qlora4bit"
+  },
+  "fine_turno": {
+    "id": 51202,
+    "eos_usati": [
+      51202
+    ]
+  },
+  "best": {
+    "step": "/content/runs/Minerva-7B-instruct-v1.0__T3/checkpoint-161",
+    "metrica": "ctx_delta",
+    "valore": 0.5252
+  },
+  "storia": [
+    {
+      "eval_loss": 3.2884585857391357,
+      "eval_runtime": 22.6305,
+      "eval_samples_per_second": 4.242,
+      "eval_steps_per_second": 1.061,
+      "step": 23
+    },
+    {
+      "eval_loss": 3.1075754165649414,
+      "eval_runtime": 22.6332,
+      "eval_samples_per_second": 4.242,
+      "eval_steps_per_second": 1.06,
+      "step": 46
+    },
+    {
+      "eval_loss": 3.1004714965820312,
+      "eval_runtime": 22.4986,
+      "eval_samples_per_second": 4.267,
+      "eval_steps_per_second": 1.067,
+      "step": 69
+    },
+    {
+      "eval_loss": 3.099076509475708,
+      "eval_runtime": 22.5241,
+      "eval_samples_per_second": 4.262,
+      "eval_steps_per_second": 1.066,
+      "step": 92
+    },
+    {
+      "eval_loss": 3.3728950023651123,
+      "eval_runtime": 22.6503,
+      "eval_samples_per_second": 4.238,
+      "eval_steps_per_second": 1.06,
+      "step": 115
+    },
+    {
+      "eval_loss": 3.3589184284210205,
+      "eval_runtime": 22.6789,
+      "eval_samples_per_second": 4.233,
+      "eval_steps_per_second": 1.058,
+      "step": 138
+    },
+    {
+      "eval_loss": 3.734769821166992,
+      "eval_runtime": 22.4844,
+      "eval_samples_per_second": 4.27,
+      "eval_steps_per_second": 1.067,
+      "step": 161
+    },
+    {
+      "eval_loss": 3.6971347332000732,
+      "eval_runtime": 22.5752,
+      "eval_samples_per_second": 4.252,
+      "eval_steps_per_second": 1.063,
+      "step": 184
+    },
+    {
+      "eval_loss": 3.69616436958313,
+      "eval_runtime": 22.8677,
+      "eval_samples_per_second": 4.198,
+      "eval_steps_per_second": 1.05,
+      "step": 188
+    }
+  ]
+}

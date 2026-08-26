@@ -1,0 +1,117 @@
+{
+  "run": "minerva-7b-instruct-v1.0__T1__ft",
+  "decoding": "greedy",
+  "repo_id": "sapienzanlp/Minerva-7B-instruct-v1.0",
+  "task": "T1",
+  "tag": "ft",
+  "architettura": "CausalLM",
+  "n_test": 267,
+  "F_riferimento": {
+    "chrf++": 71.05,
+    "bleu": 48.56
+  },
+  "F_bootstrap_chrf": {
+    "ci95_basso": 69.01,
+    "ci95_alto": 73.28
+  },
+  "F_baseline": {
+    "copia_italiano": 35.41,
+    "riferimento_di_un_altro_item": 9.62,
+    "_lettura": "un sistema che non batte queste in modo netto non ha imparato nulla."
+  },
+  "C_distribuzionali": {
+    "distinct_1": 0.3588,
+    "distinct_2": 0.8596,
+    "distinct_3": 0.9768,
+    "rep_2": 0.03,
+    "rep_3": 0.0037,
+    "lunghezza_media": 7.0,
+    "lunghezza_mediana": 6,
+    "ks_lunghezza_stat": 0.015,
+    "ks_lunghezza_pvalue": 1.0,
+    "_umano": {
+      "distinct_1": 0.3503,
+      "distinct_2": 0.8327,
+      "distinct_3": 0.9586,
+      "rep_2": 0.0337,
+      "rep_3": 0.0075,
+      "lunghezza_media": 7.07,
+      "lunghezza_mediana": 6
+    },
+    "_lettura": "bersagli bilaterali: confronta con _umano, non massimizzare. ks_pvalue alto = distribuzione delle lunghezze compatibile con l'umano."
+  },
+  "C_degenerazione": {
+    "frazione_con_loop_3plus": 0.007,
+    "loop_massimo": 3,
+    "incipit_dominante": {
+      "token": "e",
+      "frazione": 0.052
+    },
+    "_umano": {
+      "frazione_con_loop_3plus": 0.007,
+      "loop_massimo": 3,
+      "incipit_dominante": {
+        "token": "e",
+        "frazione": 0.052
+      }
+    },
+    "_lettura": "loop = degenerazione del decoder (il greedy su task aperti la produce per costruzione). incipit_dominante alto = collasso modale: se il 76% delle repliche inizia con la stessa parola e negli umani il massimo e' il 6%, il modello ha imparato una formula, non una distribuzione."
+  },
+  "A_avversariale": {
+    "accuracy_umano_vs_macchina": 0.5,
+    "std": 0.021,
+    "controllo_umano_vs_umano": 0.505,
+    "controllo_solo_lunghezza": 0.5,
+    "_lettura": "~0.50 = indistinguibile dall'umano (ottimo). 1.00 = riconoscibile subito. Valido SOLO se controllo_umano_vs_umano resta vicino a 0.50: altrimenti il classificatore legge artefatti. Se controllo_solo_lunghezza e' alto, sta misurando la lunghezza."
+  },
+  "G_troncamento": {
+    "frazione_al_tetto": 0.0,
+    "max_new_tokens": 64,
+    "_lettura": "frazione di output che raggiunge max_new senza emettere fine di turno. Sopra ~0.05 le altre metriche misurano il troncamento."
+  },
+  "H_stratificato": {
+    "riscontri": {
+      "n": 1,
+      "nota": "troppi pochi item"
+    },
+    "contenutistici": {
+      "n": 266,
+      "chrf++": 71.03,
+      "lunghezza_media_generata": 7.02,
+      "lunghezza_media_riferimento": 7.09
+    },
+    "_lettura": "il numero aggregato e' una media fra due distribuzioni diverse: guarda 'contenutistici' per la generazione libera."
+  },
+  "gen_kw": {
+    "decoding": "greedy",
+    "temperature": 0.8,
+    "top_p": 0.9,
+    "typical_p": null,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "eos_token_id": [
+      1,
+      51202
+    ],
+    "max_new_tokens": 64,
+    "seed": 42
+  },
+  "D_dialettalita": {
+    "P_nap_generato": 0.884,
+    "P_nap_riferimenti_umani": 0.88,
+    "discriminatore": {
+      "n_frasi_train": 1859,
+      "accuracy": 0.979,
+      "auc": 1.0
+    },
+    "_lettura": "confronta P_nap_generato con P_nap_riferimenti_umani: il bersaglio e' quello, non 1.0."
+  },
+  "B_contrastiva": {
+    "accuracy": 0.99,
+    "baseline_casuale": 0.2,
+    "k_distrattori": 4,
+    "n": 100,
+    "logprob_riferimento_norm": -0.738,
+    "_lettura": "distrattori = target reali di altri item appaiati per lunghezza. logprob normalizzata per token: piu' alta (meno negativa) = il modello considera plausibile una continuazione valida."
+  }
+}

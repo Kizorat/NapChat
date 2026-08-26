@@ -1,0 +1,110 @@
+{
+  "split_dir": "/kaggle/working/split",
+  "split": "dev",
+  "contatori": {
+    "righe": [
+      {
+        "run": "minerva-7b-instruct-v1.0__A2",
+        "layout": "A2",
+        "max_seq_len": 512,
+        "train": 1742,
+        "troncati_train": 0,
+        "frazione_troncati": 0.0,
+        "prefix_mismatch_train": 0
+      },
+      {
+        "run": "minerva-7b-instruct-v1.0__T1",
+        "layout": "T1",
+        "max_seq_len": 512,
+        "train": 1134,
+        "troncati_train": 0,
+        "frazione_troncati": 0.0,
+        "prefix_mismatch_train": 0
+      }
+    ],
+    "problemi": [],
+    "verificato": true
+  },
+  "prompt": {
+    "T1": {
+      "layout": "T1",
+      "n": 1134,
+      "con_contesto": 1133,
+      "senza_contesto": 1,
+      "turni_medi": 2.99,
+      "parole_contesto_medie": 21.5,
+      "parole_contesto_mediane": 19,
+      "turni_etichettati": 1.0,
+      "istruzioni_distinte": 1120,
+      "frazione_istruzione_piu_comune": 0.005,
+      "istruzione_piu_comune": "Traduci in napoletano: non lo so",
+      "osservazioni": [
+        "T1: 21.5 parole di contesto in media (2.99 turni). E' parlato frammentario: puo' non bastare a stabilire l'argomento. Prova ad allargare la finestra (igiene_split.py --finestre) e vedi se la contrastiva si muove: se non si muove, il contesto non e' il collo di bottiglia e lo sai.",
+        "T1: 1/1134 item senza blocco di contesto estraibile. Su quelli il delta di contesto e il CFG non sono definiti e vengono esclusi dalle misure."
+      ]
+    }
+  },
+  "ablazione": {
+    "T1": {
+      "n": 64,
+      "chrf_tra_le_due_uscite": 88.1,
+      "frazione_uscite_identiche": 0.609,
+      "chrf_contro_riferimento_contesto_vero": 69.84,
+      "chrf_contro_riferimento_contesto_falso": 69.24,
+      "delta_chrf_vero_meno_falso": 0.6,
+      "_lettura": "chrf_tra_le_due_uscite ALTO (>60) o frazione_identiche alta = il modello ignora il contesto: cecita' misurata. delta_chrf_vero_meno_falso <= 0 = il contesto reale non aiuta nemmeno contro il riferimento, che e' la forma piu' netta dello stesso risultato.",
+      "esempi": [
+        {
+          "contesto_vero": "esatto, cioè tu 'o vide tutto 'intero accussì nun pienze",
+          "contesto_falso": "esatto, cioè tu 'o vide tutto 'intero accussì nun pienze",
+          "riferimento": "esatto, cioè tu 'o vide tutto sano accussì, nun pienze"
+        },
+        {
+          "contesto_vero": "chisto è nu c~ cunnutionale, è na cosa, no, quinni isso ll'ha pigliata ehm e s'è 'nguttata tutta accussì",
+          "contesto_falso": "chisto è nu c~, cunnimento, è na cosa, no, quinni isso ll'ha pigliata ehm e s'è 'nguttata tutta accussì",
+          "riferimento": "\"chisto è nu c~, cunnimento, è na cosa\", no, quinni isso ll'ha pigliata, ehm, e s' 'a è 'nguttata tutta accussì"
+        },
+        {
+          "contesto_vero": "diece secunne appriesso era tipo russo",
+          "contesto_falso": "diece secunne appriesso era tipo russo",
+          "riferimento": "diece secunne doppo era tipo russo"
+        },
+        {
+          "contesto_vero": "ma proprio lurdo, nun riusciva a respirà",
+          "contesto_falso": "ma proprio lurdo, nun riusciva a respirà",
+          "riferimento": "ma proprio sudava, nun riesceva a respirà"
+        },
+        {
+          "contesto_vero": "ma scusa, ma che ore è?",
+          "contesto_falso": "ma scusa, ma che dorme?",
+          "riferimento": "ma scusa, ma che ore songo"
+        },
+        {
+          "contesto_vero": "'e vinte et cinch'anni",
+          "contesto_falso": "'e vinte et cinchiciento",
+          "riferimento": "'e vintuno e cinquantaquatto"
+        },
+        {
+          "contesto_vero": "embè, tra nu poco ce ne jammo",
+          "contesto_falso": "embè, tra nu poco ce ne jammo",
+          "riferimento": "embè, tra nu poco ce ne jammo"
+        },
+        {
+          "contesto_vero": "ll'ê bevé vino pecché i' nun ce riesco a bevere ccà ce n'è ancora tipo mez'a buttiglia",
+          "contesto_falso": "t'ê bevé vino pecché i' nun ce riesco a vìbbere ccà ce n'è ancora tipo mez'a buttiglia",
+          "riferimento": "t'ê bevere 'o vino pecché i' nun 'o riesco a bevere, ccà ce ne sta ancora tipo meza buttiglia"
+        },
+        {
+          "contesto_vero": "i' moro sotto, me so' addormentanno",
+          "contesto_falso": "i' me sto addormentanno",
+          "riferimento": "i' me sto addurmenno"
+        },
+        {
+          "contesto_vero": "comme te se stù addormentanno",
+          "contesto_falso": "comme te sta 'ncopp'addormentanno",
+          "riferimento": "comme te staje addurmenno"
+        }
+      ]
+    }
+  }
+}

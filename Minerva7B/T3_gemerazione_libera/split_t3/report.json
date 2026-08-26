@@ -1,0 +1,23 @@
+{
+  "train": {
+    "n": 742,
+    "scartati_riscontri": 6,
+    "scartati_sintetici": 0,
+    "contesti_corti": 4,
+    "turni_contesto_medi": 5.47
+  },
+  "dev": {
+    "n": 165,
+    "scartati_riscontri": 0,
+    "scartati_sintetici": 22,
+    "contesti_corti": 1,
+    "turni_contesto_medi": 5.75
+  },
+  "test": {
+    "n": 168,
+    "scartati_riscontri": 0,
+    "scartati_sintetici": 24,
+    "contesti_corti": 3,
+    "turni_contesto_medi": 5.54
+  }
+}
