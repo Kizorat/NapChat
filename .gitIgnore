@@ -58,3 +58,10 @@ metrics_history.csv
 
 __pycache__/
 *.pyc
+
+# --- Minerva7B / T2 completamento dialogo ---
+Minerva7B/T2_completamento_dialogo/.virtual_documents/
+Minerva7B/T2_completamento_dialogo/backup_t2/
+Minerva7B/T2_completamento_dialogo/runs/
+Minerva7B/T2_completamento_dialogo/predizioni_t2_test.csv
+Minerva7B/T2_completamento_dialogo/risultati_t2.csv

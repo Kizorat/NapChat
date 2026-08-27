@@ -1,0 +1,60 @@
+{
+  "tag": "minerva__T2__few-shot-4__dev",
+  "modello": "sapienzanlp/Minerva-7B-instruct-v1.0",
+  "sistema": "few-shot-4",
+  "split": "dev",
+  "stile": "prefill",
+  "decodifica": "beam",
+  "n": 103,
+  "teacher_forcing": {
+    "ppl_target": 99.575,
+    "acc_token": 0.281,
+    "ctx_acc": 0.6408,
+    "delta_logp_per_token": 0.3509,
+    "n_item_ctx": 103
+  },
+  "scelta": {
+    "accuratezza@N": 0.2233,
+    "mrr": 0.4276,
+    "N": 10,
+    "fondo_scala": 0.1,
+    "n_item": 103
+  },
+  "generazione": {
+    "chrf++": 10.82,
+    "chrf++_beta1": 10.77,
+    "tasso_ciclo": 0.0,
+    "densita_dial_gen": 0.3769,
+    "densita_dial_rif": 0.2557,
+    "tasso_copia": 0.0291,
+    "rapporto_lunghezza": 1.008,
+    "vuote": 1
+  },
+  "generazione_lunghezza_controllata": {
+    "chrf++": 9.77,
+    "chrf++_beta1": 10.74,
+    "tasso_ciclo": 0.0,
+    "densita_dial_gen": 0.3867,
+    "densita_dial_rif": 0.2557,
+    "tasso_copia": 0.0291,
+    "rapporto_lunghezza": 0.716,
+    "vuote": 1
+  },
+  "generazione_solo_golden": {
+    "chrf++": 10.39,
+    "chrf++_beta1": 10.46,
+    "tasso_ciclo": 0.0,
+    "densita_dial_gen": 0.3846,
+    "densita_dial_rif": 0.2627,
+    "tasso_copia": 0.033,
+    "rapporto_lunghezza": 0.98,
+    "vuote": 1
+  },
+  "baseline": {
+    "pavimento_target_mescolati": 8.99,
+    "ripeti_il_prefisso": 13.8,
+    "ultimo_turno_di_contesto": 7.41,
+    "densita_dial_riferimenti": 0.2557,
+    "densita_dial_prefissi": 0.2761
+  }
+}
