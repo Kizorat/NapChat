@@ -28,6 +28,17 @@ Minerva7B/**/predizioni_test.csv
 
 Minerva7B/T1_Traduzione/cpt/
 
+# --- Gemma4B / T3 (stessa configurazione di Minerva7B) ---
+Gemma4B/t3_generazione_libera/.virtual_documents/
+
+Gemma4B/**/adapter_final/
+Gemma4B/**/checkpoint-*/
+
+Gemma4B/**/predizioni_test.csv
+
+# run dello smoke test (gemma-3-1b-it__SMOKE): non fa parte dei risultati
+Gemma4B/**/runs/*__SMOKE/
+
 train.csv
 dev.csv
 test.csv

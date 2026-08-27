@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-Grafici delle metriche di T1 (traduzione con contesto) e della loss di T3.
+Grafici delle metriche di T1 (traduzione con contesto) e della loss di T3,
+per ognuno dei modelli fine-tunati (Minerva7B, Gemma4B).
 
 Per T1 (da runs/, cpt/, metriche_finali.json, eval/):
   - la curva della loss (train + eval) dei tre stadi di addestramento
@@ -12,9 +13,15 @@ Per T1 (da runs/, cpt/, metriche_finali.json, eval/):
 Per T3 (dagli output salvati nel notebook fine_tuning_T3.ipynb):
   - la curva della loss (train + eval)
 
+I task assenti per un modello vengono semplicemente saltati: Gemma4B ha solo T3.
+Senza --out ogni modello scrive nella propria cartella dei grafici
+(Minerva7B/grafici_minerva7B/, Gemma4B/grafici_gemma4B/), in una sottocartella
+per task.
+
 Uso:
-    python scripts/grafici_metriche.py                  # tutto, in figure/
-    python scripts/grafici_metriche.py --task T1
+    python scripts/grafici_metriche.py                     # tutto, tutti i modelli
+    python scripts/grafici_metriche.py --modello gemma     # solo Gemma4B
+    python scripts/grafici_metriche.py --task T3
     python scripts/grafici_metriche.py --out mia_cartella --dpi 300
 """
 
@@ -30,11 +37,39 @@ import matplotlib.pyplot as plt
 
 RADICE = Path(__file__).resolve().parent.parent
 
-DIR_T1 = RADICE / "T1_Traduzione"
-# la cartella T3 nel repo ha un refuso nel nome: accettiamo entrambe le grafie
-DIR_T3 = next((RADICE / n for n in ("T3_generazione_libera", "T3_gemerazione_libera")
-               if (RADICE / n).is_dir()), RADICE / "T3_generazione_libera")
-NOTEBOOK_T3 = DIR_T3 / "notebook" / "fine_tuning_T3.ipynb"
+
+def prima_esistente(base, *nomi):
+    """Prima sottocartella esistente fra quelle indicate.
+
+    Serve perche' i nomi delle cartelle non sono uniformi fra i modelli:
+    Minerva usa T3_gemerazione_libera (con un refuso), Gemma t3_generazione_libera."""
+    for nome in nomi:
+        if (base / nome).is_dir():
+            return base / nome
+    return base / nomi[0]
+
+
+class Modello:
+    """Un modello fine-tunato: dove stanno i suoi task e dove finiscono i grafici."""
+
+    NOMI_T1 = ("T1_Traduzione", "t1_traduzione")
+    NOMI_T3 = ("T3_generazione_libera", "t3_generazione_libera",
+               "T3_gemerazione_libera")
+
+    def __init__(self, chiave, etichetta, cartella, cartella_grafici):
+        self.chiave = chiave
+        self.etichetta = etichetta
+        self.radice = RADICE / cartella
+        self.grafici = self.radice / cartella_grafici
+        self.dir_t1 = prima_esistente(self.radice, *self.NOMI_T1)
+        self.dir_t3 = prima_esistente(self.radice, *self.NOMI_T3)
+        self.notebook_t3 = self.dir_t3 / "notebook" / "fine_tuning_T3.ipynb"
+
+
+MODELLI = {
+    "minerva": Modello("minerva", "Minerva7B", "Minerva7B", "grafici_minerva7B"),
+    "gemma": Modello("gemma", "Gemma4B", "Gemma4B", "grafici_gemma4B"),
+}
 
 # palette coerente fra tutti i grafici
 C_TRAIN, C_EVAL = "#1f77b4", "#d62728"
@@ -97,22 +132,31 @@ def griglia(ax):
 
 # ------------------------------------------------------------------- T1 -----
 
-def curve_loss_t1(cartella, dpi):
+def run_t1(modello, suffisso):
+    """Cartella del run che termina con il suffisso dato (es. __T1), se esiste.
+
+    Il nome completo dipende dal repo_id del modello, quindi non lo fissiamo."""
+    candidati = sorted(d for d in (modello.dir_t1 / "runs").glob("*" + suffisso)
+                       if d.is_dir())
+    return candidati[-1] if candidati else None
+
+
+def curve_loss_t1(modello, cartella, dpi):
     """Loss di training e di validazione dei tre stadi: CPT -> A2 lessico -> T1."""
     stadi = []
 
-    cpt = DIR_T1 / "cpt" / "minerva-7b-instruct-v1.0"
-    stato = sorted(cpt.glob("checkpoint-*/trainer_state.json"))
+    stato = sorted((modello.dir_t1 / "cpt").glob("*/checkpoint-*/trainer_state.json"))
     if stato:
         log = leggi_json(stato[-1])["log_history"]
         tr = [(d["epoch"], d["loss"]) for d in log if "loss" in d]
         ev = [(d["epoch"], d["eval_loss"]) for d in log if "eval_loss" in d]
         stadi.append(("Stadio CPT (pretraining dialettale)", tr, ev))
 
-    for nome_run, titolo in (("minerva-7b-instruct-v1.0__A2", "Stadio A2 (lessico)"),
-                             ("minerva-7b-instruct-v1.0__T1", "Stadio T1 (traduzione)")):
-        csv_run = DIR_T1 / "runs" / nome_run / "metrics_history.csv"
-        if not csv_run.exists():
+    for suffisso, titolo in (("__A2", "Stadio A2 (lessico)"),
+                             ("__T1", "Stadio T1 (traduzione)")):
+        run = run_t1(modello, suffisso)
+        csv_run = run / "metrics_history.csv" if run else None
+        if csv_run is None or not csv_run.exists():
             continue
         righe = leggi_storico(csv_run)
         tr = list(zip(*serie(righe, "epoch", "loss")))
@@ -144,15 +188,17 @@ def curve_loss_t1(cartella, dpi):
         ax.set_ylabel("loss")
         ax.legend(fontsize=9)
         griglia(ax)
-    fig.suptitle("T1 - Loss function per stadio di addestramento", fontsize=13)
+    fig.suptitle("{} - T1 - Loss function per stadio di addestramento"
+                 .format(modello.etichetta), fontsize=13)
     fig.tight_layout()
     salva(fig, cartella, "T1_loss.png", dpi)
 
 
-def curve_prf1_t1(cartella, dpi):
+def curve_prf1_t1(modello, cartella, dpi):
     """Precision / Recall / F1 lessicali (e chrF++) durante l'addestramento T1."""
-    csv_run = DIR_T1 / "runs" / "minerva-7b-instruct-v1.0__T1" / "metrics_history.csv"
-    if not csv_run.exists():
+    run = run_t1(modello, "__T1")
+    csv_run = run / "metrics_history.csv" if run else None
+    if csv_run is None or not csv_run.exists():
         print("  ! metrics_history.csv di T1 assente")
         return
     righe = leggi_storico(csv_run)
@@ -184,15 +230,16 @@ def curve_prf1_t1(cartella, dpi):
     ax2.legend(fontsize=9)
     griglia(ax2)
 
-    fig.suptitle("T1 - Andamento delle metriche in validazione "
-                 "(teacher forcing, proxy di monitoraggio)", fontsize=12)
+    fig.suptitle("{} - T1 - Andamento delle metriche in validazione "
+                 "(teacher forcing, proxy di monitoraggio)"
+                 .format(modello.etichetta), fontsize=12)
     fig.tight_layout()
     salva(fig, cartella, "T1_prf1_curve.png", dpi)
 
 
-def barre_prf1_t1(cartella, dpi):
+def barre_prf1_t1(modello, cartella, dpi):
     """P/R/F1 finali su test: BERTScore (sistema vs pavimenti) + lessicali."""
-    percorso = DIR_T1 / "metriche_finali.json"
+    percorso = modello.dir_t1 / "metriche_finali.json"
     if not percorso.exists():
         print("  ! metriche_finali.json assente")
         return
@@ -245,15 +292,17 @@ def barre_prf1_t1(cartella, dpi):
     ax2.tick_params(axis="x", labelrotation=12)
     griglia(ax2)
 
-    fig.suptitle("T1 - Precision, Recall e F1-Score finali", fontsize=13)
+    fig.suptitle("{} - T1 - Precision, Recall e F1-Score finali"
+                 .format(modello.etichetta), fontsize=13)
     fig.tight_layout()
     salva(fig, cartella, "T1_prf1_finale.png", dpi)
 
 
-def barre_chrf_t1(cartella, dpi):
+def barre_chrf_t1(modello, cartella, dpi):
     """chrF++ finale del sistema contro le baseline obbligatorie."""
-    finali = DIR_T1 / "metriche_finali.json"
-    valutazione = next(iter(sorted((DIR_T1 / "eval").glob("*.metrics.json"))), None)
+    finali = modello.dir_t1 / "metriche_finali.json"
+    valutazione = next(iter(sorted((modello.dir_t1 / "eval").glob("*.metrics.json"))),
+                       None)
     if not finali.exists() and valutazione is None:
         print("  ! nessuna metrica finale di chrF per T1")
         return
@@ -298,7 +347,8 @@ def barre_chrf_t1(cartella, dpi):
         etichette_barre(ax, barre, "{:.2f}")
     ax.set_ylabel("chrF++ (0-100)")
     ax.set_ylim(0, max(valori) * 1.25)
-    ax.set_title("T1 - chrF++ su test contro le baseline", fontsize=12)
+    ax.set_title("{} - T1 - chrF++ su test contro le baseline"
+                 .format(modello.etichetta), fontsize=12)
     griglia(ax)
     fig.tight_layout()
     salva(fig, cartella, "T1_chrf_finale.png", dpi)
@@ -356,12 +406,28 @@ def log_training_t3(percorso):
     return migliore
 
 
-def curve_loss_t3(cartella, dpi):
+def sottotitolo_t3(valutazione, ctx):
+    """Commento sotto il titolo, ricavato dai dati.
+
+    Minerva e Gemma divergono in punti diversi e scelgono checkpoint diversi:
+    la riga non puo' essere fissata a mano."""
+    pezzi = []
+    if valutazione:
+        migliore = min(valutazione, key=lambda c: c[1])
+        pezzi.append("minimo della eval loss all'epoca {:.2f}".format(migliore[0]))
+    if ctx and len(ctx) == len(valutazione):
+        i = max(range(len(ctx)), key=lambda k: ctx[k])
+        pezzi.append("checkpoint scelto sul massimo di ctx_delta "
+                     "(epoca {:.2f}), non sulla loss".format(valutazione[i][0]))
+    return "; ".join(pezzi)
+
+
+def curve_loss_t3(modello, cartella, dpi):
     """Loss di training e di validazione di T3, lette dal notebook."""
-    if not NOTEBOOK_T3.exists():
-        print("  ! notebook non trovato: " + str(NOTEBOOK_T3))
+    if not modello.notebook_t3.exists():
+        print("  ! notebook non trovato: " + str(modello.notebook_t3))
         return
-    train, valutazione, ctx = log_training_t3(NOTEBOOK_T3)
+    train, valutazione, ctx = log_training_t3(modello.notebook_t3)
     if not train and not valutazione:
         print("  ! nessun record di loss negli output del notebook "
               "(la cella di training e' stata ripulita?)")
@@ -388,9 +454,10 @@ def curve_loss_t3(cartella, dpi):
 
     ax.set_xlabel("epoca")
     ax.set_ylabel("loss")
-    ax.set_title("T3 - Loss function\n"
-                 "train e eval divergono dopo l'epoca 2: il checkpoint e' scelto "
-                 "sul massimo di ctx_delta, non sulla loss", fontsize=10)
+    ax.set_title("{} - T3 - Loss function\n{}"
+                 .format(modello.etichetta,
+                         sottotitolo_t3(valutazione, ctx)),
+                 fontsize=10)
     ax.legend(fontsize=9)
     griglia(ax)
     fig.tight_layout()
@@ -403,22 +470,44 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--task", choices=["T1", "T3", "tutti"], default="tutti")
-    ap.add_argument("--out", default=str(RADICE / "figure"),
-                    help="cartella di destinazione dei grafici (default: figure/)")
+    ap.add_argument("--modello", choices=list(MODELLI) + ["tutti"], default="tutti",
+                    help="modello da graficare (default: tutti)")
+    ap.add_argument("--out", default=None,
+                    help="cartella di destinazione: i grafici finiscono in "
+                         "<out>/<modello>/<task>/. Senza questa opzione ogni "
+                         "modello scrive nella propria cartella dei grafici")
     ap.add_argument("--dpi", type=int, default=160)
     args = ap.parse_args()
 
-    base = Path(args.out)
-    if args.task in ("T1", "tutti"):
-        print("T1  <- " + DIR_T1.name)
-        cartella = base / "T1"
-        curve_loss_t1(cartella, args.dpi)
-        curve_prf1_t1(cartella, args.dpi)
-        barre_prf1_t1(cartella, args.dpi)
-        barre_chrf_t1(cartella, args.dpi)
-    if args.task in ("T3", "tutti"):
-        print("T3  <- " + NOTEBOOK_T3.name)
-        curve_loss_t3(base / "T3", args.dpi)
+    scelti = (list(MODELLI.values()) if args.modello == "tutti"
+              else [MODELLI[args.modello]])
+
+    for modello in scelti:
+        if not modello.radice.is_dir():
+            print("== {} ==  cartella assente ({}), salto"
+                  .format(modello.etichetta, modello.radice))
+            continue
+        base = (modello.grafici if args.out is None
+                else Path(args.out) / modello.etichetta)
+        print("== " + modello.etichetta + " ==")
+
+        if args.task in ("T1", "tutti"):
+            if modello.dir_t1.is_dir():
+                print("T1  <- " + str(modello.dir_t1.relative_to(RADICE)))
+                cartella = base / "T1"
+                curve_loss_t1(modello, cartella, args.dpi)
+                curve_prf1_t1(modello, cartella, args.dpi)
+                barre_prf1_t1(modello, cartella, args.dpi)
+                barre_chrf_t1(modello, cartella, args.dpi)
+            else:
+                print("T1  - non presente per " + modello.etichetta + ", salto")
+
+        if args.task in ("T3", "tutti"):
+            if modello.dir_t3.is_dir():
+                print("T3  <- " + str(modello.dir_t3.relative_to(RADICE)))
+                curve_loss_t3(modello, base / "T3", args.dpi)
+            else:
+                print("T3  - non presente per " + modello.etichetta + ", salto")
 
 
 if __name__ == "__main__":

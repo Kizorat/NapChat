@@ -1,0 +1,88 @@
+{
+  "repo_id": "google/gemma-3-4b-it",
+  "run": "gemma-3-4b-it__T3",
+  "minuti": 117.0,
+  "split_dir": "/content/split_t3",
+  "train": 742,
+  "dev": 165,
+  "iperparametri": {
+    "model": "gemma",
+    "split_dir": "/content/split_t3",
+    "out_dir": "/content/runs",
+    "tag": "T3",
+    "epochs": 4.0,
+    "lr": 0.0001,
+    "batch_size": 4,
+    "grad_accum": 4,
+    "eval_batch_size": 4,
+    "max_seq_len": 384,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "lambda_ctx": 0.5,
+    "margine": 0.15,
+    "metric": "ctx_delta",
+    "evals_per_epoch": 2,
+    "patience": 4,
+    "ctx_n": 64,
+    "gen_n": 24,
+    "gen_max_new": 32,
+    "seed": 42,
+    "init_adapter": "",
+    "resume_dir": "",
+    "max_train_samples": 0,
+    "eval_subset": 96,
+    "no_gradient_checkpointing": false,
+    "precision": "qlora4bit",
+    "dtype": "auto"
+  },
+  "fine_turno": {
+    "id": 106,
+    "eos_usati": [
+      1,
+      106
+    ]
+  },
+  "best": {
+    "step": "/content/runs/gemma-3-4b-it__T3/checkpoint-23",
+    "metrica": "ctx_delta",
+    "valore": 0.4229
+  },
+  "storia": [
+    {
+      "eval_loss": 3.8224735260009766,
+      "eval_runtime": 50.8338,
+      "eval_samples_per_second": 1.889,
+      "eval_steps_per_second": 0.472,
+      "step": 23
+    },
+    {
+      "eval_loss": 3.4633052349090576,
+      "eval_runtime": 50.6313,
+      "eval_samples_per_second": 1.896,
+      "eval_steps_per_second": 0.474,
+      "step": 46
+    },
+    {
+      "eval_loss": 3.31010365486145,
+      "eval_runtime": 50.9615,
+      "eval_samples_per_second": 1.884,
+      "eval_steps_per_second": 0.471,
+      "step": 69
+    },
+    {
+      "eval_loss": 3.2294225692749023,
+      "eval_runtime": 50.7181,
+      "eval_samples_per_second": 1.893,
+      "eval_steps_per_second": 0.473,
+      "step": 92
+    },
+    {
+      "eval_loss": 3.3146743774414062,
+      "eval_runtime": 51.1401,
+      "eval_samples_per_second": 1.877,
+      "eval_steps_per_second": 0.469,
+      "step": 115
+    }
+  ]
+}
