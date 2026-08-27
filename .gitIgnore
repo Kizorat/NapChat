@@ -39,6 +39,17 @@ Gemma4B/**/predizioni_test.csv
 # run dello smoke test (gemma-3-1b-it__SMOKE): non fa parte dei risultati
 Gemma4B/**/runs/*__SMOKE/
 
+# --- Llama7B / T3 (stessa configurazione di Minerva7B) ---
+Llama7B/t3_generazione_libera/.virtual_documents/
+
+Llama7B/**/adapter_final/
+Llama7B/**/checkpoint-*/
+
+Llama7B/**/predizioni_test.csv
+
+# run dello smoke test (TinyLlama-1.1B-Chat-v1.0__SMOKE): non fa parte dei risultati
+Llama7B/**/runs/*__SMOKE/
+
 train.csv
 dev.csv
 test.csv

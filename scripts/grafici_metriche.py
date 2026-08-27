@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Grafici delle metriche di T1 (traduzione con contesto) e della loss di T3,
-per ognuno dei modelli fine-tunati (Minerva7B, Gemma4B).
+per ognuno dei modelli fine-tunati (Minerva7B, Gemma4B, Llama7B).
 
 Per T1 (da runs/, cpt/, metriche_finali.json, eval/):
   - la curva della loss (train + eval) dei tre stadi di addestramento
@@ -13,14 +13,14 @@ Per T1 (da runs/, cpt/, metriche_finali.json, eval/):
 Per T3 (dagli output salvati nel notebook fine_tuning_T3.ipynb):
   - la curva della loss (train + eval)
 
-I task assenti per un modello vengono semplicemente saltati: Gemma4B ha solo T3.
-Senza --out ogni modello scrive nella propria cartella dei grafici
-(Minerva7B/grafici_minerva7B/, Gemma4B/grafici_gemma4B/), in una sottocartella
-per task.
+I task assenti per un modello vengono semplicemente saltati: solo Minerva7B ha
+anche T1. Senza --out ogni modello scrive nella propria cartella dei grafici
+(Minerva7B/grafici_minerva7B/, Gemma4B/grafici_gemma4B/, Llama7B/grafici_Llama7B/),
+in una sottocartella per task.
 
 Uso:
     python scripts/grafici_metriche.py                     # tutto, tutti i modelli
-    python scripts/grafici_metriche.py --modello gemma     # solo Gemma4B
+    python scripts/grafici_metriche.py --modello llama     # solo Llama7B
     python scripts/grafici_metriche.py --task T3
     python scripts/grafici_metriche.py --out mia_cartella --dpi 300
 """
@@ -69,6 +69,7 @@ class Modello:
 MODELLI = {
     "minerva": Modello("minerva", "Minerva7B", "Minerva7B", "grafici_minerva7B"),
     "gemma": Modello("gemma", "Gemma4B", "Gemma4B", "grafici_gemma4B"),
+    "llama": Modello("llama", "Llama7B", "Llama7B", "grafici_Llama7B"),
 }
 
 # palette coerente fra tutti i grafici

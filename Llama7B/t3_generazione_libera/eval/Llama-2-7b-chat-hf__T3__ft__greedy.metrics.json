@@ -1,0 +1,14 @@
+{
+  "n": 168,
+  "chrf": 11.501,
+  "lunghezza_media": 9.8,
+  "lunghezza_umana": 7.27,
+  "vuote": 0,
+  "dialettalita": 0.034,
+  "dialettalita_umana": 0.084,
+  "uscite_distinte": 166,
+  "rapporto_lunghezza": 1.348,
+  "ablazione_chrf_vero_vs_falso": 18.314,
+  "ablazione_identiche": 0.0,
+  "ctx_delta": 0.0256
+}
