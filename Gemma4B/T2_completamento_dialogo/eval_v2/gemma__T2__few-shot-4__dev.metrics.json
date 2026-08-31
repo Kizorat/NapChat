@@ -1,0 +1,60 @@
+{
+  "tag": "gemma__T2__few-shot-4__dev",
+  "modello": "google/gemma-3-4b-it",
+  "sistema": "few-shot-4",
+  "split": "dev",
+  "stile": "prefill",
+  "decodifica": "contrastiva",
+  "n": 103,
+  "teacher_forcing": {
+    "ppl_target": 3095.22,
+    "acc_token": 0.2329,
+    "ctx_acc": 0.5922,
+    "delta_logp_per_token": 0.4221,
+    "n_item_ctx": 103
+  },
+  "scelta": {
+    "accuratezza@N": 0.2233,
+    "mrr": 0.4312,
+    "N": 10,
+    "fondo_scala": 0.1,
+    "n_item": 103
+  },
+  "generazione": {
+    "chrf++": 12.12,
+    "chrf++_beta1": 11.65,
+    "tasso_ciclo": 0.0,
+    "densita_dial_gen": 0.319,
+    "densita_dial_rif": 0.2557,
+    "tasso_copia": 0.0,
+    "rapporto_lunghezza": 1.239,
+    "vuote": 2
+  },
+  "generazione_lunghezza_controllata": {
+    "chrf++": 10.38,
+    "chrf++_beta1": 11.22,
+    "tasso_ciclo": 0.0,
+    "densita_dial_gen": 0.3492,
+    "densita_dial_rif": 0.2557,
+    "tasso_copia": 0.0097,
+    "rapporto_lunghezza": 0.803,
+    "vuote": 2
+  },
+  "generazione_solo_golden": {
+    "chrf++": 11.52,
+    "chrf++_beta1": 11.22,
+    "tasso_ciclo": 0.0,
+    "densita_dial_gen": 0.3282,
+    "densita_dial_rif": 0.2627,
+    "tasso_copia": 0.0,
+    "rapporto_lunghezza": 1.191,
+    "vuote": 2
+  },
+  "baseline": {
+    "pavimento_target_mescolati": 8.99,
+    "ripeti_il_prefisso": 13.8,
+    "ultimo_turno_di_contesto": 7.41,
+    "densita_dial_riferimenti": 0.2557,
+    "densita_dial_prefissi": 0.2761
+  }
+}

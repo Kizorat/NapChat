@@ -1,0 +1,60 @@
+{
+  "tag": "gemma__T2__finetuned__test",
+  "modello": "google/gemma-3-4b-it",
+  "sistema": "fine-tuned",
+  "split": "test",
+  "stile": "prefill",
+  "decodifica": "contrastiva",
+  "n": 106,
+  "teacher_forcing": {
+    "ppl_target": 28.592,
+    "acc_token": 0.3859,
+    "ctx_acc": 0.6887,
+    "delta_logp_per_token": 0.2034,
+    "n_item_ctx": 106
+  },
+  "scelta": {
+    "accuratezza@N": 0.3962,
+    "mrr": 0.547,
+    "N": 10,
+    "fondo_scala": 0.1,
+    "n_item": 106
+  },
+  "generazione": {
+    "chrf++": 8.63,
+    "chrf++_beta1": 9.59,
+    "tasso_ciclo": 0.0,
+    "densita_dial_gen": 0.373,
+    "densita_dial_rif": 0.2798,
+    "tasso_copia": 0.0,
+    "rapporto_lunghezza": 0.699,
+    "vuote": 0
+  },
+  "generazione_lunghezza_controllata": {
+    "chrf++": 8.28,
+    "chrf++_beta1": 9.62,
+    "tasso_ciclo": 0.0,
+    "densita_dial_gen": 0.3774,
+    "densita_dial_rif": 0.2798,
+    "tasso_copia": 0.0094,
+    "rapporto_lunghezza": 0.586,
+    "vuote": 0
+  },
+  "generazione_solo_golden": {
+    "chrf++": 8.81,
+    "chrf++_beta1": 9.79,
+    "tasso_ciclo": 0.0,
+    "densita_dial_gen": 0.3732,
+    "densita_dial_rif": 0.2767,
+    "tasso_copia": 0.0,
+    "rapporto_lunghezza": 0.694,
+    "vuote": 0
+  },
+  "baseline": {
+    "pavimento_target_mescolati": 11.38,
+    "ripeti_il_prefisso": 13.61,
+    "ultimo_turno_di_contesto": 10.0,
+    "densita_dial_riferimenti": 0.2798,
+    "densita_dial_prefissi": 0.2899
+  }
+}

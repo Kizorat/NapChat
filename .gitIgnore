@@ -65,3 +65,12 @@ Minerva7B/T2_completamento_dialogo/backup_t2/
 Minerva7B/T2_completamento_dialogo/runs/
 Minerva7B/T2_completamento_dialogo/predizioni_t2_test.csv
 Minerva7B/T2_completamento_dialogo/risultati_t2.csv
+
+# --- Gemma4B / T2 completamento dialogo (stessa configurazione di Minerva7B) ---
+Gemma4B/T2_completamento_dialogo/.virtual_documents/
+Gemma4B/T2_completamento_dialogo/backup_t2/
+Gemma4B/T2_completamento_dialogo/runs/
+Gemma4B/T2_completamento_dialogo/predizioni_t2_test.csv
+Gemma4B/T2_completamento_dialogo/risultati_t2.csv
+# artefatto di export di Kaggle, non fa parte dei risultati
+Gemma4B/T2_completamento_dialogo/__results___files/

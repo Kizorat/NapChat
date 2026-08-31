@@ -11,7 +11,8 @@ Per T1 (da runs/, cpt/, metriche_finali.json, eval/):
   - le barre di Precision, Recall, F1 finali su test
   - le barre di chrF++ finale contro le baseline
 
-Per T2 (da runs/<run>/summary.json, da eval_v2/ e dal notebook):
+Per T2 (da runs/<run>/summary.json, da eval_v2/ e dal notebook; Minerva tiene la
+loss negli output del notebook, Gemma nel log_history del summary):
   - la curva della loss (train + eval)
   - l'andamento della perplessita' sul target (ppl_target) in addestramento
   - l'andamento della ctx_accuracy (quanto il modello usa davvero il contesto)
@@ -20,10 +21,10 @@ Per T2 (da runs/<run>/summary.json, da eval_v2/ e dal notebook):
 Per T3 (dagli output salvati nel notebook fine_tuning_T3.ipynb):
   - la curva della loss (train + eval)
 
-I task assenti per un modello vengono semplicemente saltati: solo Minerva7B ha
-anche T1 e T2. Senza --out ogni modello scrive nella propria cartella dei grafici
-(Minerva7B/grafici_minerva7B/, Gemma4B/grafici_gemma4B/, Llama7B/grafici_Llama7B/),
-in una sottocartella per task.
+I task assenti per un modello vengono semplicemente saltati: T1 esiste solo per
+Minerva7B, T2 per Minerva7B e Gemma4B. Senza --out ogni modello scrive nella
+propria cartella dei grafici (Minerva7B/grafici_minerva7B/,
+Gemma4B/grafici_Gemma4B/, Llama7B/grafici_Llama7B/), in una sottocartella per task.
 
 Uso:
     python scripts/grafici_metriche.py                     # tutto, tutti i modelli
@@ -88,7 +89,7 @@ class Modello:
 
 MODELLI = {
     "minerva": Modello("minerva", "Minerva7B", "Minerva7B", "grafici_minerva7B"),
-    "gemma": Modello("gemma", "Gemma4B", "Gemma4B", "grafici_gemma4B"),
+    "gemma": Modello("gemma", "Gemma4B", "Gemma4B", "grafici_Gemma4B"),
     "llama": Modello("llama", "Llama7B", "Llama7B", "grafici_Llama7B"),
 }
 
@@ -444,15 +445,17 @@ def barre_chrf_t1(modello, cartella, dpi):
 
 # ------------------------------------------------------------------- T2 -----
 #
-# T2 (completamento del turno in napoletano) esiste solo per Minerva. Le fonti:
+# T2 (completamento del turno in napoletano). Le fonti:
 #   * runs/<run>/summary.json -> storia_ctx (ppl_target, acc_token e ctx_acc a
-#     ogni valutazione intermedia), iperparametri e checkpoint scelto
+#     ogni valutazione intermedia), log_history (la loss), iperparametri e
+#     checkpoint scelto
 #   * eval_v2/*.metrics.json  -> le metriche finali dei sistemi a confronto
 #     (zero-shot, few-shot-4, fine-tuned) su dev e su test
-#   * il notebook             -> la loss di training, che non e' su disco
+#   * il notebook             -> la loss di training, quando il run non salva
+#     log_history (e' il caso di Minerva)
 
-# ordine di preferenza fra le decodifiche: il fine-tuned su dev e' stato
-# valutato tre volte, e vanno confrontati sistemi decodificati allo stesso modo
+# ordine di preferenza fra le decodifiche, usato solo per sciogliere le parita':
+# quale sia davvero quella comune ai sistemi lo decide decodifica_comune()
 DECOD_PREFERITA = ("beam", "greedy", "contrastiva", "campionamento")
 SISTEMI_T2 = ("zero-shot", "few-shot-4", "fine-tuned")
 
@@ -494,16 +497,63 @@ def storia_ctx_t2(modello, sommario):
     return sorted(fuori, key=lambda v: v["step"])
 
 
+def loss_da_log_history(sommario):
+    """(train, eval) dal log_history del Trainer conservato in summary.json.
+
+    E' la sorgente per i run il cui notebook e' stato ripulito degli output
+    (Gemma). Come per storia_ctx, l'ultima valutazione ripete quella del
+    checkpoint migliore ricaricato a fine addestramento invece di misurare
+    l'ultimo step: degli step duplicati si tiene la prima occorrenza, l'unica
+    che dice davvero come stava andando la eval loss li'."""
+    train, valutazione, visti = [], [], set()
+    for r in sommario.get("log_history") or []:
+        if "epoch" not in r:
+            continue
+        if "eval_loss" in r:
+            if r.get("step") in visti:
+                continue
+            visti.add(r.get("step"))
+            valutazione.append((r["epoch"], r["eval_loss"]))
+        elif "loss" in r:              # il record finale ha 'train_loss', non 'loss'
+            train.append((r["epoch"], r["loss"]))
+    return sorted(train), sorted(valutazione)
+
+
 def step_scelto_t2(sommario):
     """Lo step del checkpoint promosso ad adapter finale, None se non risulta."""
     trovato = RE_CHECKPOINT.search(sommario.get("best_checkpoint") or "")
     return int(trovato.group(1)) if trovato else None
 
 
-def ordine_decod(m):
-    decodifica = m.get("decodifica")
-    return (DECOD_PREFERITA.index(decodifica) if decodifica in DECOD_PREFERITA
+def indice_decod(nome):
+    """Posizione nell'ordine di preferenza; le decodifiche ignote vanno in coda."""
+    return (DECOD_PREFERITA.index(nome) if nome in DECOD_PREFERITA
             else len(DECOD_PREFERITA))
+
+
+def ordine_decod(m, preferita=None):
+    """Quanto e' preferibile la valutazione m: piu' basso, meglio."""
+    nome = m.get("decodifica")
+    return -1 if preferita is not None and nome == preferita else indice_decod(nome)
+
+
+def decodifica_comune(valutazioni, split):
+    """La decodifica con cui e' stato valutato il maggior numero di sistemi.
+
+    Non e' la stessa per tutti i modelli: su dev Minerva ha zero-shot e
+    few-shot in beam, Gemma in contrastiva. Fissarne una a priori farebbe
+    confrontare il fine-tuned in beam con le baseline in contrastiva, cioe'
+    misurare la decodifica invece del sistema: la si ricava dai dati. A parita'
+    di copertura vince l'ordine di DECOD_PREFERITA."""
+    copertura = {}
+    for m in valutazioni:
+        if m.get("split") != split or not m.get("decodifica"):
+            continue
+        copertura.setdefault(m["decodifica"], set()).add(m.get("sistema"))
+    if not copertura:
+        return None
+    return min(copertura,
+               key=lambda d: (-len(copertura[d]), indice_decod(d)))
 
 
 def valutazioni_t2(modello):
@@ -516,17 +566,20 @@ def sistemi_su(valutazioni, split):
     """[(sistema, metriche)] su uno split, un sistema solo per decodifica.
 
     Del fine-tuned su dev esistono tre valutazioni (beam, greedy, contrastiva):
-    si tiene beam, la stessa usata per zero-shot e few-shot, altrimenti il
+    si tiene quella nella decodifica comune agli altri sistemi, altrimenti il
     confronto misura la decodifica invece del sistema. Le sezioni assenti dal
-    file scelto (la 'scelta' manca dal run beam) si ripescano dalle altre
-    valutazioni dello stesso sistema, che condividono modello, adapter e split:
-    teacher forcing e accuratezza di scelta non dipendono dalla decodifica."""
+    file scelto (la 'scelta' manca dai run in beam e greedy) si ripescano dalle
+    altre valutazioni dello stesso sistema, che condividono modello, adapter e
+    split: teacher forcing e accuratezza di scelta non dipendono dalla
+    decodifica."""
+    preferita = decodifica_comune(valutazioni, split)
     scelte = {}
     for m in valutazioni:
         if m.get("split") != split:
             continue
         attuale = scelte.get(m.get("sistema"))
-        if attuale is None or ordine_decod(m) < ordine_decod(attuale):
+        if attuale is None or ordine_decod(m, preferita) < ordine_decod(attuale,
+                                                                       preferita):
             scelte[m["sistema"]] = m
     for sistema, m in scelte.items():
         for altra in valutazioni:
@@ -580,6 +633,8 @@ def curve_loss_t2(modello, cartella, dpi):
     if modello.notebook_t2:
         train, valutazione = loss_da_testo(
             testo_cella_training(modello.notebook_t2, "train_t2.py"))
+    if not train and not valutazione:
+        train, valutazione = loss_da_log_history(sommario)
     parziale = False
     if not train and not valutazione:
         # ripiego: il trainer_state del checkpoint salvato. Si ferma alla
@@ -646,13 +701,25 @@ def curva_ppl_t2(modello, cartella, dpi):
         ax.axvline(scelto, color="#2ca02c", ls="--", lw=1.2,
                    label="checkpoint scelto (step {})".format(scelto))
 
-    # la ppl di partenza e' quella del modello non addestrato sullo stesso dev
+    # la ppl di partenza e' quella del modello non addestrato sullo stesso dev.
+    # Tenerla dentro l'asse costa poco su Minerva (99.6 contro una curva che
+    # arriva a 43.8) ma non su Gemma, dove lo zero-shot sta a 3095 e la curva
+    # 37-102 finirebbe appiattita sull'asse: sopra la soglia si rinuncia alla
+    # riga e il valore resta nella legenda, dichiarato fuori scala
+    QUOTA_MINIMA = .10       # frazione dell'asse che la curva deve occupare
     base = dict(sistemi_su(valutazioni_t2(modello), "dev")).get("zero-shot", {})
     partenza = base.get("teacher_forcing", {}).get("ppl_target")
     if partenza:
-        ax.axhline(partenza, color=C_BASE, ls=":", lw=1.4,
-                   label="zero-shot su dev ({:.1f})".format(partenza))
-        ax.set_ylim(top=max(ppl + [partenza]) * 1.08)
+        alto = max(ppl + [partenza]) * 1.08
+        if (max(ppl) - min(ppl)) / alto >= QUOTA_MINIMA:
+            ax.axhline(partenza, color=C_BASE, ls=":", lw=1.4,
+                       label="zero-shot su dev ({:.1f})".format(partenza))
+            ax.set_ylim(top=alto)
+        else:
+            # riga fantasma: sta fuori dai limiti, serve solo per la legenda
+            ax.plot([], [], color=C_BASE, ls=":", lw=1.4,
+                    label="zero-shot su dev ({:.1f}, fuori scala)".format(partenza))
+            ax.set_ylim(top=max(ppl) * 1.15)
 
     ax.set_xlabel("step di addestramento")
     ax.set_ylabel("perplessita' sul target (piu' bassa e' meglio)")
@@ -819,8 +886,13 @@ def confronto_sistemi_t2(modello, cartella, dpi, split="dev"):
     a4.legend(fontsize=7.5, loc="upper left", framealpha=.95)
     griglia(a4)
 
-    titolo = "{} - T2 - {} a confronto su {} (n={})".format(
-        modello.etichetta, " / ".join(s for s, _ in coppie), split, n)
+    # la decodifica cambia da modello a modello: dirla evita di confrontare a
+    # occhio grafici prodotti con impostazioni di generazione diverse
+    decodifiche = sorted(set(m.get("decodifica") for _, m in coppie
+                             if m.get("decodifica")))
+    titolo = "{} - T2 - {} a confronto su {} (n={}{})".format(
+        modello.etichetta, " / ".join(s for s, _ in coppie), split, n,
+        ", decodifica " + "/".join(decodifiche) if decodifiche else "")
     if (tf.get("few-shot-4") and tf.get("zero-shot")
             and tf["few-shot-4"] == tf["zero-shot"]):
         # non e' un errore dei dati: il teacher forcing non vede il prompt
