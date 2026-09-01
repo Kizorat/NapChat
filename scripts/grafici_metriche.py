@@ -11,8 +11,8 @@ Per T1 (da runs/, cpt/, metriche_finali.json, eval/):
   - le barre di Precision, Recall, F1 finali su test
   - le barre di chrF++ finale contro le baseline
 
-Per T2 (da runs/<run>/summary.json, da eval_v2/ e dal notebook; Minerva tiene la
-loss negli output del notebook, Gemma nel log_history del summary):
+Per T2 (da runs/<run>/summary.json, da eval_v2/ e dal notebook; Minerva e Llama
+tengono la loss negli output del notebook, Gemma nel log_history del summary):
   - la curva della loss (train + eval)
   - l'andamento della perplessita' sul target (ppl_target) in addestramento
   - l'andamento della ctx_accuracy (quanto il modello usa davvero il contesto)
@@ -22,7 +22,7 @@ Per T3 (dagli output salvati nel notebook fine_tuning_T3.ipynb):
   - la curva della loss (train + eval)
 
 I task assenti per un modello vengono semplicemente saltati: T1 esiste solo per
-Minerva7B, T2 per Minerva7B e Gemma4B. Senza --out ogni modello scrive nella
+Minerva7B, T2 e T3 per tutti e tre. Senza --out ogni modello scrive nella
 propria cartella dei grafici (Minerva7B/grafici_minerva7B/,
 Gemma4B/grafici_Gemma4B/, Llama7B/grafici_Llama7B/), in una sottocartella per task.
 
@@ -475,13 +475,27 @@ def sommario_t2(modello):
     return leggi_json(trovati[-1]) if trovati else {}
 
 
+def senza_ripetizione_finale(voci, misura):
+    """Toglie l'ultima voce se ripete le misure di una precedente.
+
+    A fine addestramento il checkpoint migliore viene ricaricato e rivalutato, e
+    quella valutazione finisce in coda alla storia. Non e' una misura nuova, e
+    lasciarla farebbe sembrare che la curva torni a migliorare proprio alla
+    fine. Lo step non basta a riconoscerla, perche' non e' scritto allo stesso
+    modo da tutti i run: Minerva e Gemma le danno lo step a cui era stata
+    misurata (quindi un duplicato), Llama l'ultimo step percorso (639 invece di
+    424, che sembrerebbe una valutazione in piu'). I valori, quelli, coincidono
+    sempre."""
+    if len(voci) > 1 and misura(voci[-1]) in [misura(v) for v in voci[:-1]]:
+        return voci[:-1]
+    return voci
+
+
 def storia_ctx_t2(modello, sommario):
     """Le valutazioni intermedie: [{step, ppl_target, acc_token, ctx_acc}, ...].
 
-    L'ultima voce di storia_ctx ripete la valutazione finale, che e' quella del
-    checkpoint migliore ricaricato e non un nuovo step: gli step gia' visti si
-    scartano. Senza summary.json si ripiega sulle righe "[ctx] step ..." che il
-    training stampa nel notebook."""
+    Senza summary.json si ripiega sulle righe "[ctx] step ..." che il training
+    stampa nel notebook."""
     voci = sommario.get("storia_ctx") or []
     if not voci and modello.notebook_t2:
         testo = testo_cella_training(modello.notebook_t2, "train_t2.py")
@@ -494,17 +508,21 @@ def storia_ctx_t2(modello, sommario):
             continue
         visti.add(v.get("step"))
         fuori.append(v)
-    return sorted(fuori, key=lambda v: v["step"])
+    fuori.sort(key=lambda v: v["step"])
+    return senza_ripetizione_finale(
+        fuori, lambda v: tuple(v.get(k) for k in
+                               ("ppl_target", "acc_token", "ctx_acc")))
 
 
 def loss_da_log_history(sommario):
     """(train, eval) dal log_history del Trainer conservato in summary.json.
 
     E' la sorgente per i run il cui notebook e' stato ripulito degli output
-    (Gemma). Come per storia_ctx, l'ultima valutazione ripete quella del
-    checkpoint migliore ricaricato a fine addestramento invece di misurare
-    l'ultimo step: degli step duplicati si tiene la prima occorrenza, l'unica
-    che dice davvero come stava andando la eval loss li'."""
+    (Gemma). Come per storia_ctx, in coda c'e' la rivalutazione del checkpoint
+    migliore ricaricato invece di una misura nuova: si scartano gli step gia'
+    visti e poi l'eventuale ripetizione finale. Il confronto sui valori e'
+    sicuro qui perche' log_history li conserva in doppia precisione: due
+    valutazioni distinte non coincidono per caso fino all'ultima cifra."""
     train, valutazione, visti = [], [], set()
     for r in sommario.get("log_history") or []:
         if "epoch" not in r:
@@ -516,7 +534,8 @@ def loss_da_log_history(sommario):
             valutazione.append((r["epoch"], r["eval_loss"]))
         elif "loss" in r:              # il record finale ha 'train_loss', non 'loss'
             train.append((r["epoch"], r["loss"]))
-    return sorted(train), sorted(valutazione)
+    return sorted(train), senza_ripetizione_finale(sorted(valutazione),
+                                                   lambda c: c[1])
 
 
 def step_scelto_t2(sommario):

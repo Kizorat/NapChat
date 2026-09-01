@@ -74,3 +74,12 @@ Gemma4B/T2_completamento_dialogo/predizioni_t2_test.csv
 Gemma4B/T2_completamento_dialogo/risultati_t2.csv
 # artefatto di export di Kaggle, non fa parte dei risultati
 Gemma4B/T2_completamento_dialogo/__results___files/
+
+# --- Llama7B / T2 completamento dialogo (stessa configurazione degli altri) ---
+Llama7B/T2_completamento_dialogo/.virtual_documents/
+Llama7B/T2_completamento_dialogo/backup_t2/
+Llama7B/T2_completamento_dialogo/runs/
+Llama7B/T2_completamento_dialogo/predizioni_t2_test.csv
+Llama7B/T2_completamento_dialogo/risultati_t2.csv
+# artefatto di export di Kaggle, non fa parte dei risultati
+Llama7B/T2_completamento_dialogo/__results___files/

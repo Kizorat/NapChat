@@ -1,0 +1,53 @@
+{
+  "tag": "llama__T2__finetuned-beam__dev",
+  "modello": "meta-llama/Llama-2-7b-chat-hf",
+  "sistema": "fine-tuned",
+  "split": "dev",
+  "stile": "prefill",
+  "decodifica": "beam",
+  "n": 103,
+  "teacher_forcing": {
+    "ppl_target": 22.368,
+    "acc_token": 0.4091,
+    "ctx_acc": 0.6311,
+    "delta_logp_per_token": 0.182,
+    "n_item_ctx": 103
+  },
+  "generazione": {
+    "chrf++": 9.07,
+    "chrf++_beta1": 10.34,
+    "tasso_ciclo": 0.0,
+    "densita_dial_gen": 0.3799,
+    "densita_dial_rif": 0.2557,
+    "tasso_copia": 0.0194,
+    "rapporto_lunghezza": 0.628,
+    "vuote": 0
+  },
+  "generazione_lunghezza_controllata": {
+    "chrf++": 8.2,
+    "chrf++_beta1": 9.74,
+    "tasso_ciclo": 0.0,
+    "densita_dial_gen": 0.3887,
+    "densita_dial_rif": 0.2557,
+    "tasso_copia": 0.0194,
+    "rapporto_lunghezza": 0.54,
+    "vuote": 0
+  },
+  "generazione_solo_golden": {
+    "chrf++": 8.3,
+    "chrf++_beta1": 9.54,
+    "tasso_ciclo": 0.0,
+    "densita_dial_gen": 0.3758,
+    "densita_dial_rif": 0.2627,
+    "tasso_copia": 0.022,
+    "rapporto_lunghezza": 0.607,
+    "vuote": 0
+  },
+  "baseline": {
+    "pavimento_target_mescolati": 8.99,
+    "ripeti_il_prefisso": 13.8,
+    "ultimo_turno_di_contesto": 7.41,
+    "densita_dial_riferimenti": 0.2557,
+    "densita_dial_prefissi": 0.2761
+  }
+}
