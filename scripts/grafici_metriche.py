@@ -5,7 +5,8 @@ Grafici delle metriche di T1 (traduzione con contesto), di T2 (completamento di
 turno) e della loss di T3, per ognuno dei modelli fine-tunati (Minerva7B,
 Gemma4B, Llama7B).
 
-Per T1 (da runs/, cpt/, metriche_finali.json, eval/):
+Per T1 (da runs/, cpt/, metriche_finali.json, eval/ e, quando quei file non sono
+stati scaricati dalla sessione Kaggle, dagli output rimasti nel notebook):
   - la curva della loss (train + eval) dei tre stadi di addestramento
   - le curve di Precision, Recall, F1 e chrF++ in validazione
   - le barre di Precision, Recall, F1 finali su test
@@ -21,8 +22,8 @@ tengono la loss negli output del notebook, Gemma nel log_history del summary):
 Per T3 (dagli output salvati nel notebook fine_tuning_T3.ipynb):
   - la curva della loss (train + eval)
 
-I task assenti per un modello vengono semplicemente saltati: T1 esiste solo per
-Minerva7B, T2 e T3 per tutti e tre. Senza --out ogni modello scrive nella
+I task assenti per un modello vengono semplicemente saltati: T1 esiste per
+Minerva7B e Llama7B, T2 e T3 per tutti e tre. Senza --out ogni modello scrive nella
 propria cartella dei grafici (Minerva7B/grafici_minerva7B/,
 Gemma4B/grafici_Gemma4B/, Llama7B/grafici_Llama7B/), in una sottocartella per task.
 
@@ -48,13 +49,19 @@ RADICE = Path(__file__).resolve().parent.parent
 
 
 def prima_esistente(base, *nomi):
-    """Prima sottocartella esistente fra quelle indicate.
+    """Prima sottocartella esistente fra quelle indicate, con il nome che ha su
+    disco.
 
-    Serve perche' i nomi delle cartelle non sono uniformi fra i modelli:
-    Minerva usa T3_gemerazione_libera (con un refuso), Gemma t3_generazione_libera."""
+    Serve perche' i nomi delle cartelle non sono uniformi fra i modelli: Minerva
+    usa T3_gemerazione_libera (con un refuso), Gemma t3_generazione_libera; e
+    nemmeno nelle maiuscole, T1_Traduzione su Minerva e T1_traduzione su Llama.
+    Il confronto ignora le maiuscole, ma la cartella restituita e' quella vera:
+    su Windows base/nome funzionerebbe comunque, altrove no."""
+    presenti = ({d.name.lower(): d for d in base.iterdir() if d.is_dir()}
+                if base.is_dir() else {})
     for nome in nomi:
-        if (base / nome).is_dir():
-            return base / nome
+        if nome.lower() in presenti:
+            return presenti[nome.lower()]
     return base / nomi[0]
 
 
@@ -83,6 +90,7 @@ class Modello:
         self.dir_t1 = prima_esistente(self.radice, *self.NOMI_T1)
         self.dir_t2 = prima_esistente(self.radice, *self.NOMI_T2)
         self.dir_t3 = prima_esistente(self.radice, *self.NOMI_T3)
+        self.notebook_t1 = primo_file(self.dir_t1 / "notebook", "*T1*.ipynb")
         self.notebook_t2 = primo_file(self.dir_t2 / "notebook", "*T2*.ipynb")
         self.notebook_t3 = self.dir_t3 / "notebook" / "fine_tuning_T3.ipynb"
 
@@ -171,6 +179,7 @@ def griglia(ax):
 RE_ANSI = re.compile(r"\x1b\[[0-9;]*[A-Za-z]")
 RE_RECORD = re.compile(r"\{[^{}]*'(?:eval_)?loss'[^{}]*\}")
 RE_COPPIA = re.compile(r"'(\w+)':\s*'?(-?[\d.]+(?:e[-+]?\d+)?)'?")
+RE_CHECKPOINT = re.compile(r"checkpoint-(\d+)")
 
 
 def testo_output(cella):
@@ -189,11 +198,8 @@ def testo_cella_training(percorso, script):
     con piu' record di loss: cosi' un rilancio parziale non sostituisce il run
     completo, e la cella che si limita a scrivere lo script su disco (stesso
     nome nel sorgente, nessun output) non viene mai scelta."""
-    nb = leggi_json(percorso)
     migliore, punteggio = "", 0
-    for cella in nb.get("cells", []):
-        if cella.get("cell_type") != "code":
-            continue
+    for cella in celle_codice(percorso):
         sorgente = "".join(cella.get("source", []))
         if script not in sorgente or "SMOKE" in sorgente:
             continue
@@ -204,53 +210,159 @@ def testo_cella_training(percorso, script):
     return migliore
 
 
+def righe_da_record(testo):
+    """I record di log del Trainer -> righe come quelle di metrics_history.csv.
+
+    Il Trainer stampa un dict per ogni log e per ogni valutazione: sono gli
+    stessi campi del CSV (loss, eval_loss, eval_chrf, eval_word_*), solo
+    arrotondati a quattro cifre significative dalla stampa."""
+    righe = []
+    for record in RE_RECORD.findall(testo):
+        campi = {k: float(v) for k, v in RE_COPPIA.findall(record)}
+        if "epoch" in campi:
+            righe.append(campi)
+    return righe
+
+
 def loss_da_testo(testo):
     """I record di log del Trainer -> (train, eval), liste di (epoca, loss)."""
     train, valutazione = [], []
-    for record in RE_RECORD.findall(testo):
-        campi = dict(RE_COPPIA.findall(record))
-        if "epoch" not in campi:
-            continue
-        epoca = float(campi["epoch"])
+    for campi in righe_da_record(testo):
         if "eval_loss" in campi:
-            valutazione.append((epoca, float(campi["eval_loss"])))
+            valutazione.append((campi["epoch"], campi["eval_loss"]))
         elif "loss" in campi:              # train_loss finale non ha 'loss'
-            train.append((epoca, float(campi["loss"])))
+            train.append((campi["epoch"], campi["loss"]))
     return sorted(train), sorted(valutazione)
 
 
+def blocchi_json(testo):
+    """Gli oggetti JSON stampati con indent=2 dentro l'output di una cella.
+
+    evaluate_task.py le metriche finali le salva in eval/ ma le stampa anche:
+    quando quella cartella non e' stata scaricata dalla sessione (e' il caso di
+    T1 su Llama) il notebook ne e' l'unica copia. La riga di apertura puo'
+    portarsi dietro un residuo della barra di avanzamento ("{ contrastiva
+    100/100"), quindi della prima riga si tiene solo la graffa; la chiusura e'
+    la prima riga che vale esattamente "}"."""
+    righe, fuori = testo.splitlines(), []
+    for i, riga in enumerate(righe):
+        if not riga.startswith("{"):
+            continue
+        for j in range(i + 1, len(righe)):
+            if righe[j] == "}":
+                try:
+                    fuori.append(json.loads("{\n" + "\n".join(righe[i + 1:j + 1])))
+                except ValueError:
+                    pass
+                break
+    return fuori
+
+
+def celle_codice(percorso):
+    """Le celle di codice del notebook, nell'ordine in cui stanno nel file."""
+    return [c for c in leggi_json(percorso).get("cells", [])
+            if c.get("cell_type") == "code"]
+
+
+def json_dal_notebook(percorso, accetta):
+    """L'ultimo oggetto JSON stampato nel notebook che soddisfa `accetta`.
+
+    L'ultimo e non il primo: le celle di valutazione vengono rilanciate (su T1
+    tre volte, l'ultima con il fine turno corretto) e ogni rilancio ristampa il
+    blocco. Vale quello piu' in basso, cioe' il piu' recente."""
+    trovato = None
+    for cella in celle_codice(percorso):
+        for blocco in blocchi_json(testo_output(cella)):
+            if accetta(blocco):
+                trovato = blocco
+    return trovato
+
+
 # ------------------------------------------------------------------- T1 -----
+#
+# I tre stadi in cui e' diviso l'addestramento, con lo script che li esegue: il
+# nome dello script serve a ritrovare la cella giusta nel notebook quando lo
+# storico non e' su disco.
+STADI_T1 = (("cpt", "Stadio CPT (pretraining dialettale)", "pretrain_dialect.py"),
+            ("__A2", "Stadio A2 (lessico)", "finetune_a2_lessico.py"),
+            ("__T1", "Stadio T1 (traduzione)", "finetune_t1_traduzione.py"))
+
+
+def modello_del_run(modello):
+    """Il nome con cui i run di questo modello sono prefissati, se ricavabile.
+
+    E' il nome della cartella sotto cpt/ (llama-2-7b-chat-hf,
+    minerva-7b-instruct-v1.0), cioe' la parte finale del repo_id."""
+    sotto = sorted(d.name for d in (modello.dir_t1 / "cpt").glob("*") if d.is_dir())
+    return sotto[0] if sotto else None
+
 
 def run_t1(modello, suffisso):
     """Cartella del run che termina con il suffisso dato (es. __T1), se esiste.
 
-    Il nome completo dipende dal repo_id del modello, quindi non lo fissiamo."""
+    Il nome completo dipende dal repo_id del modello, quindi non lo fissiamo.
+    Fra i candidati si tiene quello del modello giusto: in runs/ resta anche lo
+    smoke test, che gira su un modello piccolo e scrive con lo stesso suffisso
+    (su Llama e' minerva-3b-base-v1.0__T1, tre step su 48 esempi)."""
     candidati = sorted(d for d in (modello.dir_t1 / "runs").glob("*" + suffisso)
                        if d.is_dir())
+    prefisso = modello_del_run(modello)
+    if prefisso:
+        propri = [d for d in candidati if d.name.startswith(prefisso)]
+        candidati = propri or candidati
     return candidati[-1] if candidati else None
+
+
+def ultimo_trainer_state(cartella):
+    """trainer_state.json del checkpoint piu' avanzato, None se non ce ne sono.
+
+    Lo step si legge dal nome, non dall'ordine alfabetico: checkpoint-99 verrebbe
+    dopo checkpoint-140."""
+    def passo(percorso):
+        trovato = RE_CHECKPOINT.search(percorso.parent.name)
+        return int(trovato.group(1)) if trovato else -1
+
+    stati = list(cartella.glob("checkpoint-*/trainer_state.json")) if cartella else []
+    return max(stati, key=passo) if stati else None
+
+
+def righe_stadio_t1(modello, stadio, script):
+    """Storico di uno stadio, nel formato a righe di metrics_history.csv.
+
+    Su disco lo storico completo sta nel CSV del run; se manca resta il
+    trainer_state del checkpoint, che pero' si ferma alla propria epoca. Gli
+    stessi record il Trainer li ha stampati nel notebook, e li' la serie e'
+    intera. Fra le due fonti si tiene la piu' lunga, a parita' quella su disco
+    (che conserva i valori in piena precisione): su Llama il run di T1 non ha il
+    CSV e il checkpoint piu' avanzato e' il 175 su 284 step, quindi senza il
+    notebook la curva si fermerebbe a due terzi."""
+    if stadio == "cpt":
+        stati = sorted((modello.dir_t1 / "cpt")
+                       .glob("*/checkpoint-*/trainer_state.json"))
+        stato = stati[-1] if stati else None
+        da_disco = leggi_json(stato)["log_history"] if stato else []
+    else:
+        run = run_t1(modello, stadio)
+        csv_run = run / "metrics_history.csv" if run else None
+        if csv_run is not None and csv_run.exists():
+            da_disco = leggi_storico(csv_run)
+        else:
+            stato = ultimo_trainer_state(run)
+            da_disco = leggi_json(stato)["log_history"] if stato else []
+    da_notebook = (righe_da_record(testo_cella_training(modello.notebook_t1, script))
+                   if modello.notebook_t1 else [])
+    return da_notebook if len(da_notebook) > len(da_disco) else da_disco
 
 
 def curve_loss_t1(modello, cartella, dpi):
     """Loss di training e di validazione dei tre stadi: CPT -> A2 lessico -> T1."""
     stadi = []
-
-    stato = sorted((modello.dir_t1 / "cpt").glob("*/checkpoint-*/trainer_state.json"))
-    if stato:
-        log = leggi_json(stato[-1])["log_history"]
-        tr = [(d["epoch"], d["loss"]) for d in log if "loss" in d]
-        ev = [(d["epoch"], d["eval_loss"]) for d in log if "eval_loss" in d]
-        stadi.append(("Stadio CPT (pretraining dialettale)", tr, ev))
-
-    for suffisso, titolo in (("__A2", "Stadio A2 (lessico)"),
-                             ("__T1", "Stadio T1 (traduzione)")):
-        run = run_t1(modello, suffisso)
-        csv_run = run / "metrics_history.csv" if run else None
-        if csv_run is None or not csv_run.exists():
-            continue
-        righe = leggi_storico(csv_run)
+    for stadio, titolo, script in STADI_T1:
+        righe = righe_stadio_t1(modello, stadio, script)
         tr = list(zip(*serie(righe, "epoch", "loss")))
         ev = list(zip(*serie(righe, "epoch", "eval_loss")))
-        stadi.append((titolo, tr, ev))
+        if tr or ev:
+            stadi.append((titolo, tr, ev))
 
     if not stadi:
         print("  ! nessuno storico di loss trovato per T1")
@@ -285,12 +397,10 @@ def curve_loss_t1(modello, cartella, dpi):
 
 def curve_prf1_t1(modello, cartella, dpi):
     """Precision / Recall / F1 lessicali (e chrF++) durante l'addestramento T1."""
-    run = run_t1(modello, "__T1")
-    csv_run = run / "metrics_history.csv" if run else None
-    if csv_run is None or not csv_run.exists():
-        print("  ! metrics_history.csv di T1 assente")
+    righe = righe_stadio_t1(modello, "__T1", "finetune_t1_traduzione.py")
+    if not righe:
+        print("  ! nessuno storico delle metriche in validazione per T1")
         return
-    righe = leggi_storico(csv_run)
 
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(11.5, 4.4))
 
@@ -326,21 +436,67 @@ def curve_prf1_t1(modello, cartella, dpi):
     salva(fig, cartella, "T1_prf1_curve.png", dpi)
 
 
-def barre_prf1_t1(modello, cartella, dpi):
-    """P/R/F1 finali su test: BERTScore (sistema vs pavimenti) + lessicali."""
+RE_RIEPILOGO = re.compile(r"^\S+__T1__\S+\s+(\d+)\s+"
+                          + r"\s+".join([r"(nan|[\d.]+)"] * 7) + r"\s*$", re.M)
+
+
+def senza_vuoti(dizionario):
+    """Toglie le voci mancanti, cosi' un dict ricostruito si legge come il file."""
+    fuori = {}
+    for chiave, valore in dizionario.items():
+        if isinstance(valore, dict):
+            valore = senza_vuoti(valore)
+        if valore is not None and valore != {}:
+            fuori[chiave] = valore
+    return fuori
+
+
+def riepilogo_dal_notebook(percorso):
+    """La riga di riepilogo di metriche_finali.py, nella forma del file JSON.
+
+    metriche_finali.json non e' stato scaricato da tutte le sessioni; la tabella
+    che lo script stampa prima di salvarlo, quella, e' rimasta nel notebook.
+    Contiene meno numeri del file: dei due BERTScore c'e' il solo F1 (P e R nella
+    tabella non compaiono) e delle metriche lessicali solo il recall."""
+    ultimo = None
+    for cella in celle_codice(percorso):
+        trovati = RE_RIEPILOGO.findall(testo_output(cella))
+        if trovati:
+            ultimo = trovati[-1]
+    if ultimo is None:
+        return None
+    n, chrf, bs_f1, bs_pav, rec_d, inedite, inedite_um, lunghezza = ultimo
+
+    def val(x):
+        return None if x == "nan" else float(x)
+
+    return senza_vuoti({
+        "n": int(n), "chrf++": val(chrf), "rapporto_lunghezza": val(lunghezza),
+        "bertscore_sistema": {"F1": val(bs_f1)},
+        "bertscore_pavimento": {"F1": val(bs_pav)},
+        "lessicali": {"recall_dialettale": val(rec_d)},
+        "forme_inedite": {"tasso_generato": val(inedite),
+                          "tasso_riferimenti_umani": val(inedite_um)}})
+
+
+def metriche_finali_t1(modello):
+    """(metriche finali su test, ricostruite dal notebook?), (None, False) se niente."""
     percorso = modello.dir_t1 / "metriche_finali.json"
-    if not percorso.exists():
-        print("  ! metriche_finali.json assente")
-        return
-    dati = leggi_json(percorso)
-    chiave = next(iter(dati))
-    m = dati[chiave]
+    if percorso.exists():
+        return next(iter(leggi_json(percorso).values())), False
+    if modello.notebook_t1:
+        voce = riepilogo_dal_notebook(modello.notebook_t1)
+        if voce:
+            return voce, True
+    return None, False
 
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12.5, 4.6))
 
+def pannello_bertscore(ax, m):
+    """BERTScore su test: il sistema contro la copia dell'italiano e il pavimento."""
     gruppi = [("sistema (fine-tuned)", m.get("bertscore_sistema"), C_F1),
               ("copia dell'italiano", m.get("bertscore_copia_italiano"), "#8C8C8C"),
-              ("pavimento (nap. non correlato)", m.get("bertscore_pavimento"), "#D3D3D3")]
+              ("pavimento (nap. non correlato)", m.get("bertscore_pavimento"),
+               "#D3D3D3")]
     gruppi = [g for g in gruppi if g[1]]
     etichette = ["Precision", "Recall", "F1-Score"]
     larghezza = 0.8 / max(len(gruppi), 1)
@@ -348,61 +504,160 @@ def barre_prf1_t1(modello, cartella, dpi):
     for i, (nome, valori, colore) in enumerate(gruppi):
         altezze = [valori["P"], valori["R"], valori["F1"]]
         x = [p - 0.4 + larghezza * (i + .5) for p in posizioni]
-        barre = ax1.bar(x, altezze, larghezza * .92, label=nome, color=colore,
-                        edgecolor="white", linewidth=.6)
-        etichette_barre(ax1, barre)
-    ax1.set_xticks(list(posizioni))
-    ax1.set_xticklabels(etichette)
-    ax1.set_ylim(0, 1.25)
-    ax1.set_ylabel("BERTScore")
-    ax1.set_title("BERTScore su test (n={})\n".format(m.get("n", "?")) +
-                  "il pavimento e' il vero zero della scala", fontsize=10)
-    ax1.legend(fontsize=8, loc="upper right", framealpha=.95)
-    griglia(ax1)
+        barre = ax.bar(x, altezze, larghezza * .92, label=nome, color=colore,
+                       edgecolor="white", linewidth=.6)
+        etichette_barre(ax, barre)
+    ax.set_xticks(list(posizioni))
+    ax.set_xticklabels(etichette)
+    ax.set_ylim(0, 1.25)
+    ax.set_ylabel("BERTScore")
+    ax.set_title("BERTScore su test (n={})\n".format(m.get("n", "?")) +
+                 "il pavimento e' il vero zero della scala", fontsize=10)
+    ax.legend(fontsize=8, loc="upper right", framealpha=.95)
+    griglia(ax)
 
+
+def pannello_lessicali(ax, m):
+    """Le metriche lessicali dialettali su test, quelle che ci sono."""
     les = m.get("lessicali", {})
-    valori = [les.get("precisione_dialettale"), les.get("recall_dialettale"),
-              les.get("f1_dialettale")]
-    if all(v is not None for v in valori):
-        barre = ax2.bar(etichette, valori, 0.55, color=[C_P, C_R, C_F1],
-                        edgecolor="white", linewidth=.6)
-        etichette_barre(ax2, barre)
+    valori = {"Precision": les.get("precisione_dialettale"),
+              "Recall": les.get("recall_dialettale"),
+              "F1-Score": les.get("f1_dialettale")}
+    valori = dict((k, v) for k, v in valori.items() if v is not None)
+    if valori:
+        barre = ax.bar(list(valori), list(valori.values()), 0.55,
+                       color=[C_P, C_R, C_F1][:len(valori)],
+                       edgecolor="white", linewidth=.6)
+        etichette_barre(ax, barre)
     extra = {"tasso italianismi": les.get("tasso_italianismi"),
              "tasso di copia": les.get("tasso_copia")}
     extra = dict((k, v) for k, v in extra.items() if v is not None)
     if extra:
-        barre = ax2.bar(list(extra), list(extra.values()), 0.55, color="#C44E52",
-                        alpha=.75, edgecolor="white", linewidth=.6)
-        etichette_barre(ax2, barre)
-    ax2.set_ylim(0, 1.05)
-    ax2.set_ylabel("valore")
-    ax2.set_title("Metriche lessicali dialettali su test\n"
-                  "(a destra: piu' basso e' meglio)", fontsize=10)
-    ax2.tick_params(axis="x", labelrotation=12)
-    griglia(ax2)
+        barre = ax.bar(list(extra), list(extra.values()), 0.55, color="#C44E52",
+                       alpha=.75, edgecolor="white", linewidth=.6)
+        etichette_barre(ax, barre)
+    ax.set_ylim(0, 1.05)
+    ax.set_ylabel("valore")
+    ax.set_title("Metriche lessicali dialettali su test\n"
+                 "(a destra: piu' basso e' meglio)", fontsize=10)
+    ax.tick_params(axis="x", labelrotation=12)
+    griglia(ax)
 
-    fig.suptitle("{} - T1 - Precision, Recall e F1-Score finali"
-                 .format(modello.etichetta), fontsize=13)
+
+def pannello_prf1_dev(ax, modello):
+    """P/R/F1 della valutazione che ha promosso il checkpoint, su dev.
+
+    Ripiego per quando su test P e R non ci sono: la selezione del checkpoint va
+    su chrF, quindi la valutazione da mostrare e' quella con il chrF migliore."""
+    campi = ("eval_word_precision", "eval_word_recall", "eval_word_f1")
+    righe = [r for r in righe_stadio_t1(modello, "__T1", "finetune_t1_traduzione.py")
+             if all(r.get(c) is not None for c in campi)]
+    if not righe:
+        return False
+    m = max(righe, key=lambda r: r.get("eval_chrf") or 0)
+    valori = [m[c] for c in campi]
+    barre = ax.bar(["Precision", "Recall", "F1-Score"], valori, 0.55,
+                   color=[C_P, C_R, C_F1], edgecolor="white", linewidth=.6)
+    etichette_barre(ax, barre)
+    ax.set_ylim(0, 1.05)
+    ax.set_ylabel("valore")
+    ax.set_title("Precision / Recall / F1 (overlap bag-of-words) su dev\n"
+                 "valutazione del checkpoint promosso (epoca {:.2f}, chrF {:.2f})"
+                 .format(m.get("epoch", 0), m.get("eval_chrf") or 0), fontsize=10)
+    griglia(ax)
+    return True
+
+
+def pannello_test_parziale(ax, m):
+    """I numeri su test che la riga di riepilogo del notebook conserva."""
+    voci = [("BERTScore F1\n(sistema)",
+             m.get("bertscore_sistema", {}).get("F1"), C_F1),
+            ("BERTScore F1\n(pavimento)",
+             m.get("bertscore_pavimento", {}).get("F1"), "#D3D3D3"),
+            ("recall\ndialettale", m.get("lessicali", {}).get("recall_dialettale"),
+             C_R),
+            ("forme inedite\n(generato)",
+             m.get("forme_inedite", {}).get("tasso_generato"), "#C44E52"),
+            ("forme inedite\n(umani)",
+             m.get("forme_inedite", {}).get("tasso_riferimenti_umani"), C_BASE)]
+    voci = [v for v in voci if v[1] is not None]
+    if not voci:
+        return
+    barre = ax.bar([v[0] for v in voci], [v[1] for v in voci], 0.55,
+                   color=[v[2] for v in voci], edgecolor="white", linewidth=.6)
+    etichette_barre(ax, barre)
+    ax.set_ylim(0, 1.05)
+    ax.set_ylabel("valore")
+    ax.set_title("Metriche finali su test (n={})\n".format(m.get("n", "?")) +
+                 "il pavimento e' il vero zero del BERTScore; delle forme "
+                 "inedite conta l'eccesso sugli umani", fontsize=9)
+    ax.tick_params(axis="x", labelsize=8)
+    griglia(ax)
+
+
+def barre_prf1_t1(modello, cartella, dpi):
+    """P/R/F1 finali su test: BERTScore (sistema vs pavimenti) + lessicali."""
+    m, dal_notebook = metriche_finali_t1(modello)
+    if m is None:
+        print("  ! nessuna metrica finale per T1 (metriche_finali.json assente e "
+              "nessun riepilogo negli output del notebook)")
+        return
+    # con P e R su test si fa il grafico pieno; senza (metriche_finali.json non
+    # scaricato, dal notebook si recuperano i soli F1) si ripiega sulle P/R/F1
+    # lessicali della valutazione che ha promosso il checkpoint, su dev
+    completo = all(k in m.get("bertscore_sistema", {}) for k in ("P", "R", "F1"))
+
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12.5, 4.6))
+    nota = ""
+    if completo:
+        pannello_bertscore(ax1, m)
+        pannello_lessicali(ax2, m)
+    else:
+        if not pannello_prf1_dev(ax1, modello):
+            print("  ! ne' P/R su test ne' storico di dev: salto le barre P/R/F1")
+            plt.close(fig)
+            return
+        pannello_test_parziale(ax2, m)
+        nota = ("su test restano i soli F1: metriche_finali.json non e' stato "
+                "scaricato dalla sessione e la riga di riepilogo rimasta nel "
+                "notebook non riporta P e R" if dal_notebook else
+                "su test P e R non sono state calcolate")
+
+    fig.suptitle("{} - T1 - Precision, Recall e F1-Score finali{}"
+                 .format(modello.etichetta,
+                         "\n" + a_capo(nota, 92) if nota else ""),
+                 fontsize=13 if not nota else 11)
     fig.tight_layout()
     salva(fig, cartella, "T1_prf1_finale.png", dpi)
 
 
+def valutazione_t1(modello):
+    """Le metriche di evaluate_task.py: da eval/ o, se la cartella non e' stata
+    scaricata, dal blocco JSON che lo script ha stampato nel notebook."""
+    percorsi = sorted((modello.dir_t1 / "eval").glob("*.metrics.json"))
+    if percorsi:
+        return leggi_json(percorsi[0])
+    if modello.notebook_t1:
+        return json_dal_notebook(
+            modello.notebook_t1,
+            lambda b: "F_riferimento" in b and b.get("task") == "T1")
+    return None
+
+
 def barre_chrf_t1(modello, cartella, dpi):
     """chrF++ finale del sistema contro le baseline obbligatorie."""
-    finali = modello.dir_t1 / "metriche_finali.json"
-    valutazione = next(iter(sorted((modello.dir_t1 / "eval").glob("*.metrics.json"))),
-                       None)
-    if not finali.exists() and valutazione is None:
+    finali, _ = metriche_finali_t1(modello)
+    valutazione = valutazione_t1(modello)
+    if finali is None and valutazione is None:
         print("  ! nessuna metrica finale di chrF per T1")
         return
 
     sistema = ci = None
     baseline = {}
-    if finali.exists():
-        m = next(iter(leggi_json(finali).values()))
-        sistema = m.get("chrf++")
+    if finali is not None:
+        sistema = finali.get("chrf++")
     if valutazione is not None:
-        e = leggi_json(valutazione)
+        e = valutazione
         sistema = e.get("F_riferimento", {}).get("chrf++", sistema)
         boot = e.get("F_bootstrap_chrf", {})
         if "ci95_basso" in boot and "ci95_alto" in boot and sistema is not None:
@@ -461,7 +716,6 @@ SISTEMI_T2 = ("zero-shot", "few-shot-4", "fine-tuned")
 
 RE_CTX_STEP = re.compile(r"\[ctx\] step (\d+): ctx_acc=([\d.]+)\s+"
                          r"acc_token=([\d.]+)\s+ppl_target=([\d.]+)")
-RE_CHECKPOINT = re.compile(r"checkpoint-(\d+)")
 
 
 # --- lettura -----------------------------------------------------------------

@@ -1,0 +1,36 @@
+{
+  "stadio": "A — continued pretraining",
+  "repo_id": "meta-llama/Llama-2-7b-chat-hf",
+  "architettura": "CausalLM",
+  "gpu": "Tesla T4",
+  "bf16": false,
+  "lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "n_moduli_target": 224
+  },
+  "hyperparams": {
+    "lr": 5e-05,
+    "epochs": 3,
+    "block_size": 512,
+    "effective_batch_size": 8,
+    "max_steps": 18
+  },
+  "dati": {
+    "turni_train": 1147,
+    "parole_train": 11229,
+    "token_train": 23989,
+    "blocchi_train": 46,
+    "turni_dev": 271,
+    "fonte": "solo i file train.json dei tre layout — dev e test esclusi"
+  },
+  "perplexity_dev": {
+    "iniziale": 43.22,
+    "finale": 35.51,
+    "migliore": 35.51
+  },
+  "best_metric": 3.5697622299194336,
+  "adapter_final": "/kaggle/working/cpt/llama-2-7b-chat-hf/adapter_final",
+  "_uso": "passalo ai tre script di SFT con --init-adapter"
+}
