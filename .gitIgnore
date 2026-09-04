@@ -83,3 +83,8 @@ Llama7B/T2_completamento_dialogo/predizioni_t2_test.csv
 Llama7B/T2_completamento_dialogo/risultati_t2.csv
 # artefatto di export di Kaggle, non fa parte dei risultati
 Llama7B/T2_completamento_dialogo/__results___files/
+
+# --- Likert: schede da compilare e linee guida per gli annotatori ---
+# le schede HTML sono la resa navigabile dei .csv, che restano nel repo
+likert/schede/*.html
+likert/linee_guida.md

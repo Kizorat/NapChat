@@ -1,0 +1,652 @@
+﻿item,task,modello,contesto,istruzione,inizio_turno,testo_valutato,naturalezza,grammatica,lessico,note
+V140,T3,Llama7B,"B: simmo juti c' 'a chiavetta 'n copisteria
+A: sì
+A: e e iss~ e chillo llà ha visto tutte 'e toje",Sei C. Rispondi in napoletano a quello che ha appena detto A.,,"sì, sì, llà ha visto tutte 'e toje, e 'o chillo llà ha visto 'e toje",2,2,2,
+V108,T3,Minerva7B,"A: sì, no, 'o saccio, però
+C: vabbuò, 'ntanto scrivimmo
+A: ah, llà puó stoppà in realtà
+B: a luca
+B: addò sta
+C: mh",Scrivi la replica di B in napoletano: dev'essere una risposta a C. (l'ultimo turno e' solo un cenno di ascolto: il tema vero e' nel turno precedente),,addò sta luca,5,5,3,
+V123,T3,Minerva7B,"A: no, i' no
+B: okay, i' te piglio n'ata birra
+B: però nun saparrìa quale piglià
+D: si jate 'e xxx
+D: vuó quaccosa sempe 'ncopp' 'o acido
+D: o","Come risponderebbe B, in napoletano?",,"no, nun truove, nun truove, nun truove, eh",2,3,1,
+V080,T3,Llama7B,"C: sì sì, 'o fà fà pure a tutte ll'invitate
+A: sì, 'nzegn~ 'nzegnà, nun saccio
+A: 'e passe 'e
+D: signurine, vulite quacc'ata cosa
+A: grazie
+D: nu ducetiello",Continua la conversazione: scrivi il turno di C in napoletano.,,"sì, 'e 'nzognò, nun saccio",2,2,2,
+V074,T2,Gemma4B,"C: e lloro che faccia hanno fatto?
+B: pecché era chillo ca ce steva pure quanno stévamo cu marco e tommaso, era 'o stesso cammariere
+C: sì sì","Completa il turno gia' iniziato, in napoletano.",'nfatti pure i',ll'avr' ditto,2,2,3,
+V053,T3,Llama7B,"C: mhmh
+A: sì sì
+A: pe' me sì, ca, ca mangio mh cibo indiano, sì
+B: no, i' no
+A: essa no
+A: però",Scrivi la replica di C in napoletano: dev'essere una risposta a A.,,"sì, sì, ca, ca mangio mh cibo indiano, sì, ma no, i' no, essa no",3,3,1,
+V122,T2,Llama7B,"B: magari dice ""vabbuò, ne sta parlanno cu ll'ate"" e 'o faje
+C: vabbuò, almeno ce si' rimasta impressa
+B: no","Completa il turno gia' iniziato, in napoletano.",e lloro che,fanno 'a scolaresca,3,4,2,
+V148,T3,Riferimento umano,"C: e 'o twister, è overo
+A: 'o twister, allora erano quatto, forse
+C: chello ca ha fatto cu 'a sara
+A: obbligo o verità ce steva
+C: secondo me obbligo o verità steva int' 'e casellelle
+C: 'a comme me ricordo","Riprendi il discorso di C: parla B, in napoletano.",,pecché i' me so' perza tutto,5,4,5,
+V118,T2,Minerva7B,"A: a ll'universi~
+C: na vota ca avev'a jì a lezione
+C: ll'aggio ditto ""vabbuò, vedimmoce primma ca vaco a lezione""","Completa il turno gia' iniziato, in napoletano.",e avimmo bevuto,'n bicchiere,4,4,4,
+V037,T2,Minerva7B,"B: che strategia, cioè, che po' strategia
+C: embè, tu ce ll'hê 'a ripetere tante vote ""ma nun ce stanno parcheggi""
+B: eh, 'nfatti no, pecché sennò ce dico ""c' 'o cazzo ca venco llà a""","Completa il turno gia' iniziato, in napoletano.","sì, cioè si hê 'a stà sulo 'n machina a girà 'mpanicata",'ncopp' 'o parcheggio,3,4,3,
+V150,T3,Gemma4B,"C: è ca nun tenimmo tante ffoto 'e ale nove
+C: e chille stickers nun saccio si veneno
+A: ll'ha fatte essa cu 'e ffoto soje
+A: 'o sape, 'e manna essa
+C: eh, però nun saccio si veneno gruosse, cioè
+C: nun 'e putimmo stampà","Riprendi il discorso di C: parla B, in napoletano.",,"'e putimmo stampà, sì, però 'e stickers nun sanno, cioè 'e putimmo stampà, sì, però 'e",1,2,1,
+V079,T2,Riferimento umano,"B: e tu addò s~ addò ce si' juta tu
+A: a ll'universi~
+C: na vota ca avev'a jì a lezione","Completa il turno gia' iniziato, in napoletano.","ll'aggio ditto ""vabbuò, vedimmoce primma","ca vaco a lezione""",5,5,5,
+V138,T3,Gemma4B,"D: bbuono, grazie assaje a vuje
+C: grazie
+A: ce sta pure c' 'e balle fà quaccosa
+A: ca dopo c' 'o vestito suojo se carreca
+A: eh
+C: n'ata birra","Turno di A. Rispondi in napoletano, breve e pertinente.",,"ma 'o vestito suojo se carreca, eh, 'a birra 'a fa 'a differenza",3,3,3,
+V092,T2,Minerva7B,"B: 'mballatissima
+A: ma 'nfatti 'a vide, pecché nun fa nu cazzo int' 'a vita, pe' nun spennere sordi e fà 'a guagliona alternativa nu poco fricchettona
+C: ma è cchiù piccerella","Completa il turno gia' iniziato, in napoletano.",nun saccio si è,'a primma vota,4,5,3,
+V015,T3,Gemma4B,"C: sì sì, 'o fà fà pure a tutte ll'invitate
+A: sì, 'nzegn~ 'nzegnà, nun saccio
+A: 'e passe 'e
+D: signurine, vulite quacc'ata cosa
+A: grazie
+D: nu ducetiello",Continua la conversazione: scrivi il turno di C in napoletano.,,"'e cose 'e casa, 'e cose 'e casa, 'e cose 'e casa, 'e cose 'e casa, 'e cose '",1,2,1,
+V019,T3,Minerva7B,"B: a luca
+B: addò sta
+C: mh
+B: giusto pe' sapé addò sta
+C: tanto songo già 'e
+C: unnice, embè, songo ll'unnice","Come risponderebbe A, in napoletano?",,"ah, ll'unnice",5,5,4,
+V025,T3,Gemma4B,"A: basta selez~
+A: sì sì, basta selezionà 'e ffoto
+A: ca tiene ll'album",Continua la conversazione: scrivi il turno di C in napoletano.,,"ma 'o album è 'e ffoto, cioè 'e foto, cioè 'e foto, cioè 'e foto, cioè 'e foto, cioè '",1,1,1,
+V075,T2,Riferimento umano,"B: certo
+B: sputà int' 'o cibbo, ovvio
+A: ma overamente","Completa il turno gia' iniziato, in napoletano.",cucciulià 'e pusate primma,'e 'e mettere dinto,4,3,4,
+V031,T3,Llama7B,"B: a luca
+B: addò sta
+C: mh
+B: giusto pe' sapé addò sta
+C: tanto songo già 'e
+C: unnice, embè, songo ll'unnice","Come risponderebbe A, in napoletano?",,"ll'unnice, embè, songo ll'unnice",4,4,2,
+V047,T2,Minerva7B,"C: p' 'o centro pecché tenevo malissimo
+B: è comodo cammenà accussì
+C: eh, ma in realtà era cchiù comodo, cioè","Completa il turno gia' iniziato, in napoletano.","sì, però è addeventato",cchiù 'ncoppa,3,4,2,
+V097,T3,Riferimento umano,"B: ce facimmo nuje n'album d' 'e figurine addò 'e figurine so' stickers c' 'a faccia soja
+C: È overo, è overo
+A: e comme faje?
+B: nun 'o saccio, cioè facimmo nu poco
+C: po' ll'adda attaccà tutte
+A: facimmo adesive, facimmo stampà adesive","Turno di C. Rispondi in napoletano, breve e pertinente.",,"embè, putimmo pure piglià",5,5,4,
+V071,T2,Minerva7B,"C: e lloro che faccia hanno fatto?
+B: pecché era chillo ca ce steva pure quanno stévamo cu marco e tommaso, era 'o stesso cammariere
+C: sì sì","Completa il turno gia' iniziato, in napoletano.",'nfatti pure i',nun m' 'o,3,3,3,
+V064,T2,Llama7B,"A: e vabbuò
+B: mo vaco 'n giro c' 'a buttiglia 'e vino accussì
+A: che terribbele ca si'","Completa il turno gia' iniziato, in napoletano.","baby, ce stanno",nu casino a,3,2,3,
+V005,T2,Riferimento umano,"A: sì
+A: eh
+B: cioè nun esiste, ma pure si vaje llà n'ora primma nun 'o truove","Completa il turno gia' iniziato, in napoletano.",po' soprattutto si è ll'orario addò 'e criature,"esceno 'a scola, ce stanno tutte 'e genitore",5,5,5,
+V059,T2,Gemma4B,"C: sì sì
+C: 'nfatti pure i' ll'avevo già visto
+B: mhmh","Completa il turno gia' iniziato, in napoletano.",e lloro 'nfatti,nun s',2,2,2,
+V077,T2,Llama7B,"C: no, nun, 'nfatti ll'ata vota nun simmo trasute
+A: nun simmo trasute
+C: però cioè nun penzo ca s' 'a sia fatta sulo pe' sta serata, cioè","Completa il turno gia' iniziato, in napoletano.","ca po' isso fa 'e cose,",po' fernesce,4,4,3,
+V038,T3,Minerva7B,"A: e e iss~ e chillo llà ha visto tutte 'e toje
+C: no no no, era, era 'n bolognina
+A: piazza 'e ll'unità
+B: ah, era arte copia
+C: arte copia
+B: oddio, me canosce pure bbuono, vaco sempe llà",Sei A. Rispondi in napoletano a quello che ha appena detto B.,,"ma sì sì, pure llà",5,5,4,
+V102,T2,Minerva7B,"C: sì sì
+C: 'nfatti pure i' ll'avevo già visto
+B: mhmh","Completa il turno gia' iniziato, in napoletano.",e lloro 'nfatti,nun l'avevano,4,4,4,
+V063,T3,Minerva7B,"C: sì sì, 'o fà fà pure a tutte ll'invitate
+A: sì, 'nzegn~ 'nzegnà, nun saccio
+A: 'e passe 'e
+D: signurine, vulite quacc'ata cosa
+A: grazie
+D: nu ducetiello",Continua la conversazione: scrivi il turno di C in napoletano.,,"no, grazie",5,5,5,
+V087,T3,Riferimento umano,"A: nun campa 'n Italia 'a nu poco
+B: cchiù o meno
+A: eh, che faje c' 'o tuvagliulo mio
+B: aggio sbrudulato tutte cose, guarda che casino ca aggio fatto
+A: ah, aggio capito, ma i' magari m'aggi'a pulizzà
+B: grazie cara","Turno di A. Rispondi in napoletano, breve e pertinente.",,è na fronna 'e lauro d' 'a curona soja,5,5,5,
+V017,T2,Riferimento umano,"C: sulo a nuje
+C: nun se sape cchiù
+C: chi è","Completa il turno gia' iniziato, in napoletano.","sì sì, ll'ata",vota ll'avimmo viste,5,5,5,
+V034,T3,Riferimento umano,"A: è overo
+C: Sì, è overo, mh
+C: è ca nun tenimmo tante ffoto 'e ale nove
+C: e chille stickers nun saccio si veneno
+A: ll'ha fatte essa cu 'e ffoto soje
+A: 'o sape, 'e manna essa","Riprendi il discorso di A: parla C, in napoletano.",,"eh, però nun saccio si veneno gruosse, cioè",5,5,5,
+V089,T3,Gemma4B,"A: 'e balle suoje
+A: cioè sorteggià nu ballo
+A: che ne saccio, essa ll'adda fà però quanno è già bresca
+C: sì sì, 'o fà fà pure a tutte ll'invitate
+A: sì, 'nzegn~ 'nzegnà, nun saccio
+A: 'e passe 'e","Come risponderebbe D, in napoletano?",,'e passe 'e,3,2,1,
+V029,T3,Llama7B,"C: ha ditto ""sì sì, si vulite ve 'e faccio 'n hd""
+C: però ll'aggi'a sistemà tutte
+C: quinni ce vularrà nu poco
+B: e vuje ce avite ditto ""ma scusate, avite visto 'e ffoto""
+A: sì, avimmo ditto ""ma no""
+B: ah, ok ok","Adesso parla C. Che dice, in napoletano? (l'ultimo turno e' solo un cenno di ascolto: il tema vero e' nel turno precedente)",,"sì, sì, si vulite ve 'e faccio 'n hd, ma ll'aggi'a sistemà tutte, quin",3,3,1,
+V083,T3,Minerva7B,"C: è ca nun tenimmo tante ffoto 'e ale nove
+C: e chille stickers nun saccio si veneno
+A: ll'ha fatte essa cu 'e ffoto soje
+A: 'o sape, 'e manna essa
+C: eh, però nun saccio si veneno gruosse, cioè
+C: nun 'e putimmo stampà","Riprendi il discorso di C: parla B, in napoletano.",,"no, 'e gruosse no, però eventualmente",4,4,4,
+V127,T2,Gemma4B,"B: che strategia, cioè, che po' strategia
+C: embè, tu ce ll'hê 'a ripetere tante vote ""ma nun ce stanno parcheggi""
+B: eh, 'nfatti no, pecché sennò ce dico ""c' 'o cazzo ca venco llà a""","Completa il turno gia' iniziato, in napoletano.","sì, cioè si hê 'a stà sulo 'n machina a girà 'mpanicata",int' 'a città,4,4,4,
+V110,T2,Gemma4B,"A: quacche tiempo fa
+A: ca se parlava 'e mh, so' partute 'e vacanze eh
+A: spennere pe' mangià, 'nsomma eh","Completa il turno gia' iniziato, in napoletano.",e stevamo dicenno appunto ca â,fine 'e vacanz' 'a ll'abbim,2,1,2,
+V135,T3,Minerva7B,"A: grazie
+D: nu ducetiello
+C: no no, grazie, stammo a posto
+A: no, a posto accussì
+D: stammo a posto accussì
+A: grazie assaje",Continua la conversazione: scrivi il turno di D in napoletano.,,"grazie, grazie",4,5,4,
+V125,T2,Riferimento umano,"B: vide chisto
+A: no, assaggio primma chisto
+B: mhmh","Completa il turno gia' iniziato, in napoletano.","però c' 'o riso, si no",nun riesce a 'o piglià,4,4,5,
+V132,T2,Llama7B,"A: quacche tiempo fa
+A: ca se parlava 'e mh, so' partute 'e vacanze eh
+A: spennere pe' mangià, 'nsomma eh","Completa il turno gia' iniziato, in napoletano.",e stevamo dicenno appunto ca â,"vabbuò, cioè",2,1,2,
+V020,T3,Riferimento umano,"C: dirà ""basta, so' arraggiato""
+A: no
+C: ghostiammo
+D: vulite quacc'ata cosa",Sei A. Rispondi in napoletano a quello che ha appena detto D.,,"no no, grazie",5,5,5,
+V096,T3,Llama7B,"A: no, i' no
+B: okay, i' te piglio n'ata birra
+B: però nun saparrìa quale piglià
+D: si jate 'e xxx
+D: vuó quaccosa sempe 'ncopp' 'o acido
+D: o","Come risponderebbe B, in napoletano?",,"no, 'o acido nun è 'ncopp'",2,2,3,
+V014,T3,Minerva7B,"C: no no, grazie, stammo a posto
+A: no, a posto accussì
+D: stammo a posto accussì
+A: grazie assaje
+D: bbuono, grazie assaje a vuje
+C: grazie",Continua la conversazione: scrivi il turno di A in napoletano.,,grazie assaje a ll'attacco,2,3,1,
+V142,T3,Riferimento umano,"A: ehm obbligo o verità, forse
+C: obbligo o veri~ tà
+A: ce steva, ce steva pure obbligo o verità
+B: ma scusa, 'o memory
+C: 'o memory ll'aveva fatto 'a
+B: no, hê ditto 'o memory",Continua la conversazione: scrivi il turno di C in napoletano.,,"'o, chello 'e ll'yoga",5,5,4,
+V111,T3,Minerva7B,"B: pecché comme se dice
+A: no no, ce stongo, ce stongo
+B: nun 'e nzuppe int' 'a sarzella
+B: però 'e magne
+A: e comme no
+B: credo",Sei A. Rispondi in napoletano a quello che ha appena detto B.,,e 'e salze,4,4,4,
+V060,T2,Gemma4B,"A: ca nun se chiamma
+A: te s'arape tutto quanto
+A: e vabbuò","Completa il turno gia' iniziato, in napoletano.",mo vaco 'n giro c','e babbaglie,2,2,1,
+V137,T2,Gemma4B,"C: 'nfatti pure i' ll'avevo già visto
+B: mhmh
+B: e lloro 'nfatti stévano tipo","Completa il turno gia' iniziato, in napoletano.","e niente, m'ha ditto 'o nomme accussì e","'o ditto ""sì, è nu nomme cchiù",2,1,2,
+V105,T2,Minerva7B,"A: ca nun se chiamma
+A: te s'arape tutto quanto
+A: e vabbuò","Completa il turno gia' iniziato, in napoletano.",mo vaco 'n giro c','o piglio,2,2,2,
+V054,T2,Minerva7B,"C: prego
+B: ma chisto è n'atu tappo
+A: eh, t' 'o aggio ditto, ne hanno pigliato uno uguale, ma","Completa il turno gia' iniziato, in napoletano.",ma chisto è tipo,'o tappo suojo,4,5,5,
+V124,T2,Riferimento umano,"C: ca po', scusa, isso quanno simmo juti ll'ata vota mancu isso teneva 'a tessera
+A: no
+B: e comme ha fatto a trasì","Completa il turno gia' iniziato, in napoletano.","no, nun, 'nfatti ll'ata",vota nun simmo trasute,5,5,5,
+V013,T2,Minerva7B,"B: no, però ce aggio nu poco penzato
+B: aggio ditto ""ma pecché aggi'a f~""
+B: magari dice ""vabbuò, ne sta parlanno cu ll'ate"" e 'o faje","Completa il turno gia' iniziato, in napoletano.","vabbuò, almeno ce",aggio fatto nu,3,2,2,
+V099,T2,Llama7B,"C: p' 'o centro pecché tenevo malissimo
+B: è comodo cammenà accussì
+C: eh, ma in realtà era cchiù comodo, cioè","Completa il turno gia' iniziato, in napoletano.","sì, però è addeventato",nu poco 'e,3,3,3,
+V057,T2,Minerva7B,"A: quacche tiempo fa
+A: ca se parlava 'e mh, so' partute 'e vacanze eh
+A: spennere pe' mangià, 'nsomma eh","Completa il turno gia' iniziato, in napoletano.",e stevamo dicenno appunto ca â,fine d' 'o sabbato,4,4,3,
+V006,T2,Riferimento umano,"B: no no, sì sì, ma è stata essa a dicere subbito ""ah, mo aggi'a truvà 'o modo pe' te fà fà 'a ztl""
+A: eh
+B: e comunque lunedì me faccio proprio sulo 'o percorso cu essa pe' vedé comme","Completa il turno gia' iniziato, in napoletano.","che strategia, cioè,",che po' strategia,4,4,4,
+V084,T2,Minerva7B,"C: 'nfatti pure i' ll'avevo già visto
+B: mhmh
+B: e lloro 'nfatti stévano tipo","Completa il turno gia' iniziato, in napoletano.","e niente, m'ha ditto 'o nomme accussì e",po' 'ncopp' 'a fora,2,2,2,
+V091,T2,Minerva7B,"C: no, nun, 'nfatti ll'ata vota nun simmo trasute
+A: nun simmo trasute
+C: però cioè nun penzo ca s' 'a sia fatta sulo pe' sta serata, cioè","Completa il turno gia' iniziato, in napoletano.","ca po' isso fa 'e cose,","po' fa 'e ffoto, po' ll'aggi'a",4,4,4,
+V121,T2,Minerva7B,"C: e â, ô~ ô tal~ cioè no ô tallone, ô tendine
+B: 'o solito cuoso 'e ll'anfibio
+C: esatto","Completa il turno gia' iniziato, in napoletano.",allora aggio accummenciato a cammenà cu,ll'acqua 'ncoppa,3,4,2,
+V026,T3,Minerva7B,"B: ll'ati dduje nun ll'hê tuccate, so' separate adeguatamente
+A: mhmh
+B: tu pigli, magari nun 'e nzuppe int' 'a sarzella addò tiene
+A: pucci
+B: pecché comme se dice
+A: no no, ce stongo, ce stongo","Tocca a B. Rispondi in napoletano, restando sul tema.",,"pucci, no, chisto è nu modo 'e di~, cioè 'o stesse, no",4,3,4,
+V066,T3,Gemma4B,"B: a luca
+B: addò sta
+C: mh
+B: giusto pe' sapé addò sta
+C: tanto songo già 'e
+C: unnice, embè, songo ll'unnice","Come risponderebbe A, in napoletano?",,"'e ll'unnice, sì, 'e ll'unnice",3,3,2,
+V115,T3,Riferimento umano,"B: tutto a posto, grazie, sì sì
+A: tutto bbuono, grazie, sì sì, tutto bbuonissimo
+B: ll'unica cosa, 'o vino nun simmo riuscite a 'o fernì, 'o tenite ancora 'o tappo
+C: sì sì","Riprendi il discorso di C: parla B, in napoletano. (l'ultimo turno e' solo un cenno di ascolto: il tema vero e' nel turno precedente)",,accussì a 'o massimo 'a purtammo â casa,5,5,5,
+V036,T3,Minerva7B,"C: ha ditto ""sì sì, si vulite ve 'e faccio 'n hd""
+C: però ll'aggi'a sistemà tutte
+C: quinni ce vularrà nu poco
+B: e vuje ce avite ditto ""ma scusate, avite visto 'e ffoto""
+A: sì, avimmo ditto ""ma no""
+B: ah, ok ok","Adesso parla C. Che dice, in napoletano? (l'ultimo turno e' solo un cenno di ascolto: il tema vero e' nel turno precedente)",,"e avimmo ditto ""ma scusate, avite visto 'e ffoto""",4,4,2,
+V061,T3,Llama7B,"A: sì, esatto
+C: cu 'e cartellin' 'a aprì
+B: sì
+C: e po' ce steva 'e cchiù sta rota ca girava cu 'e tre giuoche, esatto
+A: ca era na cosa, sì
+C: ca po' llà 'e giuoche erano","Adesso parla A. Che dice, in napoletano?",,"ca llà 'e giuoche eranno, sì",2,2,3,
+V023,T3,Riferimento umano,"B: nun ce 'a pigliammo n'ata birra
+C: ah, okay, eh
+B: secondo me ce cunvene
+A: ah, ok
+C: sì sì
+A: no, i' no","Turno di B. Rispondi in napoletano, breve e pertinente.",,"okay, i' te piglio n'ata birra",5,5,5,
+V119,T2,Gemma4B,"C: p' 'o centro pecché tenevo malissimo
+B: è comodo cammenà accussì
+C: eh, ma in realtà era cchiù comodo, cioè","Completa il turno gia' iniziato, in napoletano.","sì, però è addeventato",nu poco ca,3,2,3,
+V008,T3,Riferimento umano,"C: e ce facimmo 'e spazie cu 'e nummere
+A: sì
+A: sì
+C: e po' stampammo 'ncopp'a carta fotograf~ f~ emh carta adesiva
+A: adesiva
+C: e 'e ffoto",Sei A. Rispondi in napoletano a quello che ha appena detto C.,,tanto 'o f~ ce ll'hanno,4,4,4,
+V143,T2,Gemma4B,"A: mhmh
+B: se mèttono a mangià 'a ehm cucine siciliane tipo
+A: ah okay, quinni dice comunque nun è ca dice ""saje, magari me faccio ll'esperienza a mangià int'a nu posto diverso ca fa nu menù""","Completa il turno gia' iniziato, in napoletano.",addò fanno,'e cchiù,3,3,2,
+V085,T3,Minerva7B,"A: basta selez~
+A: sì sì, basta selezionà 'e ffoto
+A: ca tiene ll'album",Continua la conversazione: scrivi il turno di C in napoletano.,,quinni basta se selezionà 'e ffoto,4,3,4,
+V076,T2,Llama7B,"C: e lloro che faccia hanno fatto?
+B: pecché era chillo ca ce steva pure quanno stévamo cu marco e tommaso, era 'o stesso cammariere
+C: sì sì","Completa il turno gia' iniziato, in napoletano.",'nfatti pure i',m'aggi'a fà,4,4,2,
+V107,T2,Riferimento umano,"A: si, si 'e ffemmene accucchiassero ll'uommene comme ll'uommene accùcchiano 'e ffemmene
+C: mh
+B: sì, i' sarrìa accussì, i' sarrìa accussì, 'nfatti","Completa il turno gia' iniziato, in napoletano.","no, però ce aggio",nu poco penzato,5,5,5,
+V069,T2,Minerva7B,"A: mhmh
+B: se mèttono a mangià 'a ehm cucine siciliane tipo
+A: ah okay, quinni dice comunque nun è ca dice ""saje, magari me faccio ll'esperienza a mangià int'a nu posto diverso ca fa nu menù""","Completa il turno gia' iniziato, in napoletano.",addò fanno,'a pasta,4,5,4,
+V070,T3,Gemma4B,"B: ll'ati dduje nun ll'hê tuccate, so' separate adeguatamente
+A: mhmh
+B: tu pigli, magari nun 'e nzuppe int' 'a sarzella addò tiene
+A: pucci
+B: pecché comme se dice
+A: no no, ce stongo, ce stongo","Tocca a B. Rispondi in napoletano, restando sul tema.",,"nun ll'hê tuccate, so separate adeguatamente, ll'ati dduje",3,3,1,
+V046,T3,Gemma4B,"A: sì, avimmo ditto ""ma no""
+B: ah, ok ok
+C: penzava ca fóssero ffoto
+A: sì
+C: po' ll'avarrà viste e avarrà ditto ""ok""
+A: Sì sì sì, no","Adesso parla B. Che dice, in napoletano? (l'ultimo turno e' solo un cenno di ascolto: il tema vero e' nel turno precedente)",,"no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no,",1,1,1,
+V073,T3,Minerva7B,"A: 'o twister, allora erano quatto, forse
+C: chello ca ha fatto cu 'a sara
+A: obbligo o verità ce steva
+C: secondo me obbligo o verità steva int' 'e casellelle
+C: 'a comme me ricordo
+B: pecché i' me so' perza tutto",Sei C. Rispondi in napoletano a quello che ha appena detto B. (l'ultimo turno e' una domanda: rispondi alla domanda),,'a comme me ricordo,5,5,2,
+V062,T3,Llama7B,"C: no no, grazie, stammo a posto
+A: no, a posto accussì
+D: stammo a posto accussì
+A: grazie assaje
+D: bbuono, grazie assaje a vuje
+C: grazie",Continua la conversazione: scrivi il turno di A in napoletano.,,"no, a posto accussì, ma 'nvece, grazie assaje",3,3,2,
+V141,T3,Gemma4B,"B: pecché comme se dice
+A: no no, ce stongo, ce stongo
+B: nun 'e nzuppe int' 'a sarzella
+B: però 'e magne
+A: e comme no
+B: credo",Sei A. Rispondi in napoletano a quello che ha appena detto B.,,"'e magne, 'e magne, 'e magne",2,3,2,
+V021,T2,Llama7B,"B: 'mballatissima
+A: ma 'nfatti 'a vide, pecché nun fa nu cazzo int' 'a vita, pe' nun spennere sordi e fà 'a guagliona alternativa nu poco fricchettona
+C: ma è cchiù piccerella","Completa il turno gia' iniziato, in napoletano.",nun saccio si è,"mh, mh",2,2,1,
+V016,T2,Gemma4B,"C: prego
+B: ma chisto è n'atu tappo
+A: eh, t' 'o aggio ditto, ne hanno pigliato uno uguale, ma","Completa il turno gia' iniziato, in napoletano.",ma chisto è tipo,na versione diversa,3,5,4,
+V116,T2,Llama7B,"B: no, però ce aggio nu poco penzato
+B: aggio ditto ""ma pecché aggi'a f~""
+B: magari dice ""vabbuò, ne sta parlanno cu ll'ate"" e 'o faje","Completa il turno gia' iniziato, in napoletano.","vabbuò, almeno ce",stanno nu poco,4,4,3,
+V056,T3,Gemma4B,"A: 'o twister, allora erano quatto, forse
+C: chello ca ha fatto cu 'a sara
+A: obbligo o verità ce steva
+C: secondo me obbligo o verità steva int' 'e casellelle
+C: 'a comme me ricordo
+B: pecché i' me so' perza tutto",Sei C. Rispondi in napoletano a quello che ha appena detto B. (l'ultimo turno e' una domanda: rispondi alla domanda),,"'a verità era 'a casellelle, sì, ma 'o twister era 'a verità, cioè 'a verità era 'a casellelle",2,2,1,
+V065,T2,Llama7B,"C: sì sì
+C: 'nfatti pure i' ll'avevo già visto
+B: mhmh","Completa il turno gia' iniziato, in napoletano.",e lloro 'nfatti,ce stévano,4,5,4,
+V001,T3,Minerva7B,"A: sì, avimmo ditto ""ma no""
+B: ah, ok ok
+C: penzava ca fóssero ffoto
+A: sì
+C: po' ll'avarrà viste e avarrà ditto ""ok""
+A: Sì sì sì, no","Adesso parla B. Che dice, in napoletano? (l'ultimo turno e' solo un cenno di ascolto: il tema vero e' nel turno precedente)",,"e avarà ditto ""ok""",4,3,2,
+V090,T2,Gemma4B,"C: no, nun, 'nfatti ll'ata vota nun simmo trasute
+A: nun simmo trasute
+C: però cioè nun penzo ca s' 'a sia fatta sulo pe' sta serata, cioè","Completa il turno gia' iniziato, in napoletano.","ca po' isso fa 'e cose,",cioè 'e cchiù,3,3,3,
+V009,T3,Gemma4B,"B: aggio sbrudulato tutte cose, guarda che casino ca aggio fatto
+A: ah, aggio capito, ma i' magari m'aggi'a pulizzà
+B: grazie cara
+A: è na fronna 'e lauro d' 'a curona soja
+A: mo sapésse 'e cibbo indiano, no, nun è overo
+B: mh","Adesso parla A. Che dice, in napoletano? (l'ultimo turno e' solo un cenno di ascolto: il tema vero e' nel turno precedente)",,"ma aggio fatto 'e cose 'e 'a curona, cioè 'e cibbo indiano, cioè 'e cose 'e 'a curona",2,2,1,
+V103,T2,Riferimento umano,"A: sì
+A: accussì
+A: pàteme, 'e tutt' 'e ccose, po' 'a primma cosa ca nota so' st~, sti ccose verde, e fa","Completa il turno gia' iniziato, in napoletano.","""mah, chi sape che d'è"",",ll'addora nu poco accussì,5,5,5,
+V010,T2,Minerva7B,"C: cioè
+C: nun era manco brutto e nun era manco antipatico
+A: no, però s' 'a credeva troppo","Completa il turno gia' iniziato, in napoletano.","però era strano, cioè nun capive",cchiù niente,5,5,5,
+V149,T2,Llama7B,"C: e â, ô~ ô tal~ cioè no ô tallone, ô tendine
+B: 'o solito cuoso 'e ll'anfibio
+C: esatto","Completa il turno gia' iniziato, in napoletano.",allora aggio accummenciato a cammenà cu,'e palline,3,4,2,
+V018,T3,Riferimento umano,"B: no, ccà è 'a primma vota, sì sì
+A: no pecché essa steva fore
+C: ah okay, okay
+B: sì sì sì
+A: nun campa 'n Italia 'a nu poco
+B: cchiù o meno",Scrivi la replica di A in napoletano: dev'essere una risposta a B.,,"eh, che faje c' 'o tuvagliulo mio",5,5,5,
+V042,T2,Gemma4B,"A: a ll'universi~
+C: na vota ca avev'a jì a lezione
+C: ll'aggio ditto ""vabbuò, vedimmoce primma ca vaco a lezione""","Completa il turno gia' iniziato, in napoletano.",e avimmo bevuto,'a birra,4,4,4,
+V144,T3,Llama7B,"D: bbuono, grazie assaje a vuje
+C: grazie
+A: ce sta pure c' 'e balle fà quaccosa
+A: ca dopo c' 'o vestito suojo se carreca
+A: eh
+C: n'ata birra","Turno di A. Rispondi in napoletano, breve e pertinente.",,"ca 'o vestito suojo se carreca, ma 'o c' 'e balle fà quaccosa",2,2,2,
+V068,T3,Llama7B,"C: è ca nun tenimmo tante ffoto 'e ale nove
+C: e chille stickers nun saccio si veneno
+A: ll'ha fatte essa cu 'e ffoto soje
+A: 'o sape, 'e manna essa
+C: eh, però nun saccio si veneno gruosse, cioè
+C: nun 'e putimmo stampà","Riprendi il discorso di C: parla B, in napoletano.",,"'e putimmo stampà, ma nun 'e putimmo stampà gruosse, cioè",3,4,3,
+V027,T3,Gemma4B,"C: mhmh
+A: sì sì
+A: pe' me sì, ca, ca mangio mh cibo indiano, sì
+B: no, i' no
+A: essa no
+A: però",Scrivi la replica di C in napoletano: dev'essere una risposta a A.,,"no, io, io mangio italiano, sì",2,2,3,
+V049,T3,Gemma4B,"A: grazie
+D: nu ducetiello
+C: no no, grazie, stammo a posto
+A: no, a posto accussì
+D: stammo a posto accussì
+A: grazie assaje",Continua la conversazione: scrivi il turno di D in napoletano.,,"ma sì, grazie assaje, grazie assaje, grazie assaje, grazie assaje, grazie assaje, grazie assaje, grazie assaje, grazie",1,2,1,
+V095,T2,Riferimento umano,"A: pecché èreno 'e primm'anne ca appunto s'accummenciava n'attimo a diffónnere 'e cchiù chesta, cioè 'a moda, no, d' 'o sushi
+A: quinni ce porta pàteme e dice ""va bbuono, okay"", doppo mh, c'èramo mangiate 'e pizze accussì, e fa ""va bbuono, okay"", cioè era p~, era passato 'o cammariere e fa ""ah, guardate, nuje stasera facimmo pure sta cosa, vulite n'assaggio"", e pàteme fa ""sì sì, okay""
+A: ""puortace magari nu piatto misto d' 'a spartere"", okay","Completa il turno gia' iniziato, in napoletano.","quinni ce stévano, saje, 'e","sashimi, ehm, 'e roll accussì",5,5,5,
+V033,T3,Gemma4B,"B: simmo juti c' 'a chiavetta 'n copisteria
+A: sì
+A: e e iss~ e chillo llà ha visto tutte 'e toje",Sei C. Rispondi in napoletano a quello che ha appena detto A.,,e 'e toje tutte 'e toje,2,3,2,
+V011,T3,Llama7B,"A: sì, no, 'o saccio, però
+C: vabbuò, 'ntanto scrivimmo
+A: ah, llà puó stoppà in realtà
+B: a luca
+B: addò sta
+C: mh",Scrivi la replica di B in napoletano: dev'essere una risposta a C. (l'ultimo turno e' solo un cenno di ascolto: il tema vero e' nel turno precedente),,"llà puó stoppà in realtà, ma 'o saccio, 'o saccio, 'o saccio",2,3,1,
+V104,T2,Riferimento umano,"A: 'a sarza 'e soia, ca tu in genere comunque pure 'o wasabi si t' 'o vuò nu poco stemperà, diciamo
+A: t' 'o miette 'ncopp' 'o roll, 'ncopp'a chello ca te pare, e po' comunque 'o vagne llà, cioè ner senso
+B: o sì","Completa il turno gia' iniziato, in napoletano.","o 'o riesce, te piace accussì e sti cazze, o comunque però si t' 'o vuò","nu poco stemperà 'o, 'o vagno llà, quinni nun ce steva manco 'a sarzella ca dice",5,4,4,
+V100,T3,Minerva7B,"B: aggio sbrudulato tutte cose, guarda che casino ca aggio fatto
+A: ah, aggio capito, ma i' magari m'aggi'a pulizzà
+B: grazie cara
+A: è na fronna 'e lauro d' 'a curona soja
+A: mo sapésse 'e cibbo indiano, no, nun è overo
+B: mh","Adesso parla A. Che dice, in napoletano? (l'ultimo turno e' solo un cenno di ascolto: il tema vero e' nel turno precedente)",,"no, è indiano",4,4,4,
+V081,T3,Llama7B,"A: basta selez~
+A: sì sì, basta selezionà 'e ffoto
+A: ca tiene ll'album",Continua la conversazione: scrivi il turno di C in napoletano.,,ca 'o album è 'e più 'e 'e 'e,1,1,1,
+V055,T3,Minerva7B,"D: bbuono, grazie assaje a vuje
+C: grazie
+A: ce sta pure c' 'e balle fà quaccosa
+A: ca dopo c' 'o vestito suojo se carreca
+A: eh
+C: n'ata birra","Turno di A. Rispondi in napoletano, breve e pertinente.",,"no, grazie",5,5,4,
+V130,T2,Gemma4B,"B: 'mballatissima
+A: ma 'nfatti 'a vide, pecché nun fa nu cazzo int' 'a vita, pe' nun spennere sordi e fà 'a guagliona alternativa nu poco fricchettona
+C: ma è cchiù piccerella","Completa il turno gia' iniziato, in napoletano.",nun saccio si è,bbuono pe' ll'alber,2,1,2,
+V139,T2,Llama7B,"A: a ll'universi~
+C: na vota ca avev'a jì a lezione
+C: ll'aggio ditto ""vabbuò, vedimmoce primma ca vaco a lezione""","Completa il turno gia' iniziato, in napoletano.",e avimmo bevuto,nu bicchiere,4,5,4,
+V129,T2,Llama7B,"C: prego
+B: ma chisto è n'atu tappo
+A: eh, t' 'o aggio ditto, ne hanno pigliato uno uguale, ma","Completa il turno gia' iniziato, in napoletano.",ma chisto è tipo,'o primmo,4,5,4,
+V035,T2,Riferimento umano,"B: cu ll'ila e 'a mara
+C: ah, ok
+B: ma nun stévamo, cioè","Completa il turno gia' iniziato, in napoletano.","si, si 'e ffemmene accucchiassero ll'uommene",comme ll'uommene accùcchiano 'e ffemmene,5,5,5,
+V052,T2,Llama7B,"C: 'nfatti pure i' ll'avevo già visto
+B: mhmh
+B: e lloro 'nfatti stévano tipo","Completa il turno gia' iniziato, in napoletano.","e niente, m'ha ditto 'o nomme accussì e",po' è rimasta 'n vacanza,4,4,2,
+V012,T3,Llama7B,"A: 'e balle suoje
+A: cioè sorteggià nu ballo
+A: che ne saccio, essa ll'adda fà però quanno è già bresca
+C: sì sì, 'o fà fà pure a tutte ll'invitate
+A: sì, 'nzegn~ 'nzegnà, nun saccio
+A: 'e passe 'e","Come risponderebbe D, in napoletano?",,"sì, sì, 'e fà fà pure a ll'invitate, ma 'e fà pure a ll'amma 'nz",3,2,2,
+V003,T3,Llama7B,"B: ll'ati dduje nun ll'hê tuccate, so' separate adeguatamente
+A: mhmh
+B: tu pigli, magari nun 'e nzuppe int' 'a sarzella addò tiene
+A: pucci
+B: pecché comme se dice
+A: no no, ce stongo, ce stongo","Tocca a B. Rispondi in napoletano, restando sul tema.",,"ll'ati dduje nun ll'hê tuccate, so' separate adeguatamente",5,5,1,
+V146,T3,Llama7B,"A: sì, avimmo ditto ""ma no""
+B: ah, ok ok
+C: penzava ca fóssero ffoto
+A: sì
+C: po' ll'avarrà viste e avarrà ditto ""ok""
+A: Sì sì sì, no","Adesso parla B. Che dice, in napoletano? (l'ultimo turno e' solo un cenno di ascolto: il tema vero e' nel turno precedente)",,"sì, ll'avarrà viste e avarrà ditto ""ok""",5,5,1,
+V126,T3,Minerva7B,"A: 'e balle suoje
+A: cioè sorteggià nu ballo
+A: che ne saccio, essa ll'adda fà però quanno è già bresca
+C: sì sì, 'o fà fà pure a tutte ll'invitate
+A: sì, 'nzegn~ 'nzegnà, nun saccio
+A: 'e passe 'e","Come risponderebbe D, in napoletano?",,'e passe 'e balle,4,5,4,
+V041,T2,Riferimento umano,"B: mhmh
+A: e 'e patatine
+A: oppure magari ce stanno 'e vvote ca spenno nu poco 'e cchiù però magari me vaco a mangià na cosa bbona, diversa, o comunque me vaco a fà 'a cena 'e pesce particulare, o che ne saccio","Completa il turno gia' iniziato, in napoletano.","spenno 'e cchiù, o pe' dicere, stevamo parlanno","pure d' 'e chef stellate, magari dice",5,5,5,
+V147,T3,Llama7B,"B: pecché comme se dice
+A: no no, ce stongo, ce stongo
+B: nun 'e nzuppe int' 'a sarzella
+B: però 'e magne
+A: e comme no
+B: credo",Sei A. Rispondi in napoletano a quello che ha appena detto B.,,"no, 'e magne, nun 'e nzuppe int' 'a sarzella",4,4,3,
+V048,T3,Riferimento umano,"C: dirà ""basta, so' arraggiato""
+A: no
+C: ghostiammo
+D: vulite quacc'ata cosa
+A: no no, grazie","Come risponderebbe B, in napoletano?",,a posto accussì,5,5,5,
+V082,T2,Llama7B,"B: e niente, m'ha ditto 'o nomme accussì e po' fa ""ma i' t'aggio già vista""
+B: e i' aggio ditto ""boh, nun 'o saccio""
+A: mhmh","Completa il turno gia' iniziato, in napoletano.",pecché ha ditto ca secondo isso,è chillu juorne,4,4,4,
+V134,T2,Gemma4B,"B: e niente, m'ha ditto 'o nomme accussì e po' fa ""ma i' t'aggio già vista""
+B: e i' aggio ditto ""boh, nun 'o saccio""
+A: mhmh","Completa il turno gia' iniziato, in napoletano.",pecché ha ditto ca secondo isso,ce stévamo assaje 'ncopp'a,3,2,3,
+V045,T3,Riferimento umano,"C: e ce facimmo 'e spazie cu 'e nummere
+A: sì
+A: sì
+C: e po' stampammo 'ncopp'a carta fotograf~ f~ emh carta adesiva
+A: adesiva",Scrivi la replica di C in napoletano: dev'essere una risposta a A.,,e 'e ffoto,5,5,4,
+V145,T2,Llama7B,"A: mhmh
+B: se mèttono a mangià 'a ehm cucine siciliane tipo
+A: ah okay, quinni dice comunque nun è ca dice ""saje, magari me faccio ll'esperienza a mangià int'a nu posto diverso ca fa nu menù""","Completa il turno gia' iniziato, in napoletano.",addò fanno,nu menù,4,5,4,
+V043,T2,Llama7B,"A: nun simmo trasute
+C: però cioè nun penzo ca s' 'a sia fatta sulo pe' sta serata, cioè
+C: ca po' isso fa 'e cose, ah, tutte v~ sto arradunanno gente","Completa il turno gia' iniziato, in napoletano.",in realtà ll'ha ditto,"""okay, vabbuò""",4,5,4,
+V086,T3,Llama7B,"B: aggio sbrudulato tutte cose, guarda che casino ca aggio fatto
+A: ah, aggio capito, ma i' magari m'aggi'a pulizzà
+B: grazie cara
+A: è na fronna 'e lauro d' 'a curona soja
+A: mo sapésse 'e cibbo indiano, no, nun è overo
+B: mh","Adesso parla A. Che dice, in napoletano? (l'ultimo turno e' solo un cenno di ascolto: il tema vero e' nel turno precedente)",,"ma aggio sbrudulato, ma aggio sbrudulato, eh, 'e cibbo indiano, nun è over",2,1,1,
+V117,T2,Gemma4B,"B: magari dice ""vabbuò, ne sta parlanno cu ll'ate"" e 'o faje
+C: vabbuò, almeno ce si' rimasta impressa
+B: no","Completa il turno gia' iniziato, in napoletano.",e lloro che,s' 'o pigliano,3,4,3,
+V004,T2,Riferimento umano,"A: eh
+B: e comunque lunedì me faccio proprio sulo 'o percorso cu essa pe' vedé comme
+B: che strategia, cioè, che po' strategia","Completa il turno gia' iniziato, in napoletano.","embè, tu ce ll'hê 'a ripetere tante","vote ""ma nun ce stanno parcheggi""",5,4,5,
+V030,T2,Gemma4B,"A: e vabbuò
+B: mo vaco 'n giro c' 'a buttiglia 'e vino accussì
+A: che terribbele ca si'","Completa il turno gia' iniziato, in napoletano.","baby, ce stanno",nu sacco 'e,4,5,4,
+V112,T2,Llama7B,"A: ca nun se chiamma
+A: te s'arape tutto quanto
+A: e vabbuò","Completa il turno gia' iniziato, in napoletano.",mo vaco 'n giro c','a mamma ll'hê,2,1,1,
+V040,T3,Gemma4B,"C: no no, grazie, stammo a posto
+A: no, a posto accussì
+D: stammo a posto accussì
+A: grazie assaje
+D: bbuono, grazie assaje a vuje
+C: grazie",Continua la conversazione: scrivi il turno di A in napoletano.,,"ma, ma, ma, ma, ma, ma, ma, ma, ma, ma, ma, ma, ma, ma, ma, ma,",1,1,1,
+V078,T2,Riferimento umano,"C: esatto
+C: allora aggio accummenciato a cammenà cu 'e vans messe a ciavatta
+A: sì","Completa il turno gia' iniziato, in napoletano.",p' 'o centro,pecché tenevo malissimo,4,4,5,
+V028,T3,Llama7B,"A: 'o twister, allora erano quatto, forse
+C: chello ca ha fatto cu 'a sara
+A: obbligo o verità ce steva
+C: secondo me obbligo o verità steva int' 'e casellelle
+C: 'a comme me ricordo
+B: pecché i' me so' perza tutto",Sei C. Rispondi in napoletano a quello che ha appena detto B. (l'ultimo turno e' una domanda: rispondi alla domanda),,"'a come me ricordo, pecché i' me so' perza todo",2,2,1,
+V088,T3,Riferimento umano,"A: Sì sì sì, no
+B: ma comunque cioè ce sta pure 'o penzà a nu jucariello p' 'a ale
+C: sì
+B: cioè magari pure si tipo okay ce steva 'o bookay fotografico cu 'e stickers
+B: ma magari
+B: ce mettere quaccosa int' 'o gioco","Tocca a C. Rispondi in napoletano, restando sul tema.",,"eh, comunque nu gioco ca 'a fa vevere",5,5,5,
+V022,T2,Minerva7B,"B: magari dice ""vabbuò, ne sta parlanno cu ll'ate"" e 'o faje
+C: vabbuò, almeno ce si' rimasta impressa
+B: no","Completa il turno gia' iniziato, in napoletano.",e lloro che,"diceno ""ah, nun",4,3,4,
+V032,T3,Riferimento umano,"A: essa no
+A: però
+C: sempe 'a nnuje o n'ato
+B: no, ccà è 'a primma vota, sì sì
+A: no pecché essa steva fore
+C: ah okay, okay","Adesso parla B. Che dice, in napoletano? (l'ultimo turno e' solo un cenno di ascolto: il tema vero e' nel turno precedente)",,sì sì sì,5,5,4,
+V120,T2,Gemma4B,"B: no, però ce aggio nu poco penzato
+B: aggio ditto ""ma pecché aggi'a f~""
+B: magari dice ""vabbuò, ne sta parlanno cu ll'ate"" e 'o faje","Completa il turno gia' iniziato, in napoletano.","vabbuò, almeno ce",stévamo 'ncopp'a stessa,3,2,2,
+V058,T2,Gemma4B,"C: cioè
+C: nun era manco brutto e nun era manco antipatico
+A: no, però s' 'a credeva troppo","Completa il turno gia' iniziato, in napoletano.","però era strano, cioè nun capive",v' 'a vota,2,1,1,
+V113,T3,Minerva7B,"B: simmo juti c' 'a chiavetta 'n copisteria
+A: sì
+A: e e iss~ e chillo llà ha visto tutte 'e toje",Sei C. Rispondi in napoletano a quello che ha appena detto A.,,"ah, te fa ""mah, ma tanto nun ll'avimmo c~ c~ cchiammà pe' sfenecere""",4,3,3,
+V114,T2,Gemma4B,"B: dipenne 'a ll'approccio
+A: ma sì
+C: pure pecché","Completa il turno gia' iniziato, in napoletano.",uno ca s~ saje ca s'è accucchiato tutte,'e nott~,3,2,3,
+V007,T3,Gemma4B,"C: ha ditto ""sì sì, si vulite ve 'e faccio 'n hd""
+C: però ll'aggi'a sistemà tutte
+C: quinni ce vularrà nu poco
+B: e vuje ce avite ditto ""ma scusate, avite visto 'e ffoto""
+A: sì, avimmo ditto ""ma no""
+B: ah, ok ok","Adesso parla C. Che dice, in napoletano? (l'ultimo turno e' solo un cenno di ascolto: il tema vero e' nel turno precedente)",,'e foto nun 'e avevamo visto,2,2,4,
+V044,T3,Gemma4B,"A: no, i' no
+B: okay, i' te piglio n'ata birra
+B: però nun saparrìa quale piglià
+D: si jate 'e xxx
+D: vuó quaccosa sempe 'ncopp' 'o acido
+D: o","Come risponderebbe B, in napoletano?",,'a 'e xxx 'e 'o limoncello,2,1,2,
+V133,T2,Minerva7B,"B: dipenne 'a ll'approccio
+A: ma sì
+C: pure pecché","Completa il turno gia' iniziato, in napoletano.",uno ca s~ saje ca s'è accucchiato tutte,'e ffoto,3,5,2,
+V094,T3,Gemma4B,"A: sì, esatto
+C: cu 'e cartellin' 'a aprì
+B: sì
+C: e po' ce steva 'e cchiù sta rota ca girava cu 'e tre giuoche, esatto
+A: ca era na cosa, sì
+C: ca po' llà 'e giuoche erano","Adesso parla A. Che dice, in napoletano?",,"ca erano 'e giuoche 'e 'e tre giuoche, llà 'e tre giuoche",2,2,2,
+V050,T3,Llama7B,"A: e e iss~ e chillo llà ha visto tutte 'e toje
+C: no no no, era, era 'n bolognina
+A: piazza 'e ll'unità
+B: ah, era arte copia
+C: arte copia
+B: oddio, me canosce pure bbuono, vaco sempe llà",Sei A. Rispondi in napoletano a quello che ha appena detto B.,,"no, era, era 'n bolognina, ll'unità, ll'unità, ll'unità",2,3,2,
+V128,T3,Gemma4B,"A: e e iss~ e chillo llà ha visto tutte 'e toje
+C: no no no, era, era 'n bolognina
+A: piazza 'e ll'unità
+B: ah, era arte copia
+C: arte copia
+B: oddio, me canosce pure bbuono, vaco sempe llà",Sei A. Rispondi in napoletano a quello che ha appena detto B.,,"ma 'o llà era 'n posto, llà era arte copia",2,2,3,
+V101,T3,Llama7B,"A: grazie
+D: nu ducetiello
+C: no no, grazie, stammo a posto
+A: no, a posto accussì
+D: stammo a posto accussì
+A: grazie assaje",Continua la conversazione: scrivi il turno di D in napoletano.,,"no, a posto accussì, ma 'nfatti, grazie assaje",4,4,2,
+V024,T2,Llama7B,"C: cioè
+C: nun era manco brutto e nun era manco antipatico
+A: no, però s' 'a credeva troppo","Completa il turno gia' iniziato, in napoletano.","però era strano, cioè nun capive","va nuje cosa, cioé",2,1,1,
+V136,T3,Gemma4B,"A: sì, no, 'o saccio, però
+C: vabbuò, 'ntanto scrivimmo
+A: ah, llà puó stoppà in realtà
+B: a luca
+B: addò sta
+C: mh",Scrivi la replica di B in napoletano: dev'essere una risposta a C. (l'ultimo turno e' solo un cenno di ascolto: il tema vero e' nel turno precedente),,"'a luca, sì, addò sta",3,3,3,
+V067,T3,Riferimento umano,"A: eh no baby
+A: no, aspiett', 'n che senzo nun te può piglià 'o covid
+B: eh
+A: overamente
+B: pecché 'o magne
+A: eh vabbuò, ma nun te fernesce comunque","Tocca a B. Rispondi in napoletano, restando sul tema.",,"eh, nun 'o ssaccio",5,5,5,
+V093,T2,Minerva7B,"A: e vabbuò
+B: mo vaco 'n giro c' 'a buttiglia 'e vino accussì
+A: che terribbele ca si'","Completa il turno gia' iniziato, in napoletano.","baby, ce stanno",'n sacco 'e,4,4,4,
+V106,T2,Minerva7B,"B: e niente, m'ha ditto 'o nomme accussì e po' fa ""ma i' t'aggio già vista""
+B: e i' aggio ditto ""boh, nun 'o saccio""
+A: mhmh","Completa il turno gia' iniziato, in napoletano.",pecché ha ditto ca secondo isso,i' nun l'aggio maje vista,5,4,5,
+V098,T2,Llama7B,"B: che strategia, cioè, che po' strategia
+C: embè, tu ce ll'hê 'a ripetere tante vote ""ma nun ce stanno parcheggi""
+B: eh, 'nfatti no, pecché sennò ce dico ""c' 'o cazzo ca venco llà a""","Completa il turno gia' iniziato, in napoletano.","sì, cioè si hê 'a stà sulo 'n machina a girà 'mpanicata",", 'mpanichella, 'mpane",1,1,1,
+V109,T3,Minerva7B,"A: sì, esatto
+C: cu 'e cartellin' 'a aprì
+B: sì
+C: e po' ce steva 'e cchiù sta rota ca girava cu 'e tre giuoche, esatto
+A: ca era na cosa, sì
+C: ca po' llà 'e giuoche erano","Adesso parla A. Che dice, in napoletano?",,llà 'e giuoche,3,4,2,
+V072,T2,Gemma4B,"A: nun simmo trasute
+C: però cioè nun penzo ca s' 'a sia fatta sulo pe' sta serata, cioè
+C: ca po' isso fa 'e cose, ah, tutte v~ sto arradunanno gente","Completa il turno gia' iniziato, in napoletano.",in realtà ll'ha ditto,"""s' 'a si",2,1,2,
+V002,T2,Llama7B,"B: dipenne 'a ll'approccio
+A: ma sì
+C: pure pecché","Completa il turno gia' iniziato, in napoletano.",uno ca s~ saje ca s'è accucchiato tutte,'e fettuole 'e pummarola,3,4,1,
+V131,T2,Minerva7B,"A: nun simmo trasute
+C: però cioè nun penzo ca s' 'a sia fatta sulo pe' sta serata, cioè
+C: ca po' isso fa 'e cose, ah, tutte v~ sto arradunanno gente","Completa il turno gia' iniziato, in napoletano.",in realtà ll'ha ditto,pure a me,5,5,5,
+V051,T2,Gemma4B,"C: e â, ô~ ô tal~ cioè no ô tallone, ô tendine
+B: 'o solito cuoso 'e ll'anfibio
+C: esatto","Completa il turno gia' iniziato, in napoletano.",allora aggio accummenciato a cammenà cu,'e scarpe nu poco cchiù,4,4,4,
+V039,T3,Minerva7B,"C: mhmh
+A: sì sì
+A: pe' me sì, ca, ca mangio mh cibo indiano, sì
+B: no, i' no
+A: essa no
+A: però",Scrivi la replica di C in napoletano: dev'essere una risposta a A.,,"essa no, ma llà sì",4,4,3,

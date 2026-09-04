@@ -1,0 +1,151 @@
+﻿item,task,modello,origine,testo,naturalezza,grammatica,lessico,media
+V001,T3,Minerva7B,KPN003_T3_1350,"e avarà ditto ""ok""",4.00,3.50,3.00,3.50
+V002,T2,Llama7B,KPN003_T2_747_c8,'e fettuole 'e pummarola,3.50,4.00,2.00,3.17
+V003,T3,Llama7B,KPN001_T3_1046,"ll'ati dduje nun ll'hê tuccate, so' separate adeguatamente",4.50,4.50,1.50,3.50
+V004,T2,Riferimento umano,KPN003_T2_498_c7,"vote ""ma nun ce stanno parcheggi""",5.00,4.00,5.00,4.67
+V005,T2,Riferimento umano,KPN003_T2_489_c8,"esceno 'a scola, ce stanno tutte 'e genitore",5.00,5.00,5.00,5.00
+V006,T2,Riferimento umano,KPN003_T2_497_c3,che po' strategia,4.00,4.00,4.00,4.00
+V007,T3,Gemma4B,KPN003_T3_1346,'e foto nun 'e avevamo visto,3.00,3.00,4.00,3.33
+V008,T3,Riferimento umano,KPN003_T3_1296,tanto 'o f~ ce ll'hanno,3.00,3.00,3.00,3.00
+V009,T3,Gemma4B,KPN001_T3_970,"ma aggio fatto 'e cose 'e 'a curona, cioè 'e cibbo indiano, cioè 'e cose 'e 'a curona",2.00,2.00,1.50,1.83
+V010,T2,Minerva7B,KPN003_T2_739_c6,cchiù niente,4.50,5.00,5.00,4.83
+V011,T3,Llama7B,KPN003_T3_1435,"llà puó stoppà in realtà, ma 'o saccio, 'o saccio, 'o saccio",2.00,3.00,1.00,2.00
+V012,T3,Llama7B,KPN003_T3_1411,"sì, sì, 'e fà fà pure a ll'invitate, ma 'e fà pure a ll'amma 'nz",2.50,2.00,2.00,2.17
+V013,T2,Minerva7B,KPN003_T2_986_c3,aggio fatto nu,2.50,2.00,2.00,2.17
+V014,T3,Minerva7B,KPN003_T3_1420,grazie assaje a ll'attacco,2.00,2.50,1.50,2.00
+V015,T3,Gemma4B,KPN003_T3_1414,"'e cose 'e casa, 'e cose 'e casa, 'e cose 'e casa, 'e cose 'e casa, 'e cose '",1.00,2.00,1.00,1.33
+V016,T2,Gemma4B,KPN001_T2_993_c4,na versione diversa,3.50,5.00,4.00,4.17
+V017,T2,Riferimento umano,KPN003_T2_239_c3,vota ll'avimmo viste,4.50,4.50,4.50,4.50
+V018,T3,Riferimento umano,KPN001_T3_963,"eh, che faje c' 'o tuvagliulo mio",4.50,4.50,5.00,4.67
+V019,T3,Minerva7B,KPN003_T3_1438,"ah, ll'unnice",4.50,5.00,4.00,4.50
+V020,T3,Riferimento umano,KPN003_T3_1451,"no no, grazie",5.00,5.00,5.00,5.00
+V021,T2,Llama7B,KPN003_T2_246_c4,"mh, mh",3.00,3.00,2.00,2.67
+V022,T2,Minerva7B,KPN003_T2_988_c3,"diceno ""ah, nun",3.00,2.50,3.00,2.83
+V023,T3,Riferimento umano,KPN003_T3_1459,"okay, i' te piglio n'ata birra",5.00,5.00,5.00,5.00
+V024,T2,Llama7B,KPN003_T2_739_c6,"va nuje cosa, cioé",2.00,1.50,1.50,1.67
+V025,T3,Gemma4B,KPN003_T3_1305,"ma 'o album è 'e ffoto, cioè 'e foto, cioè 'e foto, cioè 'e foto, cioè 'e foto, cioè '",1.00,1.00,1.00,1.00
+V026,T3,Minerva7B,KPN001_T3_1046,"pucci, no, chisto è nu modo 'e di~, cioè 'o stesse, no",4.00,3.50,4.00,3.83
+V027,T3,Gemma4B,KPN001_T3_956,"no, io, io mangio italiano, sì",2.00,2.00,2.50,2.17
+V028,T3,Llama7B,KPN003_T3_1392,"'a come me ricordo, pecché i' me so' perza todo",3.00,3.00,2.00,2.67
+V029,T3,Llama7B,KPN003_T3_1346,"sì, sì, si vulite ve 'e faccio 'n hd, ma ll'aggi'a sistemà tutte, quin",3.50,3.50,2.00,3.00
+V030,T2,Gemma4B,KPN001_T2_1000_c3,nu sacco 'e,3.00,4.00,3.00,3.33
+V031,T3,Llama7B,KPN003_T3_1438,"ll'unnice, embè, songo ll'unnice",4.00,4.00,3.00,3.67
+V032,T3,Riferimento umano,KPN001_T3_960,sì sì sì,5.00,5.00,4.00,4.67
+V033,T3,Gemma4B,KPN003_T3_1324,e 'e toje tutte 'e toje,2.00,2.50,2.00,2.17
+V034,T3,Riferimento umano,KPN003_T3_1273,"eh, però nun saccio si veneno gruosse, cioè",5.00,5.00,5.00,5.00
+V035,T2,Riferimento umano,KPN003_T2_980_c6,comme ll'uommene accùcchiano 'e ffemmene,4.50,4.50,4.50,4.50
+V036,T3,Minerva7B,KPN003_T3_1346,"e avimmo ditto ""ma scusate, avite visto 'e ffoto""",4.00,4.00,3.00,3.67
+V037,T2,Minerva7B,KPN003_T2_500_c12,'ncopp' 'o parcheggio,3.50,4.00,3.50,3.67
+V038,T3,Minerva7B,KPN003_T3_1329,"ma sì sì, pure llà",4.50,5.00,4.00,4.50
+V039,T3,Minerva7B,KPN001_T3_956,"essa no, ma llà sì",4.00,4.00,3.50,3.83
+V040,T3,Gemma4B,KPN003_T3_1420,"ma, ma, ma, ma, ma, ma, ma, ma, ma, ma, ma, ma, ma, ma, ma, ma,",1.00,1.00,1.00,1.00
+V041,T2,Riferimento umano,KPN001_T2_250_c8,"pure d' 'e chef stellate, magari dice",4.50,5.00,5.00,4.83
+V042,T2,Gemma4B,KPN003_T2_731_c3,'a birra,4.00,4.00,4.00,4.00
+V043,T2,Llama7B,KPN003_T2_235_c4,"""okay, vabbuò""",4.00,4.50,4.00,4.17
+V044,T3,Gemma4B,KPN003_T3_1464,'a 'e xxx 'e 'o limoncello,2.00,1.50,2.00,1.83
+V045,T3,Riferimento umano,KPN003_T3_1295,e 'e ffoto,4.50,5.00,4.00,4.50
+V046,T3,Gemma4B,KPN003_T3_1350,"no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no,",1.00,1.00,1.00,1.00
+V047,T2,Minerva7B,KPN003_T2_1250_c4,cchiù 'ncoppa,2.50,3.50,2.00,2.67
+V048,T3,Riferimento umano,KPN003_T3_1452,a posto accussì,5.00,5.00,5.00,5.00
+V049,T3,Gemma4B,KPN003_T3_1418,"ma sì, grazie assaje, grazie assaje, grazie assaje, grazie assaje, grazie assaje, grazie assaje, grazie assaje, grazie",1.00,2.00,1.00,1.33
+V050,T3,Llama7B,KPN003_T3_1329,"no, era, era 'n bolognina, ll'unità, ll'unità, ll'unità",2.00,3.00,2.00,2.33
+V051,T2,Gemma4B,KPN003_T2_1245_c6,'e scarpe nu poco cchiù,4.00,4.00,4.00,4.00
+V052,T2,Llama7B,KPN003_T2_994_c8,po' è rimasta 'n vacanza,3.00,3.00,2.00,2.67
+V053,T3,Llama7B,KPN001_T3_956,"sì, sì, ca, ca mangio mh cibo indiano, sì, ma no, i' no, essa no",3.00,3.00,1.50,2.50
+V054,T2,Minerva7B,KPN001_T2_993_c4,'o tappo suojo,4.00,5.00,5.00,4.67
+V055,T3,Minerva7B,KPN003_T3_1424,"no, grazie",5.00,5.00,4.00,4.67
+V056,T3,Gemma4B,KPN003_T3_1392,"'a verità era 'a casellelle, sì, ma 'o twister era 'a verità, cioè 'a verità era 'a casellelle",2.00,2.00,1.50,1.83
+V057,T2,Minerva7B,KPN001_T2_245_c6,fine d' 'o sabbato,3.50,3.50,2.50,3.17
+V058,T2,Gemma4B,KPN003_T2_739_c6,v' 'a vota,2.00,1.50,1.50,1.67
+V059,T2,Gemma4B,KPN003_T2_993_c3,nun s',2.00,2.00,2.00,2.00
+V060,T2,Gemma4B,KPN001_T2_998_c5,'e babbaglie,3.00,3.00,2.00,2.67
+V061,T3,Llama7B,KPN003_T3_1371,"ca llà 'e giuoche eranno, sì",2.00,2.00,3.00,2.33
+V062,T3,Llama7B,KPN003_T3_1420,"no, a posto accussì, ma 'nvece, grazie assaje",3.50,3.50,3.00,3.33
+V063,T3,Minerva7B,KPN003_T3_1414,"no, grazie",5.00,5.00,5.00,5.00
+V064,T2,Llama7B,KPN001_T2_1000_c3,nu casino a,3.00,2.00,3.50,2.83
+V065,T2,Llama7B,KPN003_T2_993_c3,ce stévano,4.00,4.50,4.00,4.17
+V066,T3,Gemma4B,KPN003_T3_1438,"'e ll'unnice, sì, 'e ll'unnice",3.00,3.00,2.00,2.67
+V067,T3,Riferimento umano,KPN001_T3_1063,"eh, nun 'o ssaccio",5.00,5.00,5.00,5.00
+V068,T3,Llama7B,KPN003_T3_1275,"'e putimmo stampà, ma nun 'e putimmo stampà gruosse, cioè",3.50,4.00,3.50,3.67
+V069,T2,Minerva7B,KPN001_T2_237_c2,'a pasta,4.00,5.00,4.00,4.33
+V070,T3,Gemma4B,KPN001_T3_1046,"nun ll'hê tuccate, so separate adeguatamente, ll'ati dduje",3.00,3.00,1.50,2.50
+V071,T2,Minerva7B,KPN003_T2_991_c3,nun m' 'o,3.00,3.00,3.00,3.00
+V072,T2,Gemma4B,KPN003_T2_235_c4,"""s' 'a si",2.00,1.00,2.00,1.67
+V073,T3,Minerva7B,KPN003_T3_1392,'a comme me ricordo,4.50,4.50,3.00,4.00
+V074,T2,Gemma4B,KPN003_T2_991_c3,ll'avr' ditto,2.50,2.50,3.50,2.83
+V075,T2,Riferimento umano,KPN001_T2_984_c4,'e 'e mettere dinto,3.50,2.50,3.50,3.17
+V076,T2,Llama7B,KPN003_T2_991_c3,m'aggi'a fà,4.00,4.00,2.00,3.33
+V077,T2,Llama7B,KPN003_T2_234_c6,po' fernesce,4.00,4.00,3.50,3.83
+V078,T2,Riferimento umano,KPN003_T2_1247_c3,pecché tenevo malissimo,4.00,4.00,5.00,4.33
+V079,T2,Riferimento umano,KPN003_T2_730_c5,"ca vaco a lezione""",5.00,5.00,5.00,5.00
+V080,T3,Llama7B,KPN003_T3_1414,"sì, 'e 'nzognò, nun saccio",2.00,2.00,2.00,2.00
+V081,T3,Llama7B,KPN003_T3_1305,ca 'o album è 'e più 'e 'e 'e,1.00,1.00,1.00,1.00
+V082,T2,Llama7B,KPN003_T2_997_c6,è chillu juorne,4.00,4.00,4.00,4.00
+V083,T3,Minerva7B,KPN003_T3_1275,"no, 'e gruosse no, però eventualmente",4.00,4.00,4.00,4.00
+V084,T2,Minerva7B,KPN003_T2_994_c8,po' 'ncopp' 'a fora,2.00,2.00,2.00,2.00
+V085,T3,Minerva7B,KPN003_T3_1305,quinni basta se selezionà 'e ffoto,4.00,3.50,4.00,3.83
+V086,T3,Llama7B,KPN001_T3_970,"ma aggio sbrudulato, ma aggio sbrudulato, eh, 'e cibbo indiano, nun è over",2.00,1.50,1.50,1.67
+V087,T3,Riferimento umano,KPN001_T3_967,è na fronna 'e lauro d' 'a curona soja,4.50,5.00,5.00,4.83
+V088,T3,Riferimento umano,KPN003_T3_1355,"eh, comunque nu gioco ca 'a fa vevere",4.50,4.50,5.00,4.67
+V089,T3,Gemma4B,KPN003_T3_1411,'e passe 'e,2.50,2.00,1.00,1.83
+V090,T2,Gemma4B,KPN003_T2_234_c6,cioè 'e cchiù,2.50,2.50,2.50,2.50
+V091,T2,Minerva7B,KPN003_T2_234_c6,"po' fa 'e ffoto, po' ll'aggi'a",4.00,4.00,4.00,4.00
+V092,T2,Minerva7B,KPN003_T2_246_c4,'a primma vota,3.00,4.00,2.50,3.17
+V093,T2,Minerva7B,KPN001_T2_1000_c3,'n sacco 'e,3.00,3.00,3.00,3.00
+V094,T3,Gemma4B,KPN003_T3_1371,"ca erano 'e giuoche 'e 'e tre giuoche, llà 'e tre giuoche",2.00,2.00,2.00,2.00
+V095,T2,Riferimento umano,KPN001_T2_730_c5,"sashimi, ehm, 'e roll accussì",5.00,5.00,5.00,5.00
+V096,T3,Llama7B,KPN003_T3_1464,"no, 'o acido nun è 'ncopp'",3.00,3.00,3.50,3.17
+V097,T3,Riferimento umano,KPN003_T3_1285,"embè, putimmo pure piglià",5.00,5.00,4.00,4.67
+V098,T2,Llama7B,KPN003_T2_500_c12,", 'mpanichella, 'mpane",1.00,1.00,1.00,1.00
+V099,T2,Llama7B,KPN003_T2_1250_c4,nu poco 'e,2.50,2.50,2.50,2.50
+V100,T3,Minerva7B,KPN001_T3_970,"no, è indiano",4.00,4.00,4.00,4.00
+V101,T3,Llama7B,KPN003_T3_1418,"no, a posto accussì, ma 'nfatti, grazie assaje",4.00,4.00,3.00,3.67
+V102,T2,Minerva7B,KPN003_T2_993_c3,nun l'avevano,3.00,3.00,3.00,3.00
+V103,T2,Riferimento umano,KPN001_T2_737_c5,ll'addora nu poco accussì,5.00,5.00,5.00,5.00
+V104,T2,Riferimento umano,KPN001_T2_744_c16,"nu poco stemperà 'o, 'o vagno llà, quinni nun ce steva manco 'a sarzella ca dice",5.00,4.00,4.00,4.33
+V105,T2,Minerva7B,KPN001_T2_998_c5,'o piglio,2.00,2.00,2.00,2.00
+V106,T2,Minerva7B,KPN003_T2_997_c6,i' nun l'aggio maje vista,5.00,4.00,5.00,4.67
+V107,T2,Riferimento umano,KPN003_T2_983_c4,nu poco penzato,5.00,5.00,5.00,5.00
+V108,T3,Minerva7B,KPN003_T3_1435,addò sta luca,5.00,5.00,3.50,4.50
+V109,T3,Minerva7B,KPN003_T3_1371,llà 'e giuoche,2.50,4.00,2.00,2.83
+V110,T2,Gemma4B,KPN001_T2_245_c6,fine 'e vacanz' 'a ll'abbim,2.00,1.00,2.00,1.67
+V111,T3,Minerva7B,KPN001_T3_1050,e 'e salze,3.50,4.00,3.50,3.67
+V112,T2,Llama7B,KPN001_T2_998_c5,'a mamma ll'hê,2.00,1.50,1.50,1.67
+V113,T3,Minerva7B,KPN003_T3_1324,"ah, te fa ""mah, ma tanto nun ll'avimmo c~ c~ cchiammà pe' sfenecere""",4.00,3.00,3.00,3.33
+V114,T2,Gemma4B,KPN003_T2_747_c8,'e nott~,2.50,2.00,2.50,2.33
+V115,T3,Riferimento umano,KPN001_T3_942,accussì a 'o massimo 'a purtammo â casa,5.00,5.00,5.00,5.00
+V116,T2,Llama7B,KPN003_T2_986_c3,stanno nu poco,4.00,4.00,3.50,3.83
+V117,T2,Gemma4B,KPN003_T2_988_c3,s' 'o pigliano,3.00,4.00,3.50,3.50
+V118,T2,Minerva7B,KPN003_T2_731_c3,'n bicchiere,4.00,4.00,4.00,4.00
+V119,T2,Gemma4B,KPN003_T2_1250_c4,nu poco ca,2.50,2.00,2.50,2.33
+V120,T2,Gemma4B,KPN003_T2_986_c3,stévamo 'ncopp'a stessa,2.50,2.00,2.00,2.17
+V121,T2,Minerva7B,KPN003_T2_1245_c6,ll'acqua 'ncoppa,3.00,4.00,2.00,3.00
+V122,T2,Llama7B,KPN003_T2_988_c3,fanno 'a scolaresca,2.50,3.50,2.00,2.67
+V123,T3,Minerva7B,KPN003_T3_1464,"no, nun truove, nun truove, nun truove, eh",2.50,3.50,1.50,2.50
+V124,T2,Riferimento umano,KPN003_T2_231_c4,vota nun simmo trasute,4.00,4.00,4.00,4.00
+V125,T2,Riferimento umano,KPN001_T2_481_c6,nun riesce a 'o piglià,4.00,4.00,5.00,4.33
+V126,T3,Minerva7B,KPN003_T3_1411,'e passe 'e balle,4.00,4.50,4.00,4.17
+V127,T2,Gemma4B,KPN003_T2_500_c12,int' 'a città,4.00,4.00,4.00,4.00
+V128,T3,Gemma4B,KPN003_T3_1329,"ma 'o llà era 'n posto, llà era arte copia",2.50,2.50,3.50,2.83
+V129,T2,Llama7B,KPN001_T2_993_c4,'o primmo,4.00,4.50,4.00,4.17
+V130,T2,Gemma4B,KPN003_T2_246_c4,bbuono pe' ll'alber,2.00,1.00,2.00,1.67
+V131,T2,Minerva7B,KPN003_T2_235_c4,pure a me,4.50,4.50,5.00,4.67
+V132,T2,Llama7B,KPN001_T2_245_c6,"vabbuò, cioè",2.00,1.50,2.00,1.83
+V133,T2,Minerva7B,KPN003_T2_747_c8,'e ffoto,3.50,4.50,3.00,3.67
+V134,T2,Gemma4B,KPN003_T2_997_c6,ce stévamo assaje 'ncopp'a,2.50,2.00,2.50,2.33
+V135,T3,Minerva7B,KPN003_T3_1418,"grazie, grazie",4.00,5.00,4.00,4.33
+V136,T3,Gemma4B,KPN003_T3_1435,"'a luca, sì, addò sta",3.00,3.00,3.00,3.00
+V137,T2,Gemma4B,KPN003_T2_994_c8,"'o ditto ""sì, è nu nomme cchiù",2.00,1.00,2.00,1.67
+V138,T3,Gemma4B,KPN003_T3_1424,"ma 'o vestito suojo se carreca, eh, 'a birra 'a fa 'a differenza",3.00,3.00,2.50,2.83
+V139,T2,Llama7B,KPN003_T2_731_c3,nu bicchiere,4.00,5.00,4.00,4.33
+V140,T3,Llama7B,KPN003_T3_1324,"sì, sì, llà ha visto tutte 'e toje, e 'o chillo llà ha visto 'e toje",2.00,2.00,2.00,2.00
+V141,T3,Gemma4B,KPN001_T3_1050,"'e magne, 'e magne, 'e magne",2.00,3.00,2.00,2.33
+V142,T3,Riferimento umano,KPN003_T3_1381,"'o, chello 'e ll'yoga",4.00,4.00,3.00,3.67
+V143,T2,Gemma4B,KPN001_T2_237_c2,'e cchiù,3.50,3.50,3.00,3.33
+V144,T3,Llama7B,KPN003_T3_1424,"ca 'o vestito suojo se carreca, ma 'o c' 'e balle fà quaccosa",2.00,2.00,2.00,2.00
+V145,T2,Llama7B,KPN001_T2_237_c2,nu menù,4.00,5.00,4.00,4.33
+V146,T3,Llama7B,KPN003_T3_1350,"sì, ll'avarrà viste e avarrà ditto ""ok""",4.50,4.50,1.50,3.50
+V147,T3,Llama7B,KPN001_T3_1050,"no, 'e magne, nun 'e nzuppe int' 'a sarzella",4.00,4.00,3.50,3.83
+V148,T3,Riferimento umano,KPN003_T3_1391,pecché i' me so' perza tutto,5.00,4.00,5.00,4.67
+V149,T2,Llama7B,KPN003_T2_1245_c6,'e palline,2.50,3.00,2.00,2.50
+V150,T3,Gemma4B,KPN003_T3_1275,"'e putimmo stampà, sì, però 'e stickers nun sanno, cioè 'e putimmo stampà, sì, però 'e",1.50,2.00,1.50,1.67
