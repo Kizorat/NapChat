@@ -1,0 +1,212 @@
+{
+  "origine": "/kaggle/working/split_igiene_mt",
+  "opzioni": {
+    "split_dir": "/kaggle/working/split_igiene_mt",
+    "out_dir": "/kaggle/working/split_arr",
+    "task": [
+      "T1",
+      "T2",
+      "T3"
+    ],
+    "variazioni": true,
+    "parlanti": true,
+    "ancora": true,
+    "ancora_k": 4,
+    "multitask": true,
+    "seed": 42
+  },
+  "task": {
+    "T1": {
+      "train": {
+        "prima": {
+          "nome": "T1/train prima",
+          "n": 1134,
+          "istruzioni_distinte": 1120,
+          "parole_prompt_medie": 36.2
+        },
+        "dopo": {
+          "nome": "T1/train dopo",
+          "n": 1134,
+          "istruzioni_distinte": 1121,
+          "parole_prompt_medie": 40.5
+        },
+        "istruzioni_variate": 1133,
+        "turni_etichettati": 0,
+        "ancore_aggiunte": 1133,
+        "prompt_non_scomponibili": 1
+      },
+      "dev": {
+        "prima": {
+          "nome": "T1/dev prima",
+          "n": 270,
+          "istruzioni_distinte": 266,
+          "parole_prompt_medie": 31.7
+        },
+        "dopo": {
+          "nome": "T1/dev dopo",
+          "n": 270,
+          "istruzioni_distinte": 244,
+          "parole_prompt_medie": 35.7
+        },
+        "istruzioni_variate": 0,
+        "turni_etichettati": 0,
+        "ancore_aggiunte": 268,
+        "prompt_non_scomponibili": 2
+      },
+      "test": {
+        "prima": {
+          "nome": "T1/test prima",
+          "n": 267,
+          "istruzioni_distinte": 263,
+          "parole_prompt_medie": 31.5
+        },
+        "dopo": {
+          "nome": "T1/test dopo",
+          "n": 267,
+          "istruzioni_distinte": 236,
+          "parole_prompt_medie": 35.6
+        },
+        "istruzioni_variate": 0,
+        "turni_etichettati": 0,
+        "ancore_aggiunte": 265,
+        "prompt_non_scomponibili": 2
+      }
+    },
+    "T2": {
+      "train": {
+        "prima": {
+          "nome": "T2/train prima",
+          "n": 1363,
+          "istruzioni_distinte": 681,
+          "parole_prompt_medie": 33.1
+        },
+        "dopo": {
+          "nome": "T2/train dopo",
+          "n": 1363,
+          "istruzioni_distinte": 1357,
+          "parole_prompt_medie": 36.9
+        },
+        "istruzioni_variate": 1363,
+        "turni_etichettati": 0,
+        "ancore_aggiunte": 1363,
+        "prompt_non_scomponibili": 0
+      },
+      "dev": {
+        "prima": {
+          "nome": "T2/dev prima",
+          "n": 142,
+          "istruzioni_distinte": 141,
+          "parole_prompt_medie": 35.3
+        },
+        "dopo": {
+          "nome": "T2/dev dopo",
+          "n": 142,
+          "istruzioni_distinte": 134,
+          "parole_prompt_medie": 36.6
+        },
+        "istruzioni_variate": 0,
+        "turni_etichettati": 0,
+        "ancore_aggiunte": 141,
+        "prompt_non_scomponibili": 1
+      },
+      "test": {
+        "prima": {
+          "nome": "T2/test prima",
+          "n": 147,
+          "istruzioni_distinte": 145,
+          "parole_prompt_medie": 34.7
+        },
+        "dopo": {
+          "nome": "T2/test dopo",
+          "n": 147,
+          "istruzioni_distinte": 143,
+          "parole_prompt_medie": 36.1
+        },
+        "istruzioni_variate": 0,
+        "turni_etichettati": 0,
+        "ancore_aggiunte": 145,
+        "prompt_non_scomponibili": 2
+      }
+    },
+    "T3": {
+      "train": {
+        "prima": {
+          "nome": "T3/train prima",
+          "n": 1482,
+          "istruzioni_distinte": 10,
+          "parole_prompt_medie": 25.7
+        },
+        "dopo": {
+          "nome": "T3/train dopo",
+          "n": 1482,
+          "istruzioni_distinte": 1478,
+          "parole_prompt_medie": 40.8
+        },
+        "istruzioni_variate": 1482,
+        "turni_etichettati": 0,
+        "ancore_aggiunte": 1482,
+        "prompt_non_scomponibili": 0
+      },
+      "dev": {
+        "prima": {
+          "nome": "T3/dev prima",
+          "n": 187,
+          "istruzioni_distinte": 9,
+          "parole_prompt_medie": 30.7
+        },
+        "dopo": {
+          "nome": "T3/dev dopo",
+          "n": 187,
+          "istruzioni_distinte": 187,
+          "parole_prompt_medie": 41.7
+        },
+        "istruzioni_variate": 0,
+        "turni_etichettati": 0,
+        "ancore_aggiunte": 187,
+        "prompt_non_scomponibili": 0
+      },
+      "test": {
+        "prima": {
+          "nome": "T3/test prima",
+          "n": 192,
+          "istruzioni_distinte": 12,
+          "parole_prompt_medie": 30.5
+        },
+        "dopo": {
+          "nome": "T3/test dopo",
+          "n": 192,
+          "istruzioni_distinte": 190,
+          "parole_prompt_medie": 41.5
+        },
+        "istruzioni_variate": 0,
+        "turni_etichettati": 0,
+        "ancore_aggiunte": 192,
+        "prompt_non_scomponibili": 0
+      }
+    }
+  },
+  "multitask": {
+    "n": {
+      "train": 3979,
+      "dev": 599,
+      "test": 606
+    },
+    "composizione": {
+      "train": {
+        "T2": 1363,
+        "T3": 1482,
+        "T1": 1134
+      },
+      "dev": {
+        "T1": 270,
+        "T3": 187,
+        "T2": 142
+      },
+      "test": {
+        "T2": 147,
+        "T3": 192,
+        "T1": 267
+      }
+    }
+  }
+}

@@ -22,9 +22,9 @@ tengono la loss negli output del notebook, Gemma nel log_history del summary):
 Per T3 (dagli output salvati nel notebook fine_tuning_T3.ipynb):
   - la curva della loss (train + eval)
 
-I task assenti per un modello vengono semplicemente saltati: T1 esiste per
-Minerva7B e Llama7B, T2 e T3 per tutti e tre. Senza --out ogni modello scrive nella
-propria cartella dei grafici (Minerva7B/grafici_minerva7B/,
+I task assenti per un modello vengono semplicemente saltati; al momento tutti e
+tre i task esistono per tutti e tre i modelli. Senza --out ogni modello scrive
+nella propria cartella dei grafici (Minerva7B/grafici_minerva7B/,
 Gemma4B/grafici_Gemma4B/, Llama7B/grafici_Llama7B/), in una sottocartella per task.
 
 Uso:
@@ -568,6 +568,22 @@ def pannello_prf1_dev(ax, modello):
     return True
 
 
+def generazione_vuota(valutazione):
+    """Vero se al test il modello non ha prodotto testo.
+
+    E' il caso di Gemma su T1: il fine-tunato emette il fine turno come primo
+    token e tutte e 267 le uscite sono stringhe vuote (si vede riga per riga in
+    predizioni_test.csv, colonna 'generato'). Non e' un file mancante ne' un
+    errore di lettura: e' il risultato del run. Ma ogni metrica calcolata sul
+    testo generato vale zero per costruzione, e senza dirlo il grafico sembra
+    rotto invece che il modello. La condizione si legge dai dati - lunghezza
+    media generata nulla e chrF++ nullo insieme - e non dal nome del modello."""
+    if not valutazione:
+        return False
+    return (valutazione.get("C_distribuzionali", {}).get("lunghezza_media") == 0
+            and valutazione.get("F_riferimento", {}).get("chrf++") == 0)
+
+
 def pannello_test_parziale(ax, m):
     """I numeri su test che la riga di riepilogo del notebook conserva."""
     voci = [("BERTScore F1\n(sistema)",
@@ -606,12 +622,22 @@ def barre_prf1_t1(modello, cartella, dpi):
     # scaricato, dal notebook si recuperano i soli F1) si ripiega sulle P/R/F1
     # lessicali della valutazione che ha promosso il checkpoint, su dev
     completo = all(k in m.get("bertscore_sistema", {}) for k in ("P", "R", "F1"))
+    vuota = generazione_vuota(valutazione_t1(modello))
 
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12.5, 4.6))
     nota = ""
     if completo:
         pannello_bertscore(ax1, m)
-        pannello_lessicali(ax2, m)
+        # le lessicali si contano sulle parole generate: a uscite vuote sono
+        # tutte a zero e la loro meta' di figura resta bianca. Al loro posto la
+        # valutazione in teacher forcing, l'unica in cui il modello si vede
+        if vuota and pannello_prf1_dev(ax2, modello):
+            nota = ("al test il modello non genera nulla ({} uscite vuote): il "
+                    "BERTScore e' quello della stringa vuota, sotto il pavimento. "
+                    "A destra la valutazione in teacher forcing, l'unica in cui "
+                    "il modello resta osservabile".format(m.get("n", "tutte le")))
+        else:
+            pannello_lessicali(ax2, m)
     else:
         if not pannello_prf1_dev(ax1, modello):
             print("  ! ne' P/R su test ne' storico di dev: salto le barre P/R/F1")
@@ -660,7 +686,11 @@ def barre_chrf_t1(modello, cartella, dpi):
         e = valutazione
         sistema = e.get("F_riferimento", {}).get("chrf++", sistema)
         boot = e.get("F_bootstrap_chrf", {})
-        if "ci95_basso" in boot and "ci95_alto" in boot and sistema is not None:
+        # l'intervallo va disegnato solo se ha larghezza: a uscite vuote il
+        # bootstrap ricampiona 267 zeri e restituisce 0-0, un baffo di altezza
+        # nulla che in legenda si annuncerebbe come "IC 95%" senza esserlo
+        if ("ci95_basso" in boot and "ci95_alto" in boot and sistema is not None
+                and boot["ci95_alto"] > boot["ci95_basso"]):
             ci = ([sistema - boot["ci95_basso"]], [boot["ci95_alto"] - sistema])
         b = e.get("F_baseline", {})
         if "copia_italiano" in b:
@@ -691,8 +721,19 @@ def barre_chrf_t1(modello, cartella, dpi):
         etichette_barre(ax, barre, "{:.2f}")
     ax.set_ylabel("chrF++ (0-100)")
     ax.set_ylim(0, max(valori) * 1.25)
-    ax.set_title("{} - T1 - chrF++ su test contro le baseline"
-                 .format(modello.etichetta), fontsize=12)
+    # con la barra del sistema a zero il grafico da' solo le baseline: senza
+    # una riga che spieghi perche', sembra che il chrF++ non sia stato letto
+    sotto = ""
+    if generazione_vuota(valutazione):
+        quante = valutazione.get("n_test")
+        sotto = ("il sistema non genera nulla: {} le uscite di test sono vuote, "
+                 "quindi il chrF++ e' zero per costruzione e resta sotto la "
+                 "baseline che copia l'italiano"
+                 .format("tutte e {}".format(quante) if quante else "tutte"))
+    ax.set_title("{} - T1 - chrF++ su test contro le baseline{}"
+                 .format(modello.etichetta,
+                         "\n" + a_capo(sotto, 62) if sotto else ""),
+                 fontsize=12 if not sotto else 10)
     griglia(ax)
     fig.tight_layout()
     salva(fig, cartella, "T1_chrf_finale.png", dpi)

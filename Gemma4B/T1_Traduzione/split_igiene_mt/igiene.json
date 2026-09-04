@@ -1,0 +1,194 @@
+{
+  "origine": "/kaggle/working/split",
+  "opzioni": {
+    "split_dir": "/kaggle/working/split",
+    "out_dir": "/kaggle/working/split_igiene_mt",
+    "task": [
+      "T3",
+      "T2"
+    ],
+    "tipo_turno": true,
+    "filtra_riscontri": false,
+    "sottocampiona_duplicati": true,
+    "finestre": "1,2,3,4,5",
+    "seed": 42
+  },
+  "task": {
+    "T3": {
+      "distribuzione_bucket_train": {
+        "breve": 0.537,
+        "lungo": 0.155,
+        "medio": 0.307
+      },
+      "train": {
+        "prima": {
+          "nome": "T3/train prima",
+          "n": 748,
+          "lunghezza_media": 8.03,
+          "lunghezza_mediana": 6.0,
+          "bucket": {
+            "medio": 0.307,
+            "breve": 0.537,
+            "lungo": 0.155
+          }
+        },
+        "dopo": {
+          "nome": "T3/train dopo",
+          "n": 1482,
+          "lunghezza_media": 8.07,
+          "lunghezza_mediana": 6.0,
+          "bucket": {
+            "breve": 0.534,
+            "medio": 0.31,
+            "lungo": 0.157
+          }
+        },
+        "duplicati_tolti": 756,
+        "prompt_senza_marcatore": 0,
+        "contesto_non_estraibile": 0
+      },
+      "dev": {
+        "prima": {
+          "nome": "T3/dev prima",
+          "n": 187,
+          "lunghezza_media": 7.15,
+          "lunghezza_mediana": 6,
+          "bucket": {
+            "medio": 0.316,
+            "breve": 0.572,
+            "lungo": 0.112
+          }
+        },
+        "dopo": {
+          "nome": "T3/dev dopo",
+          "n": 187,
+          "lunghezza_media": 7.15,
+          "lunghezza_mediana": 6,
+          "bucket": {
+            "medio": 0.316,
+            "breve": 0.572,
+            "lungo": 0.112
+          }
+        },
+        "duplicati_tolti": 0,
+        "prompt_senza_marcatore": 0,
+        "contesto_non_estraibile": 0
+      },
+      "test": {
+        "prima": {
+          "nome": "T3/test prima",
+          "n": 192,
+          "lunghezza_media": 6.99,
+          "lunghezza_mediana": 6.0,
+          "bucket": {
+            "medio": 0.307,
+            "lungo": 0.109,
+            "breve": 0.583
+          }
+        },
+        "dopo": {
+          "nome": "T3/test dopo",
+          "n": 192,
+          "lunghezza_media": 6.99,
+          "lunghezza_mediana": 6.0,
+          "bucket": {
+            "medio": 0.307,
+            "lungo": 0.109,
+            "breve": 0.583
+          }
+        },
+        "duplicati_tolti": 0,
+        "prompt_senza_marcatore": 0,
+        "contesto_non_estraibile": 0
+      }
+    },
+    "T2": {
+      "distribuzione_bucket_train": {
+        "breve": 0.673,
+        "lungo": 0.07,
+        "medio": 0.256
+      },
+      "train": {
+        "prima": {
+          "nome": "T2/train prima",
+          "n": 683,
+          "lunghezza_media": 6.28,
+          "lunghezza_mediana": 5,
+          "bucket": {
+            "breve": 0.673,
+            "medio": 0.256,
+            "lungo": 0.07
+          }
+        },
+        "dopo": {
+          "nome": "T2/train dopo",
+          "n": 1363,
+          "lunghezza_media": 6.28,
+          "lunghezza_mediana": 5,
+          "bucket": {
+            "medio": 0.257,
+            "breve": 0.673,
+            "lungo": 0.07
+          }
+        },
+        "duplicati_tolti": 681,
+        "prompt_senza_marcatore": 0,
+        "contesto_non_estraibile": 0
+      },
+      "dev": {
+        "prima": {
+          "nome": "T2/dev prima",
+          "n": 142,
+          "lunghezza_media": 5.16,
+          "lunghezza_mediana": 5.0,
+          "bucket": {
+            "medio": 0.183,
+            "breve": 0.81,
+            "lungo": 0.007
+          }
+        },
+        "dopo": {
+          "nome": "T2/dev dopo",
+          "n": 142,
+          "lunghezza_media": 5.16,
+          "lunghezza_mediana": 5.0,
+          "bucket": {
+            "medio": 0.183,
+            "breve": 0.81,
+            "lungo": 0.007
+          }
+        },
+        "duplicati_tolti": 0,
+        "prompt_senza_marcatore": 1,
+        "contesto_non_estraibile": 0
+      },
+      "test": {
+        "prima": {
+          "nome": "T2/test prima",
+          "n": 147,
+          "lunghezza_media": 5.05,
+          "lunghezza_mediana": 4,
+          "bucket": {
+            "breve": 0.823,
+            "medio": 0.156,
+            "lungo": 0.02
+          }
+        },
+        "dopo": {
+          "nome": "T2/test dopo",
+          "n": 147,
+          "lunghezza_media": 5.05,
+          "lunghezza_mediana": 4,
+          "bucket": {
+            "breve": 0.823,
+            "medio": 0.156,
+            "lungo": 0.02
+          }
+        },
+        "duplicati_tolti": 0,
+        "prompt_senza_marcatore": 2,
+        "contesto_non_estraibile": 0
+      }
+    }
+  }
+}

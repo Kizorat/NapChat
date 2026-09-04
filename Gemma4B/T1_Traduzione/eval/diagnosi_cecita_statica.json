@@ -1,0 +1,56 @@
+{
+  "split_dir": "/kaggle/working/split",
+  "split": "dev",
+  "contatori": {
+    "righe": [
+      {
+        "run": "gemma-3-1b-it__T1",
+        "layout": "T1",
+        "max_seq_len": 512,
+        "train": 48,
+        "troncati_train": 0,
+        "frazione_troncati": 0.0,
+        "prefix_mismatch_train": 0
+      },
+      {
+        "run": "gemma-3-4b-it__A2",
+        "layout": "A2",
+        "max_seq_len": 512,
+        "train": 1742,
+        "troncati_train": 0,
+        "frazione_troncati": 0.0,
+        "prefix_mismatch_train": 0
+      },
+      {
+        "run": "gemma-3-4b-it__T1",
+        "layout": "T1",
+        "max_seq_len": 512,
+        "train": 1134,
+        "troncati_train": 0,
+        "frazione_troncati": 0.0,
+        "prefix_mismatch_train": 0
+      }
+    ],
+    "problemi": [],
+    "verificato": true
+  },
+  "prompt": {
+    "T1": {
+      "layout": "T1",
+      "n": 1134,
+      "con_contesto": 1133,
+      "senza_contesto": 1,
+      "turni_medi": 2.99,
+      "parole_contesto_medie": 21.5,
+      "parole_contesto_mediane": 19,
+      "turni_etichettati": 1.0,
+      "istruzioni_distinte": 1120,
+      "frazione_istruzione_piu_comune": 0.005,
+      "istruzione_piu_comune": "Traduci in napoletano: non lo so",
+      "osservazioni": [
+        "T1: 21.5 parole di contesto in media (2.99 turni). E' parlato frammentario: puo' non bastare a stabilire l'argomento. Prova ad allargare la finestra (igiene_split.py --finestre) e vedi se la contrastiva si muove: se non si muove, il contesto non e' il collo di bottiglia e lo sai.",
+        "T1: 1/1134 item senza blocco di contesto estraibile. Su quelli il delta di contesto e il CFG non sono definiti e vengono esclusi dalle misure."
+      ]
+    }
+  }
+}

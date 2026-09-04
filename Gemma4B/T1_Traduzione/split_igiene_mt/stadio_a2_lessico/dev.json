@@ -1,0 +1,1210 @@
+[
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 406,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP007: cioè si tu dice \"faccio smart working, vaco a faticà 'a machu picchu\", tipo okay, o \"faccio cunzulenze\"\nPKP135: assolutamente, cioè tu\nPKP135: no no, ma 'nfatti i' 'ncopp'a chesto, cioè pur'io 'a penzo ô stesso modo, però 'a nu lato penzo \"saje che ce sta\"\n\nItaliano: vaffanculo per come si sta adesso anche\nNapoletano: vaffanculo, pe' comme se sta ___ pure\nParola mancante:",
+  "target": "mo,"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 758,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP014: cioè i' nun faccio maje fatica a 'a fernì\nPKP015: ma â fine è eguale\n\nItaliano: perché sì è lo stesso impasto ma questo è più gonfio\nNapoletano: pecché sì, è 'o stesso ___ ma chisto è cchiù gonfio\nParola mancante:",
+  "target": "'mpasto,"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN003",
+  "turn_index": 774,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP015: 'o cinema perla\nPKP014: faje ancora nu poco magari\nPKP015: nun saccio che ore songo\n\nItaliano: che all'inizio l'hai taglia~\nNapoletano:",
+  "target": "ca a ll'inizio ll'hê taglia~"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN003",
+  "turn_index": 186,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP015: eh, ha ditto ca ll'ha visto 'ncopp'a instagram\n\nItaliano: ma ti ha aggiunto qualcuno\nNapoletano:",
+  "target": "ma t'ha aggiunto quaccuno"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN003",
+  "turn_index": 133,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP015: ca po' erano miste na vota\n\nItaliano: c'erano anche verdi\nNapoletano:",
+  "target": "ce stevano pure verde"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 961,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP015: appena simmo trasute\nPKP013: pure ll'ata vota ca stévamo 'a fora\nPKP013: era sempe isso a ce servì\n\nItaliano: ma veniva in continuazione così\nNapoletano: ma veneva 'n continuazione ___\nParola mancante:",
+  "target": "accussì"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN001",
+  "turn_index": 244,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP135: ca 'nfatti pure llà ne parlavo appunto cu claudia\nPKP135: quacche tiempo fa\nPKP135: ca se parlava 'e mh, so' partute 'e vacanze eh\n\nItaliano: spendere per mangiare insomma eh\nNapoletano:",
+  "target": "spennere pe' mangià, 'nsomma eh"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 216,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP015: quanno farraje â casa 'e jalapeños\nPKP014: e chisto 'o mette 'ncopp' 'o ffuoco\nPKP013: chelle mini, chelle ca serveno pe' frijere, no, 'e mini pignatelle\n\nItaliano: son carinissime anche quelle\nNapoletano: so' carinissime pure ___\nParola mancante:",
+  "target": "chelle"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 717,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: nun 'o ssaccio\nPKP135: no nun 'o ssaccio, nun 'o ssaccio, cioè te dico ca secondo me è pure na questione 'e boh\nPKP007: tu ce stive â cena addò ilaria m'ha acciso cu nu puparuolo 'e terracina\n\nItaliano: sì che c'ero\nNapoletano: sì ca ce ___\nParola mancante:",
+  "target": "stevo"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN001",
+  "turn_index": 745,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP135: o 'o riesce, te piace accussì e sti cazze, o comunque però si t' 'o vuò nu poco stemperà 'o, 'o vagno llà, quinni nun ce steva manco 'a sarzella ca dice\n\nItaliano: beh però non lo sai neanche\nNapoletano:",
+  "target": "embè, però nun 'o saje manco"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 151,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP007: però secondo me è proprio pure 'na dinamica 'e vulé mantené 'a formalità\nPKP007: comunque pecché isso avvocato\nPKP135: no sì sì, magari comme comme famiglia, famiglie, mh, dice pure a livello 'e estrazione sociale magari\n\nItaliano: ma in realtà l'estrazione sociale sembra molto bassa perché\nNapoletano: ma 'n realtà ll'estrazione sociale pare ___ vascia pecché\nParola mancante:",
+  "target": "assaje"
+ },
+ {
+  "layout": "A2",
+  "tipo": "glossa",
+  "conversazione": "_lessico",
+  "turn_index": -1,
+  "prompt": "Il napoletano usa una forma diversa dall'italiano per questa parola. Scrivi soltanto la forma napoletana.\n\nItaliano: dobbiamo\nNapoletano:",
+  "target": "avimm'a"
+ },
+ {
+  "layout": "A2",
+  "tipo": "glossa",
+  "conversazione": "_lessico",
+  "turn_index": -1,
+  "prompt": "Il napoletano usa una forma diversa dall'italiano per questa parola. Scrivi soltanto la forma napoletana.\n\nItaliano: stessi\nNapoletano:",
+  "target": "stesse"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 148,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP013: putarrìmmo aprì overamente nu chiuschetto 'e jalapeños\nPKP015: nu chiuschetto 'e jalapeños\nPKP014: mamma d' 'a Maronna\n\nItaliano: tipo quelli americani degli hot dog\nNapoletano: tipo chille americane ___ 'e hot dog\nParola mancante:",
+  "target": "d'"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN001",
+  "turn_index": 586,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP007: però 'n India murésse\nPKP135: 'n che senzo\n\nItaliano: perché poi ne mangerei un casino\nNapoletano:",
+  "target": "pecché po' ne mangiasse nu casino"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 1009,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP013: tengo na fissazione p' 'e cammariere\n\nItaliano: i baristi e i camerieri\nNapoletano: ___ bariste e 'e cammariere\nParola mancante:",
+  "target": "'e"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN001",
+  "turn_index": 331,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP135: mh, nun faje mh, no, pecché 'nfatti pure llà dipenne d' 'o tipo 'e vacanza ca vuò fà, cioè\n\nItaliano: ci sta farsi una vacanza così\nNapoletano:",
+  "target": "ce sta 'e se fà na vacanza accussì"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN003",
+  "turn_index": 873,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP013: 'o saggio bello\nPKP014: po' ce sta stato chello 'e halloween\nPKP015: era chello 'e settembre\n\nItaliano: che dava inizio a un nuovo anno\nNapoletano:",
+  "target": "ca dava inizio a n'anno nuovo"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN003",
+  "turn_index": 882,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP014: ca i' po' nun ll'aggio f~ sì, è overo\n\nItaliano: e tu seduta sotto\nNapoletano:",
+  "target": "e tu assettata sotto"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN001",
+  "turn_index": 74,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP007: quinni i', nun canuscenno 'o vino, aggio ditto \"mah, figo, bello\", me so~ me so' gasata, aggio ditto \"ah, ottimo, fantastico\"\nPKP007: e isso se vota e fa \"'o cannusce\"\n\nItaliano: e io no però\nNapoletano:",
+  "target": "e i' \"no, però\""
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 136,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP007: i' pigliasse nu poco 'e chisto\nPKP135: vabbuò sì, esatto, si vuò t' 'o può piglià primma\nPKP135: e quinni sì\n\nItaliano: e quindi sì è stranissimo perché cioè\nNapoletano: e quinni sì, è stranissimo ___ cioè\nParola mancante:",
+  "target": "pecché"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 728,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: pecché èreno 'e primm'anne ca appunto s'accummenciava n'attimo a diffónnere 'e cchiù chesta, cioè 'a moda, no, d' 'o sushi\n\nItaliano: quindi ci porta mio padre e dice va bene okay dopo mh ci eravamo mangiati le pizze così e fa va bene okay cioè è p~ era passato il cameriere e fa ah guardate noi questa sera facciamo anche questa cosa volete un assaggio e mio padre fa sì sì okay\nNapoletano: quinni ce porta pàteme e dice \"va ___ okay\", doppo mh, c'èramo mangiate 'e pizze accussì, e fa \"va bbuono, okay\", cioè era p~, era passato 'o cammariere e fa \"ah, guardate, nuje stasera facimmo pure sta cosa, vulite n'assaggio\", e pàteme fa \"sì sì, okay\"\nParola mancante:",
+  "target": "bbuono,"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 338,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP007: mhmh, pò essere pure a miami, sì sì\nPKP007: cioè tipo i' so' ghiuta a Cuba, cioè int' 'o primmo viaggio mio sulanera, luntano, so' ghiuta a Cuba, quinni nun è ca so' ghiuta int'a nu posto\nPKP135: eh vabbuò, però azz'\n\nItaliano: iper inculato no sì vabbè in realtà un po' sì però\nNapoletano: iper ___ no sì vabbuò, in realtà nu poco sì, però\nParola mancante:",
+  "target": "'nculato,"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN003",
+  "turn_index": 503,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP013: 'a ztl, traso llà, 'a lasso 'n doppia fila, dico \"ciao, sto ccà\" e 'o criaturo saglie\n\nItaliano: ma perché non ti può dare quindi il\nNapoletano:",
+  "target": "ma pecché nun te pò dà quinni 'o"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 415,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP007: no però ll'ê assaggià chisto\nPKP135: e allora 'o assaggio\nPKP007: primma ca te passa 'a famme\n\nItaliano: non mi passa la fame\nNapoletano: nun me passa 'a ___\nParola mancante:",
+  "target": "famme"
+ },
+ {
+  "layout": "A2",
+  "tipo": "glossa",
+  "conversazione": "_lessico",
+  "turn_index": -1,
+  "prompt": "Il napoletano usa una forma diversa dall'italiano per questa parola. Scrivi soltanto la forma napoletana.\n\nItaliano: fai\nNapoletano:",
+  "target": "faje"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 553,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP014: sì sì, lloro\n\nItaliano: guarda che se fai così lo devo fare sapere ai tuoi genitori\nNapoletano: guarda ca si faje accussì ll'aggi'a fà ___ ê genitore tuoje\nParola mancante:",
+  "target": "sapé"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 739,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP015: nun era manco brutto e nun era manco antipatico\nPKP014: no, però s' 'a credeva troppo\n\nItaliano: però era strano cioè non capivi dove volesse andare a parare\nNapoletano: però era strano, cioè nun capive addò ___ jì a parà\nParola mancante:",
+  "target": "vuleva"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 673,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP015: e po' se ne scennev~ se ne cadeva uno 'a fora, 'o rimettive dinto\n\nItaliano: mentre guardavi il tipo\nNapoletano: mentre ___ 'o tipo\nParola mancante:",
+  "target": "guardave"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 446,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP014: sì, i' nun avevo c~ nun, cioè\nPKP014: nun avevo culligato ca era chella ca teneva 'o campo 'e lavanda\n\nItaliano: però sì se la conosce la impezziamo\nNapoletano: però sì, si 'a ___ ll'accucchiammo\nParola mancante:",
+  "target": "canosce"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 589,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP013: secon~ ha ditto \"secondo me era essa\"\nPKP015: ma essa teneva na figlia, me pare\nPKP014: uno è 'o suojo\n\nItaliano: no ora ne ha due\nNapoletano: no, mo ne tene ___\nParola mancante:",
+  "target": "duje"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 48,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP015: e quinni già sarrìano 'ncopp' 'e vinte euro a capa praticamente\n\nItaliano: allora quella sarebbe solo quella\nNapoletano: allora chella sarrìa sulo ___\nParola mancante:",
+  "target": "chella"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN003",
+  "turn_index": 912,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP014: tengo paura 'e tené 'e friarielle 'nfra 'e diente\nPKP015: no, nun pare\nPKP014: embè, è quase halloween\n\nItaliano: mangi due spinaci prima di uscire\nNapoletano:",
+  "target": "te magne duje spinace primma 'e ascì"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN003",
+  "turn_index": 780,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP015: vabbuò, putimmo stà ccà ancora nu poco, collassà\nPKP015: o int' 'o caso, si nun vulimmo turnà â casa, scrivimmo a luca\n\nItaliano: sei carica te\nNapoletano:",
+  "target": "si' carica tu"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 141,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP007: llà 'nvece, anze, si nun daje d' 'o vuje\nPKP135: boh, però te dico, cioè io comunque 'e genitore mieje\nPKP007: nun è c' 'a pummarola eh, è sulo 'o modo comme\n\nItaliano: no no lo so lo so lo so\nNapoletano: no no, 'o ssaccio, 'o ssaccio, 'o ___\nParola mancante:",
+  "target": "ssaccio"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 380,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP015: nun saccio si se n'è accorto o essa ll'ha ditto \"nun venco cchiù pecché sto male\", boh\n\nItaliano: boh magari a lui ha detto fisicamente non so\nNapoletano: boh, magari a isso ll'ha ditto fisicamente, ___ saccio\nParola mancante:",
+  "target": "nun"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 450,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP007: ehm, facenno sta cosa pe'\n\nItaliano: per il sudamerica\nNapoletano: ___ 'o Sudamerica\nParola mancante:",
+  "target": "p'"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 571,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP007: cusarelle però jènghieno nu sacco, è riso, e 'o ppane aggio mangiato pure\nPKP007: ll'hê assaggia~, sì, ll'hê assaggiato\nPKP135: sì sì, ll'aggio assaggiato\n\nItaliano: dai son contenta ti sia piaciuto\nNapoletano: dai, so' ___ ca t'è piaciuto\nParola mancante:",
+  "target": "cuntenta"
+ },
+ {
+  "layout": "A2",
+  "tipo": "glossa",
+  "conversazione": "_lessico",
+  "turn_index": -1,
+  "prompt": "Il napoletano usa una forma diversa dall'italiano per questa parola. Scrivi soltanto la forma napoletana.\n\nItaliano: qualcosa\nNapoletano:",
+  "target": "quaccosa"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 112,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP007: avevo accummenciato c' 'o lei\n\nItaliano: poi si vede che ho f~ detto qualcosa tipo pensa se\nNapoletano: po' se vede ca aggio f~ ___ quaccosa tipo \"pienza si\"\nParola mancante:",
+  "target": "ditto"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 99,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: cioè tipo vene maria, capito, ca è n'amica 'e sorema, â casa: \"ah rino, grande, comme staje, ah\"\nPKP007: no, me pare na cosa assaje normale comme, comme cosa, no\nPKP135: sì, cioè ner senso nun dico appunto ca tu arrive e accummience subeto a dà d' 'o tu\n\nItaliano: per quanto magari delle volte effettivamente dipende anche dal rapporto da da come si pongono loro\nNapoletano: pe' quanto magari certe vote overamente dipenne pure d' 'o rapporto, 'a 'a comme se ___ lloro\nParola mancante:",
+  "target": "pòneno"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN003",
+  "turn_index": 4,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP014: comunque sì, i' nun saccio overamente che aggio pigliato, eh, pecché\nPKP013: quale hê pigliato â fine\nPKP014: aggio pigliato chisto\n\nItaliano: oh ci hai stupito così\nNapoletano:",
+  "target": "oh, ce hê stupito accussì"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN003",
+  "turn_index": 574,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP015: ma chissà francesca\n\nItaliano: per me ha dei figli\nNapoletano:",
+  "target": "pe' me tene figlie"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 140,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: mh, che bell'addore\nPKP007: llà 'nvece, anze, si nun daje d' 'o vuje\nPKP135: boh, però te dico, cioè io comunque 'e genitore mieje\n\nItaliano: non è al pomodoro eh è solo il modo in cui\nNapoletano: nun è c' 'a pummarola eh, è ___ 'o modo comme\nParola mancante:",
+  "target": "sulo"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 831,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP014: sì sì, cammenammo nu poco\nPKP015: po' quanno nun tenimmo voglia 'e ffà niente\nPKP015: putimmo jì ô black fire\n\nItaliano: che ci stava\nNapoletano: ca ce ___\nParola mancante:",
+  "target": "steva"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 424,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP007: ca hê tirato fora\n\nItaliano: tipo cioè quale aspetta\nNapoletano: tipo, cioè quale, ___\nParola mancante:",
+  "target": "aspiett'"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 269,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: po' è nu ristorante stellato, quinni saje, te fa pure certe cose particulare, abbinamente, ah, po' 'a presentazione, cioè claudia m'ha ditto\nPKP135: è proprio n'esperienza, cioè 'o faje oltre ca pe' ghì llà a mangià, comunque te fa piacere vedé 'o clien~ cioè vien' trattato int'a nu determinato modo\nPKP007: e comme no\n\nItaliano: ehm trovi effettivamente dei piatti poi magari è vero non è che esci da lì e sei sazio però comunque sai che le cose sono fre~ cioè tipo là devi veramente prenotare\nNapoletano: ehm truove overamente certe piatte, po' magari è overo, nun è ca iesce 'a llà e si' sazio, però comunque ___ ca 'e ccose so' fre~ cioè tipo llà ê veramente prenutà\nParola mancante:",
+  "target": "saje"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN003",
+  "turn_index": 298,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP015: oppure 'e citrule 'e\nPKP015: 'e faje a fettelle e ce mette 'a senape e sanno 'e citrulelle sott'acito\nPKP013: che bbuone 'e citrulelle sott'acito\n\nItaliano: ma poi è una scatoletta di tonno questa\nNapoletano:",
+  "target": "ma po' è na scatuletta 'e tunno chesta"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 650,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: sì, 'nfatti i' l~ cioè ll'aggio 'mparato llà, pecché aggio penzato, cioè tutte quante, cioè ce mèttono annanze, tu vide tutta sta tavulata, tutte quante annanze c' 'o bicchiere 'e latte\n\nItaliano: e li vedi che iniziano e e io avevo visto sta competizione che tra l'altro mi sa che non so se vinceva una donna o arrivava tipo in semifinale no\nNapoletano: e 'e vide ca accumméncene e e i' avevo visto sta cumpetizione ca tra ll'ato me pare ___ nun saccio si vinceva na femmena o arrivava tipo 'n semifinale, no\nParola mancante:",
+  "target": "ca,"
+ },
+ {
+  "layout": "A2",
+  "tipo": "glossa",
+  "conversazione": "_lessico",
+  "turn_index": -1,
+  "prompt": "Il napoletano usa una forma diversa dall'italiano per questa parola. Scrivi soltanto la forma napoletana.\n\nItaliano: erano\nNapoletano:",
+  "target": "èreno"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN001",
+  "turn_index": 686,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP007: e accumméncene a chiagnere, a fà tipo\nPKP135: si vanno annanze\nPKP135: sì sì, s'~, 'nfatti ce sta gente ca va cu ll'ucchiale 'a sole\n\nItaliano: ci sono quelli che vanno lì con gli occhiali\nNapoletano:",
+  "target": "ce stanno chille ca vanno llà cu ll'ucchiale"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 894,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP015: è overo, è overo\nPKP014: ca po' pe' ddoje vote\n\nItaliano: si è incastrata\nNapoletano: ___ 'ncastrata\nParola mancante:",
+  "target": "s'è"
+ },
+ {
+  "layout": "A2",
+  "tipo": "glossa",
+  "conversazione": "_lessico",
+  "turn_index": -1,
+  "prompt": "Il napoletano usa una forma diversa dall'italiano per questa parola. Scrivi soltanto la forma napoletana.\n\nItaliano: che\nNapoletano:",
+  "target": "ca"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 630,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP014: ca però ll'avevo già vista cchiù vote\nPKP015: però pure 'a pull and bear ce avévamo penzato\nPKP015: ca eran~ ca so' sempe diverse chille ca ce fatìcano llà 'n cassa\n\nItaliano: secondo me fan dei contratti brevi e poi li cambiano\nNapoletano: secondo me fanno ___ brevi e po' 'e càgnano\nParola mancante:",
+  "target": "contratte"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 645,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: ter~, no, ma è\n\nItaliano: ma più che altro perché\nNapoletano: ma ___ ca ato pecché\nParola mancante:",
+  "target": "cchiù"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN003",
+  "turn_index": 504,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP013: 'a ztl, traso llà, 'a lasso 'n doppia fila, dico \"ciao, sto ccà\" e 'o criaturo saglie\nPKP015: ma pecché nun te pò dà quinni 'o\n\nItaliano: sì sì lo prendi\nNapoletano:",
+  "target": "sì sì, 'o piglie"
+ },
+ {
+  "layout": "A2",
+  "tipo": "glossa",
+  "conversazione": "_lessico",
+  "turn_index": -1,
+  "prompt": "Il napoletano usa una forma diversa dall'italiano per questa parola. Scrivi soltanto la forma napoletana.\n\nItaliano: può\nNapoletano:",
+  "target": "pò"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 764,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP007: e 'a descrizione soja è stata \"me so' sentuto 'e murì, me se so' chiuse 'e vvie respiratorie\"\nPKP135: sì sì, no no, pàteme s'è 'nguttato sta pallina accussì 'e\n\nItaliano: eh infat~ lui l'ha proprio ingoiata\nNapoletano: eh 'nfat~, isso ll'ha proprio ___\nParola mancante:",
+  "target": "'nguttata"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 375,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP015: stévamo martedì 'a costa\nPKP015: e avimmo ditto ah, 'a chiara accussì, è venuta primma a allenamento\n\nItaliano: e lui ha detto no ma non sta bene\nNapoletano: e isso ha ditto no, ma ___ sta bbona\nParola mancante:",
+  "target": "nun"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN001",
+  "turn_index": 37,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP007: e m'ha 'a chi~ m'ha 'a rispónnere si m'accetta o no\nPKP007: però ll'aggio fatta pe' na perzona\n\nItaliano: perché tu non eri sicura\nNapoletano:",
+  "target": "pecché tu nun ire sicura"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 663,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP013: però 'o piglio 'o stesso\nPKP014: no no, ma va bbuono\n\nItaliano: come la baguette appoggiata\nNapoletano: comme 'a baguette ___\nParola mancante:",
+  "target": "appuggiata"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 178,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP007: chisto ccà è 'o casecavallo\n\nItaliano: ah è forma~ eh infatti beh ci sta\nNapoletano: ah, è ___ eh 'nfatti, embè ce sta\nParola mancante:",
+  "target": "furma~,"
+ },
+ {
+  "layout": "A2",
+  "tipo": "glossa",
+  "conversazione": "_lessico",
+  "turn_index": -1,
+  "prompt": "Il napoletano usa una forma diversa dall'italiano per questa parola. Scrivi soltanto la forma napoletana.\n\nItaliano: sono\nNapoletano:",
+  "target": "so'"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN001",
+  "turn_index": 575,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP135: cioè ner senso proprio\n\nItaliano: anche il pollo comunque era\nNapoletano:",
+  "target": "pure 'o puollo comunque era"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 6,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP014: aggio pigliato chisto\nPKP013: oh, ce hê stupito accussì\nPKP014: pecché ll'aggio visto, aggio ditto\n\nItaliano: c'è il pomodoro la mozzarella\nNapoletano: ce sta 'a pummarola, 'a ___\nParola mancante:",
+  "target": "muzzarella"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 759,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: ma tipo doppo vinte, vinte minute, mez'ora se ripiglia\nPKP135: sì sì, ma pecché cioè 'o wasabi, piglia\nPKP007: rimanenno ô tavulo\n\nItaliano: sì sì ha iniziato a bers~ a bere l'acqua pane qualsiasi roba fin~ finché poi noi ehm cioè abbiamo chiesto al cameriere insomma cos'era\nNapoletano: sì sì, ha accummenciato a se ve~, a bevere ___ 'o ppane, qualsiasi cosa, fin~, finché po' nuje ehm, cioè avimmo addimannato ô cammariere 'nsomma che era\nParola mancante:",
+  "target": "ll'acqua,"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN001",
+  "turn_index": 268,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP135: po' è nu ristorante stellato, quinni saje, te fa pure certe cose particulare, abbinamente, ah, po' 'a presentazione, cioè claudia m'ha ditto\nPKP135: è proprio n'esperienza, cioè 'o faje oltre ca pe' ghì llà a mangià, comunque te fa piacere vedé 'o clien~ cioè vien' trattato int'a nu determinato modo\n\nItaliano: avoglia\nNapoletano:",
+  "target": "e comme no"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 731,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP015: na vota ca avev'a jì a lezione\nPKP015: ll'aggio ditto \"vabbuò, vedimmoce primma ca vaco a lezione\"\n\nItaliano: e abbiamo bevuto un caffè\nNapoletano: e ___ bevuto nu cafè\nParola mancante:",
+  "target": "avimmo"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 520,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP007: ehm 'a ex manager mia teneva\n\nItaliano: praticamente lei era figlia di un parlamentare inglese\nNapoletano: praticamente ___ era figlia 'e nu parlamentare inglese\nParola mancante:",
+  "target": "essa"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 420,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP013: comunque m'ha chiammato mammata\nPKP013: nun m'ha chiammato, m'ha mannato nu, nu audio\n\nItaliano: in cui diceva che vicino a lei c'è un campo di lavanda bellissimo\nNapoletano: addò diceva ___ vicino a lei ce sta nu campo 'e lavanda bellissimo\nParola mancante:",
+  "target": "ca"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 699,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: però doppo dduje vanno annanze\nPKP007: ma tutt' 'e puntate so' 'e stesse, ovviamente\nPKP135: eh, saje ca nun m' 'o ricordo\n\nItaliano: no secondo me son gare divers~ cioè magari ci sono gli stessi soggetti perché ovviamente se partecipi ad una\nNapoletano: no, secondo me so' gare ___ cioè magari ce stanno 'e stesse suggette, pecché ovviamente si partecipe a una\nParola mancante:",
+  "target": "diverz~,"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 404,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP014: ah, tu nun ce stive\nPKP014: sì ca ce stive\nPKP013: dummeneca passata sì\n\nItaliano: no più che altro è che non è andata neanche al buco\nNapoletano: no, cchiù ca ato è ca nun è ___ manco ô buco\nParola mancante:",
+  "target": "juta"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 23,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP007: si po' tu ne vuò 'e cchiù t' 'o cuntinue a versà\nPKP135: sì ma baby nun è ca me fernesco na buttiglia sulo i'\nPKP007: eh vabbè, ma nu poco 'o bevo, nun aggio ditto ca nun 'o bevo\n\nItaliano: sì dico che a sto punto potevamo non prenderlo\nNapoletano: sì, dico ca a stu punto putevamo pure nun ___ piglià\nParola mancante:",
+  "target": "'o"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 256,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP013: e ero scarsissima, e stevo pure cu 'e nuvantotto, nuvantanove\n\nItaliano: l'altra l'unica altra scarsa con me era la elena rossi quindi facevam balotta insieme\nNapoletano: ___ ll'unica ata scarsa cu me era 'a elena rossi, quinni facévamo balotta 'nzieme\nParola mancante:",
+  "target": "ll'ata,"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 212,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: anze, cioè ner senso i' 'n Italia mangio ate cucine pecché dico boh\n\nItaliano: magari lo provo figurati se vado fuori e magari\nNapoletano: magari 'o provo, figurammoce si vaco ___ e magari\nParola mancante:",
+  "target": "fore"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 531,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP007: e quinni ogne vacanza ca faceva teneva comunque stu twist culinario\nPKP007: tipo ll'urdemo viaggio ca ha fatto quanno steva\nPKP007: mh, quanno steva a est llà cu mmico\n\nItaliano: ha fatto tre settimane e in messico e perù tra messico e perù\nNapoletano: ha fatto tre semmane e ___ Messico e Perù, tra Messico e Perù\nParola mancante:",
+  "target": "'n"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 445,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP014: sì, i' nun avevo c~ nun, cioè\n\nItaliano: non avevo collegato che era quella che aveva il campo di lavanda\nNapoletano: nun avevo ___ ca era chella ca teneva 'o campo 'e lavanda\nParola mancante:",
+  "target": "culligato"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 144,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP014: forse è maionese\nPKP015: embè, in teoria è furmaggio\nPKP014: embè, cerca 'a ricetta\n\nItaliano: siccome c'è una disoccupazione imminente dobbiamo trovare un modo per fare soldi\nNapoletano: siccomme ce sta na disoccupazione imminente, avimm'a ___ nu modo pe' fà sordi\nParola mancante:",
+  "target": "truvà"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN003",
+  "turn_index": 879,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP014: e dopo hanno rifatto chello a halloween ca pure 'a chiara s'è esibita\nPKP014: e forse tu\nPKP015: stévamo i', 'a chiara e giulia bianchi\n\nItaliano: che giulia bianchi era rimasta incastrata\nNapoletano:",
+  "target": "ca giulia bianchi era rimasta 'ncastrata"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 283,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP007: sì, èreno nu poco particulare\nPKP135: era diverso, mange bbuono\nPKP135: cucina diciamo autentica accussì, però ovviamente è tutta n'ata esperienza rispetto a magari ghì a mangià\n\nItaliano: non ma nemmeno in quello stellato però sei al ristorante a farti un determinato tipo di cena dove sai che spenderai un po' di più\nNapoletano: no, ma manco int'a chillo stellato, però staje ô ristorante a te fà nu determinato tipo 'e cena addò saje ___ spennarraje nu poco 'e cchiù\nParola mancante:",
+  "target": "ca"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 637,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP013: pecché cércano pure llà\n\nItaliano: poi lì ci sta cioè alla fine\nNapoletano: po' llà ce sta, cioè ___ fine\nParola mancante:",
+  "target": "â"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 143,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP013: forse è misto maionese\nPKP014: forse è maionese\nPKP015: embè, in teoria è furmaggio\n\nItaliano: beh cerca la ricetta\nNapoletano: embè, cerca ___ ricetta\nParola mancante:",
+  "target": "'a"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 458,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP007: ca me, oggi m'è venuta voglia 'e\nPKP135: o~ oggi, eh, nun avevo capito, oggi\n\nItaliano: ma per il luogo o per\nNapoletano: ma p' ___ luogo o pe'\nParola mancante:",
+  "target": "'o"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 754,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP013: nun 'o saccio\nPKP014: nun 'o saccio\nPKP015: però sì, te piglia pe' sfinimento\n\nItaliano: questa qua era pesantissima\nNapoletano: ___ ccà era pesantissima\nParola mancante:",
+  "target": "chesta"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 305,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: putesse 'nterrompere 'a chiammata, cioè 'a registrazione\n\nItaliano: quindi ha registrato anche la chiamata siamo\nNapoletano: quinni ha registrato pure ___ chiammata, simmo\nParola mancante:",
+  "target": "'a"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 10,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: eh, sempe ca\n\nItaliano: ecco ragazze a voi\nNapoletano: ecco ___ a vvuje\nParola mancante:",
+  "target": "guagliò,"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 47,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: No, nun fa schifo però\nPKP135: nun 'o ssaccio, m'aspettavo nu montepulciano\nPKP135: 'nfatti nun ll'aggio addimannato 'a cantina\n\nItaliano: mah vabbè ci son montepulciani che son buoni medi nel senso bottiglie così\nNapoletano: mah vabbuò, ce stanno muntepulciane ca ___ buone, mieze, ner senso buttiglie accussì\nParola mancante:",
+  "target": "so'"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN003",
+  "turn_index": 701,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP014: Nun 'o saccio\nPKP014: c' 'o cane, me pare, eh, i' so' passata 'n bici\nPKP014: però aggio fatto finta 'e nun 'o vedé\n\nItaliano: ma in che zona\nNapoletano:",
+  "target": "ma 'n che zona?"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 707,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: tene isso 'e puparuole suoje e 'e ccose, però magari a na certa\nPKP135: nun va, nun arriva tipo a ll'urdemo livello, capito\nPKP135: tene e tutto, però\n\nItaliano: quindi ci son quelli e poi secondo me ci sono proprio quelli che invece vanno lì perché\nNapoletano: ___ ce stanno chille, e po' secondo me ce stanno proprio chille ca 'nvece vanno llà pecché\nParola mancante:",
+  "target": "quinni"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN003",
+  "turn_index": 521,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP013: 'nfatti me fa \"pure pe' sta situazione nu poco precaria, aggi'a tené sicuramente quaccuno\"\nPKP013: ca po' ce sia int' 'o caso chiudesse 'a scola o quant'ato\n\nItaliano: che puoi chiamare\nNapoletano:",
+  "target": "ca puó chiammà"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 37,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP007: e m'ha 'a chi~ m'ha 'a rispónnere si m'accetta o no\nPKP007: però ll'aggio fatta pe' na perzona\n\nItaliano: perché tu non eri sicura\nNapoletano: pecché tu ___ ire sicura\nParola mancante:",
+  "target": "nun"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 773,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP015: 'o cinema perla\nPKP014: faje ancora nu poco magari\n\nItaliano: non so che ore siano\nNapoletano: nun ___ che ore songo\nParola mancante:",
+  "target": "saccio"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 191,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP007: e 'o riso?\n\nItaliano: anch~ sì è buono anche sì è diver~ è più\nNapoletano: ___ sì è bbuono pure, sì è diver~ è cchiù\nParola mancante:",
+  "target": "pur~"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 686,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP007: e accumméncene a chiagnere, a fà tipo\nPKP135: si vanno annanze\nPKP135: sì sì, s'~, 'nfatti ce sta gente ca va cu ll'ucchiale 'a sole\n\nItaliano: ci sono quelli che vanno lì con gli occhiali\nNapoletano: ce stanno ___ ca vanno llà cu ll'ucchiale\nParola mancante:",
+  "target": "chille"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 741,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: piglia e s' 'a mette tutta 'mmocca\nPKP007: giustamente, pecché tu nun è ca vaje a penzà\nPKP135: pure pecché nun ce avéveno manco purtato, saje, 'a, 'a soia, no\n\nItaliano: la salsa di soia che tu in genere comunque anche il wasabi se lo vuoi un po' stemperare diciamo\nNapoletano: 'a sarza 'e soia, ca tu in genere comunque pure 'o wasabi si t' 'o ___ nu poco stemperà, diciamo\nParola mancante:",
+  "target": "vuò"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 240,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP014: sì sì, ll'ata vota ll'avimmo viste\n\nItaliano: sì però lui è tipo amico della anna bianchi tipo la sua una delle sue migliori amiche\nNapoletano: sì, però ___ è tipo amico d' 'a anna bianchi, tipo 'a soja, una d' 'e ssuoje meglio amiche\nParola mancante:",
+  "target": "isso"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN003",
+  "turn_index": 153,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP015: 'e jalapeños fritte, 'e crocchè\n\nItaliano: in più vendiamo bibite fresche\nNapoletano:",
+  "target": "'e cchiù, vennimmo bibbite fresche"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 154,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP015: 'e jalapeños fritte, 'e crocchè\nPKP013: 'e cchiù, vennimmo bibbite fresche\n\nItaliano: se diamo i volantini in giro\nNapoletano: si dammo ___ volantine attuorno\nParola mancante:",
+  "target": "'e"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 151,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP007: però secondo me è proprio pure 'na dinamica 'e vulé mantené 'a formalità\nPKP007: comunque pecché isso avvocato\nPKP135: no sì sì, magari comme comme famiglia, famiglie, mh, dice pure a livello 'e estrazione sociale magari\n\nItaliano: ma in realtà l'estrazione sociale sembra molto bassa perché\nNapoletano: ma ___ realtà ll'estrazione sociale pare assaje vascia pecché\nParola mancante:",
+  "target": "'n"
+ },
+ {
+  "layout": "A2",
+  "tipo": "glossa",
+  "conversazione": "_lessico",
+  "turn_index": -1,
+  "prompt": "Il napoletano usa una forma diversa dall'italiano per questa parola. Scrivi soltanto la forma napoletana.\n\nItaliano: miei\nNapoletano:",
+  "target": "mieje"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 265,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP013: chips 'e cipo~ no, chips 'e\n\nItaliano: ah non c'è scritto quindi\nNapoletano: ah, ___ ce sta scritto quinni\nParola mancante:",
+  "target": "nun"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN001",
+  "turn_index": 135,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP135: eh i' tengo 'o problema ca nun te pozzo maje fà assaggià 'e ccose ca piglio, me dispiace\nPKP007: i' pigliasse nu poco 'e chisto\nPKP135: vabbuò sì, esatto, si vuò t' 'o può piglià primma\n\nItaliano: e quindi sì\nNapoletano:",
+  "target": "e quinni sì"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 1017,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP015: sì, 'o segui~ cioè penza si fosse stato nu guaglione ca 'o fa a te comme cammariera\n\nItaliano: più che altro cioè loro stavan lavorando\nNapoletano: cchiù ca ___ cioè lloro stévano faticanno\nParola mancante:",
+  "target": "ato,"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 340,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: eh vabbuò, però azz'\nPKP007: iper 'nculato, no sì vabbuò, in realtà nu poco sì, però\nPKP135: eh cioè te dico, Cuba comunque secondo me\n\nItaliano: no però è la modalità secondo me non tanto dove vai tipo io sono andata con lo zainetto io e elena da sole senza parlare la lingua eccetera eccetera\nNapoletano: no, però è 'a mudalità secondo me, no tanto addò vaje; tipo i' so' ghiuta c' 'o zainetto, i' e elena sulanere, senza parlà ___ lengua eccetera eccetera\nParola mancante:",
+  "target": "'a"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN001",
+  "turn_index": 401,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP135: stongo tre mise\nPKP007: 'o fatto ca piglia 'a cassa integrazione nun me fa 'mpazzì però, pe' niente\nPKP135: no no, 'nfat~, no no, assolutamente, 'nfatti essa cioè è assaje, è assaje opinabbile\n\nItaliano: il modo in cui lei lo faccia\nNapoletano:",
+  "target": "'o modo comme essa 'o fa"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 917,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP014: ma me pare tutt'e tre\n\nItaliano: quello con la tartare era più leggero anche perché aveva un accompagnamento di insalata\nNapoletano: chello c' ___ tartare era cchiù liggiero, pure pecché teneva n'accumpagnamento 'e 'nzalata\nParola mancante:",
+  "target": "'a"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 572,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP007: ll'hê assaggia~, sì, ll'hê assaggiato\nPKP135: sì sì, ll'aggio assaggiato\nPKP007: dai, so' cuntenta ca t'è piaciuto\n\nItaliano: ma tantissimo sì sì poi qui cioè nel senso non lo so io non ho mai mangiato indiano però mi sembra buono\nNapoletano: ma assaje assaje, sì sì, po' ccà cioè ner senso nun 'o ssaccio, i' nun aggio ___ mangiato indiano, però me pare bbuono\nParola mancante:",
+  "target": "maje"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 421,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP013: comunque m'ha chiammato mammata\nPKP013: nun m'ha chiammato, m'ha mannato nu, nu audio\nPKP013: addò diceva ca vicino a lei ce sta nu campo 'e lavanda bellissimo\n\nItaliano: e che ci lavora una una ragazza che lavora anche nell'erboristeria dove avevo lasciato il curriculum in centro\nNapoletano: e ca ce fatica na, na guagliona ca fatica pure int' 'a ll'erboristeria addò avevo lassato ___ curriculum 'n centro\nParola mancante:",
+  "target": "'o"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 607,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP013: nun m' 'a immagino\nPKP015: sòreta o 'a francesca\nPKP014: sulo 'a dada\n\nItaliano: no no mia sorella eh\nNapoletano: no no, ___ eh\nParola mancante:",
+  "target": "sorema,"
+ },
+ {
+  "layout": "A2",
+  "tipo": "glossa",
+  "conversazione": "_lessico",
+  "turn_index": -1,
+  "prompt": "Il napoletano usa una forma diversa dall'italiano per questa parola. Scrivi soltanto la forma napoletana.\n\nItaliano: mangia\nNapoletano:",
+  "target": "magna"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 708,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: nun va, nun arriva tipo a ll'urdemo livello, capito\nPKP135: tene e tutto, però\nPKP135: quinni ce stanno chille, e po' secondo me ce stanno proprio chille ca 'nvece vanno llà pecché\n\nItaliano: non lo so\nNapoletano: nun 'o ___\nParola mancante:",
+  "target": "ssaccio"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 499,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: ah, 'e cepolle\n\nItaliano: questo in realtà non è piccante\nNapoletano: ___ in realtà nun è piccante\nParola mancante:",
+  "target": "chisto"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 41,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP013: quinni dicìveve sia 'a foto\nPKP015: no, cioè chelle\n\nItaliano: una delle due\nNapoletano: una d' 'e ___\nParola mancante:",
+  "target": "dduje"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN003",
+  "turn_index": 1022,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP015: embè, però 'e solito 'e bariste\n\nItaliano: sì sono devi avere un po'\nNapoletano:",
+  "target": "sì, songo, hê 'a tené nu poco"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 132,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP007: s'ha 'a mettere nu poco int' 'o piattino, ma cheste songo pure pe' te ca ê assaggià, t' 'o dico\n\nItaliano: eh io ho il problema che non ti posso mai far assaggiare le cose che prendo mi dispiace\nNapoletano: eh i' tengo 'o problema ca nun te pozzo maje fà assaggià 'e ___ ca piglio, me dispiace\nParola mancante:",
+  "target": "ccose"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 903,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP014: ma pecché po' ll'ha vuluto rifà\nPKP014: pe' fà vedé ca 'o sap~\n\nItaliano: è vero è vero\nNapoletano: è ___ è overo\nParola mancante:",
+  "target": "overo,"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 138,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: e quinni sì\nPKP007: e quinni sì, è stranissimo pecché cioè\nPKP135: mh, che bell'addore\n\nItaliano: lì invece anzi se non dai del voi\nNapoletano: llà 'nvece, anze, si nun daje d' 'o ___\nParola mancante:",
+  "target": "vuje"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 410,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: e che t'aggi'a~, eh, pulizzate\n\nItaliano: con uno scottex però va bene anche così\nNapoletano: cu nu scottex, però va ___ pure accussì\nParola mancante:",
+  "target": "bbuono"
+ },
+ {
+  "layout": "A2",
+  "tipo": "glossa",
+  "conversazione": "_lessico",
+  "turn_index": -1,
+  "prompt": "Il napoletano usa una forma diversa dall'italiano per questa parola. Scrivi soltanto la forma napoletana.\n\nItaliano: verdi\nNapoletano:",
+  "target": "verde"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 45,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: No, nun fa schifo però\n\nItaliano: non lo so mi aspettavo un montepulciano\nNapoletano: nun ___ ssaccio, m'aspettavo nu montepulciano\nParola mancante:",
+  "target": "'o"
+ },
+ {
+  "layout": "A2",
+  "tipo": "glossa",
+  "conversazione": "_lessico",
+  "turn_index": -1,
+  "prompt": "Il napoletano usa una forma diversa dall'italiano per questa parola. Scrivi soltanto la forma napoletana.\n\nItaliano: competizione\nNapoletano:",
+  "target": "cumpetizione"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 728,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: pecché èreno 'e primm'anne ca appunto s'accummenciava n'attimo a diffónnere 'e cchiù chesta, cioè 'a moda, no, d' 'o sushi\n\nItaliano: quindi ci porta mio padre e dice va bene okay dopo mh ci eravamo mangiati le pizze così e fa va bene okay cioè è p~ era passato il cameriere e fa ah guardate noi questa sera facciamo anche questa cosa volete un assaggio e mio padre fa sì sì okay\nNapoletano: quinni ce porta pàteme e dice \"va bbuono, okay\", doppo mh, c'èramo mangiate 'e pizze accussì, e fa \"va bbuono, okay\", cioè era p~, era passato 'o cammariere e fa \"ah, guardate, nuje stasera facimmo pure sta cosa, ___ n'assaggio\", e pàteme fa \"sì sì, okay\"\nParola mancante:",
+  "target": "vulite"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN003",
+  "turn_index": 96,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP015: cioè tutto chello ca ll'abbisogna pe' chello ce ll'ha\nPKP014: ma 'nfatti, no, è perfetto nu led\nPKP015: quinni cioè sì, esatto, d' 'e dduje facesse quaccosa comunque\n\nItaliano: beh di arredamento\nNapoletano:",
+  "target": "embè, 'e arredamento"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 564,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP007: ll'ê piglià pecché tanto nun m' 'o fernesco i', quinni piglia\nPKP135: sì baby, ma i' cioè\nPKP007: pigliate na muntagnella 'e riso e chello ce 'o miette 'ncoppa\n\nItaliano: no basta montagnette sì ho capito ma sono tipo s~ ma sono pie~ sì okay ma sono tipo cioè\nNapoletano: no, basta muntagnelle, sì, aggio capito, ma so' tipo s~, ma so' ___ sì okay, ma so' tipo cioè\nParola mancante:",
+  "target": "chie~,"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN003",
+  "turn_index": 617,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP015: llà 'a dada\n\nItaliano: sì che ci lavorava\nNapoletano:",
+  "target": "sì, ca ce faticava"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 215,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP014: embè, comme 'o porta jalapeños\nPKP015: quanno farraje â casa 'e jalapeños\nPKP014: e chisto 'o mette 'ncopp' 'o ffuoco\n\nItaliano: quelle mini quelle che servono per friggere no le mini pentoline\nNapoletano: chelle mini, chelle ca ___ pe' frijere, no, 'e mini pignatelle\nParola mancante:",
+  "target": "serveno"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 604,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP013: lara 'a dada\n\nItaliano: non me la immagino\nNapoletano: nun ___ 'a immagino\nParola mancante:",
+  "target": "m'"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 10,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: eh, sempe ca\n\nItaliano: ecco ragazze a voi\nNapoletano: ecco guagliò, a ___\nParola mancante:",
+  "target": "vvuje"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 389,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: quinni se fa tipo 'a maggio, pe' dicere, a settembre, primme d'ottobre, millecinquecento euro ô mese\n\nItaliano: poi c'ha la cassa integrazione\nNapoletano: po' ___ 'a cassa integrazione\nParola mancante:",
+  "target": "tene"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 589,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP013: secon~ ha ditto \"secondo me era essa\"\nPKP015: ma essa teneva na figlia, me pare\nPKP014: uno è 'o suojo\n\nItaliano: no ora ne ha due\nNapoletano: no, mo ne ___ duje\nParola mancante:",
+  "target": "tene"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 401,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: stongo tre mise\nPKP007: 'o fatto ca piglia 'a cassa integrazione nun me fa 'mpazzì però, pe' niente\nPKP135: no no, 'nfat~, no no, assolutamente, 'nfatti essa cioè è assaje, è assaje opinabbile\n\nItaliano: il modo in cui lei lo faccia\nNapoletano: 'o modo comme ___ 'o fa\nParola mancante:",
+  "target": "essa"
+ },
+ {
+  "layout": "A2",
+  "tipo": "glossa",
+  "conversazione": "_lessico",
+  "turn_index": -1,
+  "prompt": "Il napoletano usa una forma diversa dall'italiano per questa parola. Scrivi soltanto la forma napoletana.\n\nItaliano: determinato\nNapoletano:",
+  "target": "int'a"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 432,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP007: pecché faticava a, a bariloche 'ncopp'ê Ande\nPKP007: faceva tipo sci, maestro 'e sci, sti ccose ccà\nPKP135: mazz~ mhmh mh\n\nItaliano: o invece tipo questa ragazza che faceva la l'insegnante in germania sempre a cuba\nNapoletano: o 'nvece tipo sta guagliona ca faceva 'a, ___ 'n Germania, sempe a Cuba\nParola mancante:",
+  "target": "ll'insegnante"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 983,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP013: sì, i' sarrìa accussì, i' sarrìa accussì, 'nfatti\n\nItaliano: no però ci ho un po' pensato\nNapoletano: no, però ce ___ nu poco penzato\nParola mancante:",
+  "target": "aggio"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 575,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: cioè ner senso proprio\n\nItaliano: anche il pollo comunque era\nNapoletano: pure 'o ___ comunque era\nParola mancante:",
+  "target": "puollo"
+ },
+ {
+  "layout": "A2",
+  "tipo": "glossa",
+  "conversazione": "_lessico",
+  "turn_index": -1,
+  "prompt": "Il napoletano usa una forma diversa dall'italiano per questa parola. Scrivi soltanto la forma napoletana.\n\nItaliano: sarà\nNapoletano:",
+  "target": "starrà"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN003",
+  "turn_index": 914,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP014: embè, è quase halloween\nPKP014: te magne duje spinace primma 'e ascì\nPKP015: e si' pronta, si' travestita\n\nItaliano: questo era peso\nNapoletano:",
+  "target": "chisto era piso"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN003",
+  "turn_index": 612,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP013: sì, ma pecché\nPKP014: dada, dada carzature, overo\nPKP013: sì, pecché nonnema sta sempe, mhmh, nonnema sta sempe llà a bazzicà, no, 'a aldi e accussì\n\nItaliano: ah no al minganti\nNapoletano:",
+  "target": "ah no, ô minganti"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 883,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP014: ca i' po' nun ll'aggio f~ sì, è overo\nPKP013: e tu assettata sotto\n\nItaliano: sì perché poi non volevo più farlo\nNapoletano: sì, pecché po' nun 'o ___ cchiù fà\nParola mancante:",
+  "target": "vulevo"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 52,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP015: invece chell'ata, mh, pecc~ cioè secondo me era piccerella e era tipo na lampa\nPKP015: cioè sarrà accussì secondo me\n\nItaliano: non ho guardato bene costava trenta\nNapoletano: nun aggio guardato ___ custava trenta\nParola mancante:",
+  "target": "bbuono,"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 232,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP013: e comme ha fatto a trasì\nPKP015: no, nun, 'nfatti ll'ata vota nun simmo trasute\n\nItaliano: non siamo entrati\nNapoletano: ___ simmo trasute\nParola mancante:",
+  "target": "nun"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 317,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP014: no no, i' nun ll'aggio maje sentu~\nPKP015: ma pure ccà po' nun saccio c~ cu che cosa se magna, c' 'e furmagge tipo\n\nItaliano: coi formaggi sì\nNapoletano: c' ___ furmagge sì\nParola mancante:",
+  "target": "'e"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 227,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: ne apprufitto, cioè\n\nItaliano: a londra se mangi indiano è quasi pi~ cioè è quasi più\nNapoletano: a Londra si mange indiano è ___ pi~ cioè è quase cchiù\nParola mancante:",
+  "target": "quase"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 457,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP015: avimm'a jì a fà 'e set\n\nItaliano: vestite di viola\nNapoletano: ___ 'e viola\nParola mancante:",
+  "target": "vestute"
+ },
+ {
+  "layout": "A2",
+  "tipo": "glossa",
+  "conversazione": "_lessico",
+  "turn_index": -1,
+  "prompt": "Il napoletano usa una forma diversa dall'italiano per questa parola. Scrivi soltanto la forma napoletana.\n\nItaliano: lasciato\nNapoletano:",
+  "target": "lassato"
+ },
+ {
+  "layout": "A2",
+  "tipo": "glossa",
+  "conversazione": "_lessico",
+  "turn_index": -1,
+  "prompt": "Il napoletano usa una forma diversa dall'italiano per questa parola. Scrivi soltanto la forma napoletana.\n\nItaliano: due\nNapoletano:",
+  "target": "dduje"
+ },
+ {
+  "layout": "A2",
+  "tipo": "glossa",
+  "conversazione": "_lessico",
+  "turn_index": -1,
+  "prompt": "Il napoletano usa una forma diversa dall'italiano per questa parola. Scrivi soltanto la forma napoletana.\n\nItaliano: ha\nNapoletano:",
+  "target": "tene"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN001",
+  "turn_index": 181,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP135: ah, è furma~, eh 'nfatti, embè ce sta\nPKP007: ca però pare tofu\nPKP135: mh, a 'o vedé\n\nItaliano: mhmh ma anche nel gusto in realtà\nNapoletano:",
+  "target": "mhmh, ma pure 'int' 'o gusto in realtà"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN001",
+  "turn_index": 335,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP135: però te dico, i' magari cu tutto ca appunto i', i' aggio viaggiato poco, magari 'o primmo tipo 'e vacanza ca me vaco a fà\nPKP135: fatta bbona, pe' te dicere, nun è ehm cocktail e albergo figo m~, ma magari vaco a scuprì nu poco 'e poste, ca po' pò essere pure nu posto mainstream, cioè ner senso, però magari m' 'a vivo n'ata manera\n\nItaliano: mhmh può essere anche a miami sì sì\nNapoletano: mhmh, ___ essere pure a miami, sì sì\nParola mancante:",
+  "target": "pò"
+ },
+ {
+  "layout": "A2",
+  "tipo": "cloze",
+  "conversazione": "KPN003",
+  "turn_index": 722,
+  "prompt": "Completa la frase napoletana inserendo la parola che manca al posto di ___. Scrivi soltanto quella parola.\n\nConversazione finora (in napoletano):\nPKP015: pure i' na vota\n\nItaliano: anche tu io non lo sapevo che tu ci eri uscita o si\nNapoletano: pure tu, i' nun 'o sapevo ___ tu ce ere asciuta, o sì\nParola mancante:",
+  "target": "ca"
+ },
+ {
+  "layout": "A2",
+  "tipo": "turno_breve",
+  "conversazione": "KPN001",
+  "turn_index": 4,
+  "prompt": "Traduci in napoletano.\n\nConversazione finora (in napoletano):\nPKP007: tu nun l'hê maje fatte sti ffoto quanno si' ghiuta 'ncopp'â varca\nPKP135: no, dicesse 'e no\n\nItaliano: o queste foto non l'abbiam mai fatte\nNapoletano:",
+  "target": "o sti ffoto nun l'avimmo maje fatte"
+ }
+]
