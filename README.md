@@ -351,7 +351,11 @@ adapter prodotti:
 Un adapter LoRA è un derivato del modello su cui è stato addestrato: eredita la
 licenza di quel modello, non quella di questo repository.
 
----
+## Collaboratori
 
-Realizzato da **Chiara Puglia** e **Luca Giuliano**
-Università degli Studi di Salerno
+Il progetto è stato sviluppato da:
+
+| | | |
+|---|---|---|
+| **Chiara Puglia** | <a href="https://github.com/chiarapuglia99"><img src="image/github-icon.png" alt="chiarapuglia99 su GitHub" width="30"></a> | Studente Magistrale di Informatica dell'Università degli Studi di Salerno |
+| **Luca Giuliano** | <a href="https://github.com/Kizorat"><img src="image/github-icon.png" alt="Kizorat su GitHub" width="30"></a> | Studente Magistrale di Informatica dell'Università degli Studi di Salerno |
